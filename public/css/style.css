@@ -1,0 +1,216 @@
+body {
+    background-image: url("https://wallpapercave.com/wp/wp3855232.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    padding-top: 5px;
+}
+
+h3 {
+    font-family: 'Rubik', sans-serif;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+p {
+    font-family: 'Besley', sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+}
+
+#play {
+    font-family: 'Besley', sans-serif;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: #8CDAFF;
+    border-radius: 50px;
+    width: 130px;
+    height: 45px;
+    margin-left: 180px;
+}
+
+#play:hover {
+    background-color:#63B1FF;
+}
+
+#overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instructionsForm {
+    background-color: #FFB7AE;
+    height: 550px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content {
+    display: none;
+}
+
+#canvas {
+    background-color: black;
+    margin-left: 150px;
+}
+
+#songs {
+    background-color: #FFB7AE;
+    display: block;
+    flex-direction: column;
+    float: left;
+    clear: none;
+}
+
+#songList {
+    font-family: 'Rubik', sans-serif;
+    font-size: 35px;
+    padding-left: 100px;
+}
+
+.song {
+    font-family: 'Besley', sans-serif;
+    font-size: 15px;
+    background-color: #FDF3F5;
+    border: none;
+    width: 100%;
+}
+
+.song:hover {
+    background-color:#E09D99;
+}
+
+#colors {
+    font-family: 'Rubik', sans-serif;
+    font-size: 35px;
+    padding-left: 130px;
+}
+
+#changeColors {
+    background-color: #FFB7AE;
+    width: 360px;
+    margin-top: 425px;
+    display: block;
+    flex-direction: column;
+}
+
+.colorBtn {
+    font-family: 'Besley', sans-serif;
+    font-size: 15px;
+    background-color: #FDF3F5;
+    border: none;
+    width: 100%;
+}
+
+.colorBtn:hover {
+    background-color: #E09D99;
+}
+
+#options {
+    display: block;
+    flex-direction: column;
+    float: left;
+    clear: none;
+}
+
+#settingsDiv {
+    background-color: #FFB7AE;
+    display: block;
+    flex-direction: column;
+    float: right;
+    clear: none;
+}
+
+#settingsLabel {
+    font-family: 'Rubik', sans-serif;
+    font-size: 35px;
+    padding-left: 120px;
+}
+
+#settings {
+    background-color: #FDF3F5;
+    width: 360px;
+    display: block;
+    flex-direction: column;
+}
+
+.setLabels {
+    font-family: 'Besley', sans-serif;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.checkBox {
+    margin-left: 150px;
+    height: 20px;
+    width: 20px;
+}
+
+.setBtn {
+    font-family: 'Besley', sans-serif;
+    font-size: 15px;
+    background-color: #FDF3F5;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.setBtn:hover {
+    background-color: #E09D99;
+}
+
+#volume {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 20px;
+    background: #FFB7AE;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-left: 38px;
+  }
+  
+  #volume:hover {
+    opacity: 1;
+  }
+  
+  #volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #EB9694;
+    cursor: pointer;
+  }
+  
+  #volume::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #EB9694;
+    cursor: pointer;
+  }
+
+  #currentSong {
+      background-color: #FDF3F5;
+      font-family: 'Besley', sans-serif;
+      font-size: 15px;
+      border: none;
+      width: 270px;
+  }
