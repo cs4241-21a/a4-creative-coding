@@ -1,6 +1,7 @@
 Music Visualizer 
 
 Winnie Ly
+https://a4-theaniartist.glitch.me/ 
 
 The goal of this project was to use various technologies (JavaScript, HTML, CSS, and WebAudio) to create a webpage that the user can interact with. This project allows users to play a song from the Song List provided, change the color of the audio wave, and change the settings (play, pause, change the volume, loop, mute, and show the current song playing).
 
