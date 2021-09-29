@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Music Visualizer</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href=https://cdn2.bulbagarden.net/upload/thumb/1/1f/831Wooloo.png/1200px-831Wooloo.png
+        type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Besley&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webpage showcasing various types of music artists">
+</head>
+
+<body>
+    <script src="js/scripts.js" defer></script>
+    <link href="css/style.css" rel="stylesheet">
+    <h1 id='title'>Welcome!</h1>
+    <div id='overlay'>
+        <div id='instructionsForm'>
+            <h2>Instructions</h2>
+            <p>
+                Welcome user! This page will play songs from various artists that you may or may not know.
+                After pressing the 'Play' button, you will be redirected to a new page that would play a
+                set of songs. Hope you enjoy your time here!
+            </p>
+            <h3>Change Song</h3>
+            <p>
+                Choose whatever song you like to listen from the songs listed.
+            </p>
+            <h3>Change Color</h3>
+            <p>
+                Change the color of the audio wave from the options provided.
+            </p>
+            <h3>Settings</h3>
+            <p>
+                Allows you to play, pause, loop, mute, change the volume of the song and shows current song playing.
+            </p>
+            <button id="play">Play</button>
+        </div>
+    </div>
+    <div id='content'>
+        <h1>Let's Vibe</h1>
+        <div id="player">
+            <div id='options'>
+                <div id='songs'>
+                    <label id='songList'>Song List</label>
+                    <div></div>
+                    <input type="button" id="hatena" class="song" value="Dream? by hatena">
+                    <div></div>
+                    <input type="button" id="sawano" class="song" value="Hands Up to the Sky by SawanoHiroyuki[nZk]">
+                    <div></div>
+                    <input type="button" id="reona" class="song" value="Untitled World by ReoNa">
+                    <div></div>
+                    <input type="button" id="lisa" class="song" value="Gurenge by LiSA">
+                    <div></div>
+                    <input type="button" id="utada" class="song" value="PINK BLOOD by Utada Hikaru">
+                    <div></div>
+                    <input type="button" id="sasanomaly" class="song" value="Sora to Utsuro by sasanomaly">
+                    <input type="button" id="aimer" class="song" value="3min by Aimer">
+                    <div></div>
+                    <input type="button" id="lyn" class="song" value="Take Over by Lyn">
+                    <div></div>
+                </div>
+                <div id="changeColors">
+                    <label id='colors'>Colors</label>
+                    <button id="default" class='colorBtn'>Default</button>
+                    <button id="redGradient" class='colorBtn'>Red</button>
+                    <button id="greenGradient" class='colorBtn'>Green</button>
+                    <button id="blueGradient" class='colorBtn'>Blue</button>
+                    <button id="purpleGradient" class='colorBtn'>Purple</button>
+                </div>
+            </div>
+            <div id='settingsDiv'>
+                <label id='settingsLabel'>Settings</label>
+                <div id='settings'>
+                    <div></div>
+                    <button id='playSet'class= 'setBtn'>Play</button>
+                    <div></div>
+                    <button id='pause' class= 'setBtn'>Pause</button>
+                    <div></div>
+                    <label class= 'setLabels'>Volume</label>
+                    <input type="range" min= '0' max= '100' value= '100' step= '1' id="volume">
+                    <div></div>
+                    <label class= 'setLabels'>Mute</label>
+                    <input type='checkbox' class= 'checkBox' id= 'mute'>
+                    <div></div>
+                    <label class= 'setLabels'>Loop</label>
+                    <input type="checkbox" class= 'checkBox' id= 'loop'>
+                    <div></div>
+                    <label class= 'setLabels'>Playing: </label>
+                    <input type="text" id= 'currentSong'>
+                </div>
+            </div>
+            <div id="canvasDiv">
+                <canvas id="canvas" width="500" height="528"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
