@@ -1,4 +1,4 @@
-## Boid-0-sphere
+## Boid-o-sphere
 
 http://a4-matt-johannesen.glitch.me
 

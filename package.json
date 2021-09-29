@@ -1,0 +1,25 @@
+{
+  "name": "a4-matt-johannesen",
+  "version": "1.0.0",
+  "description": "http://a4-matt-johannesen.glitch.me",
+  "main": "server.js",
+  "dependencies": {
+    "mime": "^2.5.2",
+    "nodemon": "^2.0.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-d-jo/a4-matt-johannesen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-d-jo/a4-matt-johannesen/issues"
+  },
+  "homepage": "https://github.com/m-d-jo/a4-matt-johannesen#readme"
+}
