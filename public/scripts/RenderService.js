@@ -32,10 +32,6 @@ class RenderService {
         }
     }
 
-    updateRotationSpeed(speed) {
-        this.parameters.rotationSpeed = speed;
-    }
-
     togglePlaying() {
         this.playing = !this.playing;
         if (this.playing) {

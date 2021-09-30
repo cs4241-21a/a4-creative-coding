@@ -1,6 +1,8 @@
 const renderService = new RenderService();
 const pane = new Tweakpane.Pane({ container: document.getElementById('tweakpane'), title: 'Parameters' });
 
+const changeHandler = (name) => change => renderService.updateParameter(name, change.value);
+
 // Song
 const songFolder = pane.addFolder({ title: 'Song' });
 const SONG = {
@@ -22,12 +24,9 @@ const CUSTOMIZATION = {
     'treble-boost': 1
 };
 
-customizationFolder.addInput(CUSTOMIZATION, 'Sphere Color')
-    .on('change', color => renderService.updateParameter('sphereColor', color.value));
-customizationFolder.addInput(CUSTOMIZATION, 'Sphere Detail', { min: 1, max: 12, step: 1 })
-    .on('change', detail => renderService.updateParameter('sphereDetail', detail.value));
-customizationFolder.addInput(CUSTOMIZATION, 'Rotation Speed', { min: 0, max: 20 })
-    .on('change', speed => renderService.updateParameter('rotationSpeed', speed.value));
+customizationFolder.addInput(CUSTOMIZATION, 'Sphere Color').on('change', changeHandler('sphereColor'));
+customizationFolder.addInput(CUSTOMIZATION, 'Sphere Detail', { min: 1, max: 12, step: 1 }).on('change', changeHandler('sphereDetail'));
+customizationFolder.addInput(CUSTOMIZATION, 'Rotation Speed', { min: 0, max: 20 }).on('change', changeHandler('rotationSpeed'));
 customizationFolder.addInput(CUSTOMIZATION, 'treble-boost', { min: 1, max: 5 });
 
 // Playback
