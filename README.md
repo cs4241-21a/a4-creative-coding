@@ -2,7 +2,7 @@ Assignment 4 - Creative Coding: Interactive Multimedia Experiences
 ===
 ## a4-creative
 
-your hosting link e.g. https://a4-creative-mattthew7758.glitch.me <br>
+your hosting link e.g. https://a4-creative-matthew7758.glitch.me <br>
 repository: [Github](https://github.com/Matthew7758/a4-creative-coding)
 
 ![Image](./public/img/logo.png) <br>
