@@ -18,15 +18,16 @@ const customizationFolder = pane.addFolder({ title: 'Customization' });
 const CUSTOMIZATION = {
     'Sphere Color': renderService.parameters.sphereColor,
     'Sphere Detail': renderService.parameters.sphereDetail,
-    speed: 5,
+    'Rotation Speed': renderService.parameters.rotationSpeed,
     'treble-boost': 1
 };
 
 customizationFolder.addInput(CUSTOMIZATION, 'Sphere Color')
-    .on('change', color => renderService.updateSphereColor(color.value));
+    .on('change', color => renderService.updateParameter('sphereColor', color.value));
 customizationFolder.addInput(CUSTOMIZATION, 'Sphere Detail', { min: 1, max: 12, step: 1 })
-    .on('change', detail => renderService.updateSphereDetail(detail.value));
-customizationFolder.addInput(CUSTOMIZATION, 'speed', { min: 1, max: 10 });
+    .on('change', detail => renderService.updateParameter('sphereDetail', detail.value));
+customizationFolder.addInput(CUSTOMIZATION, 'Rotation Speed', { min: 0, max: 20 })
+    .on('change', speed => renderService.updateParameter('rotationSpeed', speed.value));
 customizationFolder.addInput(CUSTOMIZATION, 'treble-boost', { min: 1, max: 5 });
 
 // Playback

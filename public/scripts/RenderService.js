@@ -14,7 +14,8 @@ class RenderService {
     parameters = {
         song: 'TheySaid',
         sphereColor: '#00ff00',
-        sphereDetail: 10
+        sphereDetail: 10,
+        rotationSpeed: 5
     };
 
     simplexNoise = new SimplexNoise();
@@ -24,14 +25,15 @@ class RenderService {
         this.updateSphere(1);
     }
 
-    updateSphereColor(color) {
-        this.parameters.sphereColor = color;
-        this.updateSphere();
+    updateParameter(name, value) {
+        this.parameters[name] = value;
+        if (name.includes('sphere')) {
+            this.updateSphere();
+        }
     }
 
-    updateSphereDetail(detail) {
-        this.parameters.sphereDetail = detail;
-        this.updateSphere();
+    updateRotationSpeed(speed) {
+        this.parameters.rotationSpeed = speed;
     }
 
     togglePlaying() {
@@ -89,8 +91,8 @@ class RenderService {
         const lowFrequencyAverage = this.sum(lowFrequencies) / lowFrequencies.length;
         const highFrequencyAverage = this.sum(highFrequencies) / highFrequencies.length;
 
-        this.sphere.rotation.y += 0.001;
-        this.sphere.rotation.x += 0.00025;
+        this.sphere.rotation.y += 0.0002 * this.parameters.rotationSpeed;
+        this.sphere.rotation.x += 0.00004 * this.parameters.rotationSpeed;
         this.visualizeFrequencies(this.normalizeFrequency(lowFrequencyAverage), this.normalizeFrequency(highFrequencyAverage));
         this.renderer.render(this.scene, this.camera);
 
