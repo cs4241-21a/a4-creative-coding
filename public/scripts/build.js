@@ -4,25 +4,25 @@ const pane = new Tweakpane.Pane({ container: document.getElementById('tweakpane'
 // Song
 const songFolder = pane.addFolder({ title: 'Song' });
 const SONG = {
-    preset: 0,
+    Preset: renderService.parameters.song,
     preset_options: {
-        'They Said - Tre Wright': 0
+        'They Said - Tre Wright': 'TheySaid'
     }
 };
 
-songFolder.addInput(SONG, 'preset', { options: SONG.preset_options });
+songFolder.addInput(SONG, 'Preset', { options: SONG.preset_options });
 songFolder.addButton({ title: 'Upload', label: 'custom' });
 
 // Customization
 const customizationFolder = pane.addFolder({ title: 'Customization' });
 const CUSTOMIZATION = {
-    color: '#0f0',
+    'Sphere Color': renderService.parameters.sphereColor,
     detail: 8,
     speed: 5,
     'treble-boost': 1
 };
 
-customizationFolder.addInput(CUSTOMIZATION, 'color');
+customizationFolder.addInput(CUSTOMIZATION, 'Sphere Color').on('change', color => renderService.updateSphereColor(color.value));
 customizationFolder.addInput(CUSTOMIZATION, 'detail', { min: 1, max: 16 });
 customizationFolder.addInput(CUSTOMIZATION, 'speed', { min: 1, max: 10 });
 customizationFolder.addInput(CUSTOMIZATION, 'treble-boost', { min: 1, max: 5 });

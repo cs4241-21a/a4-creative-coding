@@ -17,3 +17,7 @@
 #tweakpane .tp-lblv_v {
     min-width: 200px;
 }
+
+#tweakpane .tp-lstv_s {
+    padding: 0 24px 0 8px;
+}

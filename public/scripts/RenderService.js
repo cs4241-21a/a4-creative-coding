@@ -12,7 +12,8 @@ class RenderService {
     playing = false;
     songLoaded = false;
     parameters = {
-        song: 'TheySaid'
+        song: 'TheySaid',
+        sphereColor: '#00ff00'
     };
 
     simplexNoise = new SimplexNoise();
@@ -22,8 +23,9 @@ class RenderService {
         this.updateSphere(1);
     }
 
-    updateParameter(name, value) {
-        this.parameters[name] = value;
+    updateSphereColor(color) {
+        this.parameters.sphereColor = color;
+        this.updateSphere();
     }
 
     togglePlaying() {
@@ -59,10 +61,13 @@ class RenderService {
         this.frequencyArray = new Uint8Array(this.analyzer.frequencyBinCount);
     }
 
-    updateSphere(sphereRadius) {
-        this.sphereRadius = sphereRadius;
-        const geometry = new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(sphereRadius, 10));
-        const material = new THREE.LineBasicMaterial({ color: 0x00ff00});
+    updateSphere(radius = this.sphereRadius) {
+        if (this.sphere) {
+            this.scene.remove(this.sphere);
+        }
+        this.sphereRadius = radius;
+        const geometry = new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(radius, 10));
+        const material = new THREE.LineBasicMaterial({ color: this.parameters.sphereColor});
         this.sphere = new THREE.LineSegments(geometry, material);
         this.scene.add(this.sphere);
     }
