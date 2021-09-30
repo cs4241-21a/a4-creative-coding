@@ -1,3 +1,19 @@
-body {
-    margin: 0;
+#tweakpane {
+    position: absolute;
+    left: 20px;
+    width: 400px;
+    box-shadow: var(--box-shadow-down);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+#tweakpane .tp-rotv, #tweakpane .tp-brkv {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#tweakpane .tp-lblv_v {
+    min-width: 200px;
 }
