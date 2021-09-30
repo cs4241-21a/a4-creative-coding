@@ -2,7 +2,8 @@ class RenderService {
     renderer = new THREE.WebGLRenderer({ alpha: true });
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    sphere;
+    wireframe;
+    mesh;
     sphereRadius;
 
     audio;
@@ -15,7 +16,9 @@ class RenderService {
         song: 'TheySaid',
         sphereColor: '#00ff00',
         sphereDetail: 10,
-        rotationSpeed: 5
+        rotationSpeed: 5,
+        trebleAmplitude: 1,
+        bassAmplitude: 1
     };
 
     simplexNoise = new SimplexNoise();
@@ -66,14 +69,22 @@ class RenderService {
     }
 
     updateSphere(radius = this.sphereRadius) {
-        if (this.sphere) {
-            this.scene.remove(this.sphere);
+        if (this.wireframe || this.mesh) {
+            this.scene.remove(this.wireframe);
+            this.scene.remove(this.mesh);
         }
         this.sphereRadius = radius;
-        const geometry = new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(radius, this.parameters.sphereDetail));
-        const material = new THREE.LineBasicMaterial({ color: this.parameters.sphereColor});
-        this.sphere = new THREE.LineSegments(geometry, material);
-        this.scene.add(this.sphere);
+
+        let geometry = new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(radius, this.parameters.sphereDetail));
+        let material = new THREE.LineBasicMaterial({ color: this.parameters.sphereColor });
+        this.wireframe = new THREE.LineSegments(geometry, material);
+        this.scene.add(this.wireframe);
+
+        geometry = new THREE.IcosahedronGeometry(this.sphereRadius, this.parameters.sphereDetail);
+        material = new THREE.MeshBasicMaterial({ color: "#000", opacity: 0.75 });
+        material.transparent = true;
+        this.mesh = new THREE.Mesh(geometry, material);
+        this.scene.add(this.mesh);
     }
 
     render() {
@@ -87,9 +98,9 @@ class RenderService {
         const lowFrequencyAverage = this.sum(lowFrequencies) / lowFrequencies.length;
         const highFrequencyAverage = this.sum(highFrequencies) / highFrequencies.length;
 
-        this.sphere.rotation.y += 0.0002 * this.parameters.rotationSpeed;
-        this.sphere.rotation.x += 0.00004 * this.parameters.rotationSpeed;
-        this.visualizeFrequencies(this.normalizeFrequency(lowFrequencyAverage), this.normalizeFrequency(highFrequencyAverage));
+        this.rotateSphere(0.00004, 0.0002)
+        this.modulateSphere(this.wireframe, this.sphereRadius, this.normalizeFrequency(lowFrequencyAverage), this.normalizeFrequency(highFrequencyAverage));
+        this.modulateSphere(this.mesh, this.sphereRadius - 0.01, this.normalizeFrequency(lowFrequencyAverage), this.normalizeFrequency(highFrequencyAverage));
         this.renderer.render(this.scene, this.camera);
 
         if (this.playing) {
@@ -100,8 +111,8 @@ class RenderService {
     }
 
     // animates sphere vertices to visualize frequencies
-    visualizeFrequencies(bass, treble) {
-        const vertices = this.sphere.geometry.attributes.position.array;
+    modulateSphere(object, radius, bass, treble) {
+        const vertices = object.geometry.attributes.position.array;
         for (let i = 0; i < vertices.length; i += 3) {
             // normalize vertex to default sphere shape
             const magnitude = this.getMagnitude([vertices[i], vertices[i + 1], vertices[i + 2]]);
@@ -118,13 +129,20 @@ class RenderService {
                 vertices[i + 2]
             );
 
-            // scale vertex by calculated distance based on bass, sphere radius, noise, and treble
-            const distance = bass + this.sphereRadius + (noise * treble);
+            // scale vertex by calculated distance based on sphere radius, bass, noise, and treble
+            const distance = radius + (bass * this.parameters.bassAmplitude) + (noise * treble * this.parameters.trebleAmplitude);
             for (let j = i; j < i + 3; j++) {
                 vertices[j] = vertices[j] * distance;
             }
         }
-        this.sphere.geometry.attributes.position.needsUpdate = true;
+        object.geometry.attributes.position.needsUpdate = true;
+    }
+
+    rotateSphere(x, y) {
+        this.wireframe.rotation.x += x * this.parameters.rotationSpeed;
+        this.wireframe.rotation.y += y * this.parameters.rotationSpeed;
+        this.mesh.rotation.x += x * this.parameters.rotationSpeed;
+        this.mesh.rotation.y += y * this.parameters.rotationSpeed;
     }
 
     // normalizes frequency to a range of 0 to 1
