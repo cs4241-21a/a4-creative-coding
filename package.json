@@ -1,0 +1,25 @@
+{
+  "name": "a4-creative",
+  "version": "1.0.0",
+  "description": "Submission for Matthew Malone",
+  "author": "Matthew7758",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "browserify ./public/js/scripts.js --outfile ./public/js/scriptsBrowser.js"
+  },
+  "repository": "https://github.com/Matthew7758/a4-creative-coding",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "cors": "^2.8.5",
+    "tweakpane": "^3.0.5",
+    "p5": "^1.4.0",
+    "helmet-csp": "^3.4.0"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "license": "UNLICENSED"
+}
