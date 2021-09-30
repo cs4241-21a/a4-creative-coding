@@ -13,7 +13,8 @@ class RenderService {
     songLoaded = false;
     parameters = {
         song: 'TheySaid',
-        sphereColor: '#00ff00'
+        sphereColor: '#00ff00',
+        sphereDetail: 10
     };
 
     simplexNoise = new SimplexNoise();
@@ -25,6 +26,11 @@ class RenderService {
 
     updateSphereColor(color) {
         this.parameters.sphereColor = color;
+        this.updateSphere();
+    }
+
+    updateSphereDetail(detail) {
+        this.parameters.sphereDetail = detail;
         this.updateSphere();
     }
 
@@ -66,7 +72,7 @@ class RenderService {
             this.scene.remove(this.sphere);
         }
         this.sphereRadius = radius;
-        const geometry = new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(radius, 10));
+        const geometry = new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(radius, this.parameters.sphereDetail));
         const material = new THREE.LineBasicMaterial({ color: this.parameters.sphereColor});
         this.sphere = new THREE.LineSegments(geometry, material);
         this.scene.add(this.sphere);
