@@ -21,3 +21,7 @@
 #tweakpane .tp-lstv_s {
     padding: 0 24px 0 8px;
 }
+
+#songInput {
+    visibility: hidden;
+}

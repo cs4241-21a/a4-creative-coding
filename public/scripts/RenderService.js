@@ -13,7 +13,7 @@ class RenderService {
     playing = false;
     songLoaded = false;
     parameters = {
-        song: 'TheySaid',
+        song: 'SICKO MODE - Travis Scott',
         sphereColor: '#00ff00',
         sphereDetail: 10,
         rotationSpeed: 5,

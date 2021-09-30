@@ -1,21 +1,29 @@
 const renderService = new RenderService();
-const pane = new Tweakpane.Pane({ container: document.getElementById('tweakpane'), title: 'Parameters' });
 
+function onSongUpload(event) {
+    if (event?.files && event.files[0]) {
+        renderService.updateSong(URL.createObjectURL(event.files[0]));
+    }
+}
+
+// Control Panel
+const pane = new Tweakpane.Pane({ container: document.getElementById('tweakpane'), title: 'Parameters' });
 const changeHandler = (name) => change => renderService.updateParameter(name, change.value);
 
-// Song
+// Song Tab
 const songFolder = pane.addFolder({ title: 'Song' });
 const SONG = {
     Preset: renderService.parameters.song,
     preset_options: {
-        'They Said - Tre Wright': 'TheySaid'
+        'SICKO MODE - Travis Scott': 'SICKO MODE - Travis Scott',
+        'They Said - Tre Wright': 'They Said - Tre Wright'
     }
 };
 
 songFolder.addInput(SONG, 'Preset', { options: SONG.preset_options });
-songFolder.addButton({ title: 'Upload', label: 'custom' });
+songFolder.addButton({ title: 'Upload', label: 'Custom' }).on('click', () => document.getElementById('songInput').click());
 
-// Customization
+// Customization Tab
 const customizationFolder = pane.addFolder({ title: 'Customization' });
 const CUSTOMIZATION = {
     'Sphere Color': renderService.parameters.sphereColor,
@@ -31,7 +39,7 @@ customizationFolder.addInput(CUSTOMIZATION, 'Rotation Speed', { min: 0, max: 20 
 customizationFolder.addInput(CUSTOMIZATION, 'Treble Amplitude', { min: 0, max: 3 }).on('change', changeHandler('trebleAmplitude'));
 customizationFolder.addInput(CUSTOMIZATION, 'Bass Amplitude', { min: 0, max: 3 }).on('change', changeHandler('bassAmplitude'));
 
-// Playback
+// Playback Tab
 const playbackFolder = pane.addFolder({ title: 'Playback' });
 
 playbackFolder.addButton({ title: 'Play' }).on('click', () => renderService.togglePlaying());
