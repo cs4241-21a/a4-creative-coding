@@ -1,0 +1,26 @@
+{
+  "name": "a4",
+  "version": "1.0.0",
+  "description": "Assignment 4 - Creative Coding: Interactive Multimedia Experiences",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorendiloreto/a4-creative-coding.git"
+  },
+  "author": "Loren DiLoreto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorendiloreto/a4-creative-coding/issues"
+  },
+  "homepage": "https://github.com/lorendiloreto/a4-creative-coding#readme",
+  "dependencies": {
+    "d3": "^7.0.4",
+    "express": "^4.17.1",
+    "node": "^16.10.0",
+    "yahoo-finance": "^0.3.7"
+  }
+}
