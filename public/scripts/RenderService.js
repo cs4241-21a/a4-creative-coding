@@ -59,6 +59,9 @@ class RenderService {
     togglePlaying() {
         if (this.songLoaded) {
             this.playing = !this.playing;
+            const button = Array.from(document.getElementsByTagName('button')).find(b => b.innerText === 'Play' || b.innerText === 'Pause');
+            button.innerHTML = this.playing ? 'Pause' : 'Play';
+
             if (this.playing) {
                 this.audio.play();
                 this.render();

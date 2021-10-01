@@ -25,7 +25,7 @@ const SONG = {
     }
 };
 
-const presetInput = songFolder.addInput(SONG, 'Preset', { options: SONG.preset_options }).on('change', change => renderService.changeSong(change.value));
+songFolder.addInput(SONG, 'Preset', { options: SONG.preset_options }).on('change', change => renderService.changeSong(change.value));
 songFolder.addButton({ title: 'Upload', label: 'Custom' }).on('click', () => document.getElementById('songInput').click());
 
 // Customization Tab
