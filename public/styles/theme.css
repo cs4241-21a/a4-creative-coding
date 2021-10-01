@@ -1,0 +1,82 @@
+:root {
+    --color-primary: #fff;
+    --color-secondary: #bfbfbf;
+    --background-primary: #181818;
+    --background-secondary: #282828;
+    --background-tertiary: #3A3A3A;
+    --background-quantenary: #484848;
+
+    --font-family-primary: 'Roboto Mono', sans-serif;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.0625rem;
+    --font-size-xl: 1.25rem;
+
+    --tp-base-background-color: var(--background-secondary);
+    --tp-base-shadow-color: rgba(0, 0, 0, 0.15);
+    --tp-button-background-color: var(--background-tertiary);
+    --tp-button-background-color-active: var(--background-quantenary);
+    --tp-button-background-color-focus: var(--background-quantenary);
+    --tp-button-background-color-hover: var(--background-quantenary);
+    --tp-button-foreground-color: var(--color-primary);
+    --tp-container-background-color: var(--background-tertiary);
+    --tp-container-background-color-active: var(--background-quantenary);
+    --tp-container-background-color-focus: var(--background-quantenary);
+    --tp-container-background-color-hover: var(--background-quantenary);
+    --tp-container-foreground-color: var(--color-primary);
+    --tp-groove-foreground-color: var(--color-primary);
+    --tp-input-background-color: var(--background-quantenary);
+    --tp-input-background-color-active: var(--background-quantenary);
+    --tp-input-background-color-focus: var(--background-quantenary);
+    --tp-input-background-color-hover: var(--background-quantenary);
+    --tp-input-foreground-color: var(--color-primary);
+    --tp-label-foreground-color: var(--color-primary);
+    --tp-monitor-background-color: var(--background-quantenary);
+    --tp-monitor-foreground-color: var(--color-primary);
+    --tp-blade-unit-size: 32px;
+    --tp-base-border-radius: 0;
+    --tp-font-family: var(--font-family-primary);
+    --tp-container-horizontal-padding: 16px;
+    --tp-container-vertical-padding: 8px;
+
+    --shadow-intensity: 0.2;
+    --shadow-offset: 4px;
+    --shadow-blur: 16px;
+    --box-shadow-down: 0 var(--shadow-offset) var(--shadow-blur) rgb(0, 0, 0, var(--shadow-intensity));
+
+    --transition-duration: 250ms;
+    --transition-timing-function: ease-in-out;
+
+    --border-radius: 8px;
+}
+
+:root body {
+    margin: 0;
+    background-color: var(--background-primary);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-primary);
+}
+
+strong, i {
+    font-size: inherit;
+}
+
+button {
+    font-family: var(--font-family-primary);
+    outline: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    background: #1ea11e;
+    padding: 0.5rem 1rem;
+    float: right;
+    margin-top: 2rem;
+}
+
+button:hover, button:active {
+    background: #1c851c;
+}
