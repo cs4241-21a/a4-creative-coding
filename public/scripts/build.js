@@ -21,7 +21,8 @@ const SONG = {
     preset_options: {
         'None': 'null',
         'SICKO MODE - Travis Scott': '/songs/SICKO MODE - Travis Scott.mp3',
-        'They Said - Tre Wright': '/songs/They Said - Tre Wright.mp3'
+        'ZEZE - Kodak Black': '/songs/ZEZE - Kodak Black.mp3',
+        'INDUSTRY BABY - Lil Nas X': '/songs/INDUSTRY BABY - Lil Nas X.mp3'
     }
 };
 
