@@ -7,13 +7,14 @@ class RenderService {
     sphereRadius;
 
     audio;
+    audioContext;
     analyzer;
     frequencyArray;
 
     playing = false;
     songLoaded = false;
     parameters = {
-        song: 'SICKO MODE - Travis Scott',
+        songPath: '/songs/SICKO MODE - Travis Scott.mp3',
         sphereColor: '#00ff00',
         sphereDetail: 10,
         rotationSpeed: 5,
@@ -39,7 +40,7 @@ class RenderService {
         this.playing = !this.playing;
         if (this.playing) {
             if (!this.songLoaded) {
-                this.updateSong(`/songs/${ this.parameters.song }.mp3`);
+                this.updateSong(this.parameters.songPath);
             }
             this.audio.play();
             this.render();
@@ -52,21 +53,31 @@ class RenderService {
         this.camera.position.z = 5;
     }
 
-    updateSong(songName) {
-        this.audio = document.getElementById('audio');
-        this.audio.src = songName;
+    updateSong(songPath) {
+        if (this.songLoaded && this.playing) {
+            this.togglePlaying();
+        }
+
+        if (!this.audioContext) {
+            this.createAudioContext();
+        }
+
+        this.audio.src = this.parameters.songPath = songPath;
         this.audio.load();
         this.songLoaded = true;
-        this.audio.volume = 0.2;
+    }
 
-        const audioContext = new AudioContext();
-        const src = audioContext.createMediaElementSource(this.audio);
-        this.analyzer = audioContext.createAnalyser();
-        src.connect(this.analyzer);
-        this.analyzer.connect(audioContext.destination);
+    createAudioContext() {
+        this.audio = new Audio();
+        this.audio.volume = 0.2;
+        this.audioContext = new AudioContext();
+        const audioSource = this.audioContext.createMediaElementSource(this.audio);
+        this.analyzer =  this.audioContext.createAnalyser();
+        audioSource.connect(this.analyzer);
+        this.analyzer.connect( this.audioContext.destination);
         this.analyzer.fftSize = 512;
         this.frequencyArray = new Uint8Array(this.analyzer.frequencyBinCount);
-    }
+}
 
     updateSphere(radius = this.sphereRadius) {
         if (this.wireframe || this.mesh) {

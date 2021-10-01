@@ -13,14 +13,14 @@ const changeHandler = (name) => change => renderService.updateParameter(name, ch
 // Song Tab
 const songFolder = pane.addFolder({ title: 'Song' });
 const SONG = {
-    Preset: renderService.parameters.song,
+    Preset: renderService.parameters.songPath,
     preset_options: {
-        'SICKO MODE - Travis Scott': 'SICKO MODE - Travis Scott',
-        'They Said - Tre Wright': 'They Said - Tre Wright'
+        'SICKO MODE - Travis Scott': '/songs/SICKO MODE - Travis Scott.mp3',
+        'They Said - Tre Wright': '/songs/They Said - Tre Wright.mp3'
     }
 };
 
-songFolder.addInput(SONG, 'Preset', { options: SONG.preset_options });
+songFolder.addInput(SONG, 'Preset', { options: SONG.preset_options }).on('change', change => renderService.updateSong(change.value));
 songFolder.addButton({ title: 'Upload', label: 'Custom' }).on('click', () => document.getElementById('songInput').click());
 
 // Customization Tab
