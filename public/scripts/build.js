@@ -33,6 +33,7 @@ songFolder.addButton({ title: 'Upload', label: 'Custom' }).on('click', () => doc
 const customizationFolder = pane.addFolder({ title: 'Customization' });
 const CUSTOMIZATION = {
     'Sphere Color': renderService.parameters.sphereColor,
+    'Sphere Gradient': renderService.parameters.sphereGradient,
     'Sphere Detail': renderService.parameters.sphereDetail,
     'Rotation Speed': renderService.parameters.rotationSpeed,
     'Treble Amplitude': renderService.parameters.trebleAmplitude,
@@ -40,7 +41,8 @@ const CUSTOMIZATION = {
 };
 
 customizationFolder.addInput(CUSTOMIZATION, 'Sphere Color').on('change', changeHandler('sphereColor'));
-customizationFolder.addInput(CUSTOMIZATION, 'Sphere Detail', { min: 1, max: 12, step: 1 }).on('change', changeHandler('sphereDetail'));
+customizationFolder.addInput(CUSTOMIZATION, 'Sphere Gradient').on('change', changeHandler('sphereGradient'))
+customizationFolder.addInput(CUSTOMIZATION, 'Sphere Detail', { min: 1, max: 16, step: 1 }).on('change', changeHandler('sphereDetail'));
 customizationFolder.addInput(CUSTOMIZATION, 'Rotation Speed', { min: 0, max: 50 }).on('change', changeHandler('rotationSpeed'));
 customizationFolder.addInput(CUSTOMIZATION, 'Treble Amplitude', { min: 0, max: 3 }).on('change', changeHandler('trebleAmplitude'));
 customizationFolder.addInput(CUSTOMIZATION, 'Bass Amplitude', { min: 0, max: 3 }).on('change', changeHandler('bassAmplitude'));

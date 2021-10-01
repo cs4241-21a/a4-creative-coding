@@ -2,9 +2,15 @@ class RenderService {
     renderer = new THREE.WebGLRenderer({ alpha: true });
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
     wireframe;
     mesh;
     sphereRadius;
+    gradient = new Rainbow();
+    gradientIndex = 0;
+    gradientInterval;
+    gradientDirection = 1;
+    gradientN = 100;
 
     audio;
     audioContext;
@@ -18,6 +24,7 @@ class RenderService {
     parameters = {
         songPath: 'null',
         sphereColor: '#00ff00',
+        sphereGradient: false,
         sphereDetail: 10,
         rotationSpeed: 5,
         trebleAmplitude: 1,
@@ -65,6 +72,11 @@ class RenderService {
             if (this.playing) {
                 this.audio.play();
                 this.render();
+                if (this.parameters.sphereGradient) {
+                    this.startSphereGradient();
+                }
+            } else {
+                this.stopSphereGradient();
             }
         }
     }
@@ -72,8 +84,17 @@ class RenderService {
     // change rendering parameter
     changeParameter(name, value) {
         this.parameters[name] = value;
-        if (name.includes('sphere')) {
+        if (name === 'sphereDetail') {
             this.createSphere();
+        } else if (name === 'sphereColor' && !this.parameters.sphereGradient) {
+            this.wireframe.material = new THREE.MeshBasicMaterial({ color: value });
+        } else if (name === 'sphereGradient' && this.playing) {
+            if (value) {
+                this.startSphereGradient();
+            } else {
+                this.stopSphereGradient();
+                this.wireframe.material = new THREE.MeshBasicMaterial({ color: this.parameters.sphereColor });
+            }
         }
     }
 
@@ -153,8 +174,6 @@ class RenderService {
             requestAnimationFrame(() => this.render());
         } else {
             this.audio.pause();
-            this.modulateSphere(0, 0);
-            this.renderer.render(this.scene, this.camera);
         }
     }
 
@@ -197,6 +216,31 @@ class RenderService {
         this.wireframe.rotation.y += y * this.parameters.rotationSpeed;
         this.mesh.rotation.x += x * this.parameters.rotationSpeed;
         this.mesh.rotation.y += y * this.parameters.rotationSpeed;
+    }
+
+    // starts sphere color transition gradient
+    startSphereGradient() {
+        this.gradientInterval = setInterval(() => {
+            if (this.gradientDirection) {
+                this.gradientIndex++;
+                if (this.gradientIndex === this.gradientN) {
+                    this.gradientDirection = 0;
+                }
+            } else {
+                this.gradientIndex--;
+                if (this.gradientIndex === 0) {
+                    this.gradientDirection = 1;
+                }
+            }
+            this.wireframe.material = new THREE.MeshBasicMaterial({ color: `#${this.gradient.colourAt(this.gradientIndex)}` });
+        }, 100);
+    }
+
+    // stop sphere color transition gradient
+    stopSphereGradient() {
+        if (this.gradientInterval) {
+            clearInterval(this.gradientInterval);
+        }
     }
 
     // normalize frequency to a range of 0 to 1
