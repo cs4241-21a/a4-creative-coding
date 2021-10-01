@@ -10,6 +10,8 @@ class RenderService {
     audioContext;
     analyzer;
     frequencyArray;
+    maxLowFrequency;
+    maxHighFrequency;
 
     playing = false;
     songLoaded = false;
@@ -72,11 +74,14 @@ class RenderService {
         this.audio.volume = 0.2;
         this.audioContext = new AudioContext();
         const audioSource = this.audioContext.createMediaElementSource(this.audio);
+
         this.analyzer =  this.audioContext.createAnalyser();
         audioSource.connect(this.analyzer);
         this.analyzer.connect( this.audioContext.destination);
         this.analyzer.fftSize = 512;
         this.frequencyArray = new Uint8Array(this.analyzer.frequencyBinCount);
+        this.maxLowFrequency = 1;
+        this.maxHighFrequency = 1;
 }
 
     updateSphere(radius = this.sphereRadius) {
@@ -109,9 +114,18 @@ class RenderService {
         const lowFrequencyAverage = this.sum(lowFrequencies) / lowFrequencies.length;
         const highFrequencyAverage = this.sum(highFrequencies) / highFrequencies.length;
 
+        // calculate new max frequencies
+        this.maxLowFrequency = lowFrequencyAverage > this.maxLowFrequency ?  lowFrequencyAverage : this.maxLowFrequency;
+        this.maxHighFrequency = highFrequencyAverage > this.maxHighFrequency ?  highFrequencyAverage : this.maxHighFrequency;
+
+        // normalize average frequencies
+        const normalizedLFA = this.normalizeFrequency(lowFrequencyAverage, this.maxLowFrequency);
+        const normalizeHFA = this.normalizeFrequency(highFrequencyAverage,  this.maxHighFrequency);
+
+        // render sphere
         this.rotateSphere(0.00004, 0.0002)
-        this.modulateSphere(this.wireframe, this.sphereRadius, this.normalizeFrequency(lowFrequencyAverage), this.normalizeFrequency(highFrequencyAverage));
-        this.modulateSphere(this.mesh, this.sphereRadius - 0.01, this.normalizeFrequency(lowFrequencyAverage), this.normalizeFrequency(highFrequencyAverage));
+        this.modulateSphere(this.wireframe, this.sphereRadius, normalizedLFA, normalizeHFA);
+        this.modulateSphere(this.mesh, this.sphereRadius - 0.01, normalizedLFA, normalizeHFA);
         this.renderer.render(this.scene, this.camera);
 
         if (this.playing) {
@@ -157,8 +171,8 @@ class RenderService {
     }
 
     // normalizes frequency to a range of 0 to 1
-    normalizeFrequency(fr) {
-        return Math.min(fr / 100, 1);
+    normalizeFrequency(fr, max) {
+        return Math.min(fr / max, 1);
     }
 
     // calculates vector magnitude for a vertex array
