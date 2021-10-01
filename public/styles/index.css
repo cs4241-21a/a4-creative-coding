@@ -1,7 +1,7 @@
 #tweakpane {
     position: absolute;
     left: 20px;
-    width: 400px;
+    width: 450px;
     box-shadow: var(--box-shadow-down);
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
@@ -15,7 +15,7 @@
 }
 
 #tweakpane .tp-lblv_v {
-    min-width: 200px;
+    min-width: 250px;
 }
 
 #tweakpane .tp-lstv_s {

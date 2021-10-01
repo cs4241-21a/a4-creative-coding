@@ -16,7 +16,7 @@ class RenderService {
     playing = false;
     songLoaded = false;
     parameters = {
-        songPath: '/songs/SICKO MODE - Travis Scott.mp3',
+        songPath: 'null',
         sphereColor: '#00ff00',
         sphereDetail: 10,
         rotationSpeed: 5,
@@ -28,56 +28,19 @@ class RenderService {
     simplexNoise = new SimplexNoise();
 
     constructor() {
-        this.initializeRenderer();
-        this.updateSphere(1);
+        this.initRenderer();
+        this.createSphere(1);
     }
 
-    updateParameter(name, value) {
-        this.parameters[name] = value;
-        if (name.includes('sphere')) {
-            this.updateSphere();
-        }
-    }
-
-    togglePlaying() {
-        this.playing = !this.playing;
-        if (this.playing) {
-            if (!this.songLoaded) {
-                this.updateSong(this.parameters.songPath);
-            }
-            this.audio.play();
-            this.render();
-        }
-    }
-
-    initializeRenderer() {
+    // initialize three.js renderer
+    initRenderer() {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(this.renderer.domElement);
         this.camera.position.z = 5;
     }
 
-    updateSong(songPath) {
-        if (this.songLoaded && this.playing) {
-            this.togglePlaying();
-        }
-
-        if (!this.audioContext) {
-            this.createAudioContext();
-        }
-
-        this.audio.src = this.parameters.songPath = songPath;
-        this.audio.load();
-        this.songLoaded = true;
-    }
-
-    changeVolume(volume) {
-        this.parameters.volume = volume;
-        if (this.audio) {
-            this.audio.volume = volume / 100;
-        }
-    }
-
-    createAudioContext() {
+    // initialize Audio with AudioContext for analyzing frequencies
+    initAudioContext() {
         this.audio = new Audio();
         this.audio.volume = this.parameters.volume / 100;
         this.audioContext = new AudioContext();
@@ -90,9 +53,56 @@ class RenderService {
         this.frequencyArray = new Uint8Array(this.analyzer.frequencyBinCount);
         this.maxLowFrequency = 1;
         this.maxHighFrequency = 1;
-}
+    }
 
-    updateSphere(radius = this.sphereRadius) {
+    // toggle whether song is playing
+    togglePlaying() {
+        if (this.songLoaded) {
+            this.playing = !this.playing;
+            if (this.playing) {
+                this.audio.play();
+                this.render();
+            }
+        }
+    }
+
+    // change rendering parameter
+    changeParameter(name, value) {
+        this.parameters[name] = value;
+        if (name.includes('sphere')) {
+            this.createSphere();
+        }
+    }
+
+    // update song and autoplay
+    changeSong(songPath) {
+        if (this.songLoaded && this.playing) {
+            this.togglePlaying();
+        }
+
+        if (songPath !== 'null') {
+            if (!this.audioContext) {
+                this.initAudioContext();
+            }
+
+            this.audio.src = this.parameters.songPath = songPath;
+            this.audio.load();
+            this.songLoaded = true;
+
+            this.togglePlaying();
+        }
+    }
+
+    // change audio volume
+    changeVolume(volume) {
+        this.parameters.volume = volume;
+        if (this.audio) {
+            this.audio.volume = volume / 100;
+        }
+    }
+
+    // create new sphere based on specified parameters
+    createSphere(radius = this.sphereRadius) {
         if (this.wireframe || this.mesh) {
             this.scene.remove(this.wireframe);
             this.scene.remove(this.mesh);
@@ -111,6 +121,7 @@ class RenderService {
         this.scene.add(this.mesh);
     }
 
+    // render scene
     render() {
         this.analyzer.getByteFrequencyData(this.frequencyArray);
 
@@ -132,19 +143,25 @@ class RenderService {
 
         // render sphere
         this.rotateSphere(0.00004, 0.0002)
-        this.modulateSphere(this.wireframe, this.sphereRadius, normalizedLFA, normalizeHFA);
-        this.modulateSphere(this.mesh, this.sphereRadius - 0.01, normalizedLFA, normalizeHFA);
+        this.modulateSphere(normalizedLFA, normalizeHFA);
         this.renderer.render(this.scene, this.camera);
 
         if (this.playing) {
             requestAnimationFrame(() => this.render());
         } else {
             this.audio.pause();
+            this.modulateSphere(0, 0);
+            this.renderer.render(this.scene, this.camera);
         }
     }
 
     // animates sphere vertices to visualize frequencies
-    modulateSphere(object, radius, bass, treble) {
+    modulateSphere(bass, treble) {
+        this._modulateSphere(this.wireframe, this.sphereRadius, bass, treble);
+        this._modulateSphere(this.mesh, this.sphereRadius - 0.01, bass, treble);
+    }
+
+    _modulateSphere(object, radius, bass, treble) {
         const vertices = object.geometry.attributes.position.array;
         for (let i = 0; i < vertices.length; i += 3) {
             // normalize vertex to default sphere shape
@@ -171,6 +188,7 @@ class RenderService {
         object.geometry.attributes.position.needsUpdate = true;
     }
 
+    // rotate sphere
     rotateSphere(x, y) {
         this.wireframe.rotation.x += x * this.parameters.rotationSpeed;
         this.wireframe.rotation.y += y * this.parameters.rotationSpeed;
@@ -178,17 +196,17 @@ class RenderService {
         this.mesh.rotation.y += y * this.parameters.rotationSpeed;
     }
 
-    // normalizes frequency to a range of 0 to 1
+    // normalize frequency to a range of 0 to 1
     normalizeFrequency(fr, max) {
         return Math.min(fr / max, 1);
     }
 
-    // calculates vector magnitude for a vertex array
+    // calculate vector magnitude for a vertex array
     getMagnitude(vertex) {
         return Math.sqrt(vertex.reduce((a, b) => a + b * b, 0));
     }
 
-    // sums array of numbers
+    // sum array of numbers
     sum(array) {
         return array.reduce((a, b) => a + b);
     }

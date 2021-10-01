@@ -2,25 +2,30 @@ const renderService = new RenderService();
 
 function onSongUpload(event) {
     if (event?.files && event.files[0]) {
-        renderService.updateSong(URL.createObjectURL(event.files[0]));
+        const songSelect = document.getElementsByTagName('select')[0];
+        songSelect.value = 'null';
+        songSelect.dispatchEvent(new Event('change'));
+        renderService.changeSong(URL.createObjectURL(event.files[0]));
+        document.getElementById('songInput').value = "";
     }
 }
 
 // Control Panel
 const pane = new Tweakpane.Pane({ container: document.getElementById('tweakpane'), title: 'Parameters' });
-const changeHandler = (name) => change => renderService.updateParameter(name, change.value);
+const changeHandler = (name) => change => renderService.changeParameter(name, change.value);
 
 // Song Tab
 const songFolder = pane.addFolder({ title: 'Song' });
 const SONG = {
     Preset: renderService.parameters.songPath,
     preset_options: {
+        'None': 'null',
         'SICKO MODE - Travis Scott': '/songs/SICKO MODE - Travis Scott.mp3',
         'They Said - Tre Wright': '/songs/They Said - Tre Wright.mp3'
     }
 };
 
-songFolder.addInput(SONG, 'Preset', { options: SONG.preset_options }).on('change', change => renderService.updateSong(change.value));
+const presetInput = songFolder.addInput(SONG, 'Preset', { options: SONG.preset_options }).on('change', change => renderService.changeSong(change.value));
 songFolder.addButton({ title: 'Upload', label: 'Custom' }).on('click', () => document.getElementById('songInput').click());
 
 // Customization Tab
