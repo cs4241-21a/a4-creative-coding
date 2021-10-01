@@ -1,0 +1,113 @@
+h1 {
+  font-family: "Azeret Mono", monospace;
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: "Azeret Mono", monospace;
+}
+
+body {
+  font-family: "Azeret Mono", monospace;
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F86215940-4642-4ac3-952e-0c81a0f637a0.jpg?fit=scale-down&source=next&width=700");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+p {
+  font-family: "Azeret Mono", monospace;
+}
+
+#popup {
+  font-family: "Azeret Mono", monospace;
+  display: block;
+}
+
+#welcomeScreen {
+  font-family: "Azeret Mono", monospace;
+  display: block;
+}
+
+#doodle {
+  font-family: "Azeret Mono", monospace;
+}
+
+#toolbar {
+  font-family: "Azeret Mono", monospace;
+  display: block;
+}
+
+#colors {
+  font-family: "Azeret Mono", monospace;
+  display: block;
+}
+
+#red {
+}
+
+#blue {
+}
+
+#yellow {
+}
+
+#green {
+}
+
+#black {
+}
+
+#shapes {
+  font-family: "Azeret Mono", monospace;
+}
+
+#square {
+}
+
+#circle {
+}
+
+#triangle {
+}
+
+#line {
+}
+
+#canvasDiv {
+  display: block;
+}
+
+#canvas {
+  background-color: white;
+  border-style: solid;
+  border: 2px solid black;
+  display: block;
+}
+
+.color {
+  font-family: "Azeret Mono", monospace;
+}
+
+.shape {
+  font-family: "Azeret Mono", monospace;
+}
+
+.color:hover {
+  background-color: yellow;
+}
+
+.shape:hover {
+  background-color: yellow;
+}

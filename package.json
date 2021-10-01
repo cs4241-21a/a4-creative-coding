@@ -1,0 +1,9 @@
+{
+  "name": "a4-bplima",
+  "version": "0.1.0",
+  "description": "WPI CS4241 Assignment 4",
+  "author": "Bryan Lima",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

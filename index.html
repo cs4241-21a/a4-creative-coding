@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="javascript/canvas.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <title>DoodleBoard</title>
+
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="rainbow-text">DoodleBoard</h1>
+
+    <div id="popup">
+      <div id="welcomeScreen">
+        <h2>Instructions</h2>
+        <p>
+          Once you hit the Doodle button, feel free to draw whatever you desire!
+        </p>
+        <button id="doodle">Doodle!</button>
+      </div>
+    </div>
+
+    <div id="toolbar">
+      <label id="colors">Colors</label>
+      <div></div>
+      <input type="button" id="red" class="color" value="Red" />
+      <div></div>
+      <input type="button" id="blue" class="color" value="Blue" />
+      <div></div>
+      <input type="button" id="yellow" class="color" value="Yellow" />
+      <div></div>
+      <input type="button" id="green" class="color" value="Green" />
+      <div></div>
+      <input type="button" id="black" class="color" value="Black" />
+      <div></div>
+
+      <label id="shapes">Shapes</label>
+      <div></div>
+      <input type="button" id="square" class="shape" value="Square" />
+      <div></div>
+      <input type="button" id="circle" class="shape" value="Circle" />
+      <div></div>
+      <input type="button" id="triangle" class="shape" value="Triangle" />
+      <div></div>
+      <input type="button" id="line" class="shape" value="Line" />
+      <div></div>
+    </div>
+    <div id="canvasDiv">
+      <canvas id="canvas" width="600" height="600"></canvas>
+    </div>
+  </body>
+</html>
