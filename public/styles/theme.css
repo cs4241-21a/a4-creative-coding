@@ -73,7 +73,6 @@ button {
     color: var(--color-primary);
     background: #1ea11e;
     padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
     float: right;
     margin-top: 2rem;
 }
