@@ -6,9 +6,10 @@
     --background-tertiary: #3A3A3A;
     --background-quantenary: #484848;
 
+    --font-family-primary: 'Roboto Mono', sans-serif;
     --font-size-sm: 0.875rem;
     --font-size-md: 1rem;
-    --font-size-lg: 1.125rem;
+    --font-size-lg: 1.0625rem;
     --font-size-xl: 1.25rem;
 
     --tp-base-background-color: var(--background-secondary);
@@ -34,14 +35,17 @@
     --tp-monitor-foreground-color: var(--color-primary);
     --tp-blade-unit-size: 32px;
     --tp-base-border-radius: 0;
-    --tp-font-family: 'Roboto Mono', sans-serif;
+    --tp-font-family: var(--font-family-primary);
     --tp-container-horizontal-padding: 16px;
     --tp-container-vertical-padding: 8px;
 
     --shadow-intensity: 0.2;
     --shadow-offset: 4px;
     --shadow-blur: 16px;
-    --box-shadow-right: 0 var(--shadow-offset) var(--shadow-blur) rgb(0, 0, 0, var(--shadow-intensity));
+    --box-shadow-down: 0 var(--shadow-offset) var(--shadow-blur) rgb(0, 0, 0, var(--shadow-intensity));
+
+    --transition-duration: 250ms;
+    --transition-timing-function: ease-in-out;
 
     --border-radius: 8px;
 }
@@ -50,8 +54,30 @@
     margin: 0;
     background-color: var(--background-primary);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-primary);
 }
 
-:root * {
-    font-size: var(--font-size-sm);
+strong, i {
+    font-size: inherit;
+}
+
+button {
+    font-family: var(--font-family-primary);
+    outline: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    background: #1ea11e;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    float: right;
+    margin-top: 2rem;
+}
+
+button:hover, button:active {
+    background: #1c851c;
 }

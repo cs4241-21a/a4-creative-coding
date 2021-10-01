@@ -19,6 +19,14 @@
     <script src="scripts/RenderService.js"></script>
 </head>
 <body>
+    <div id="cover"></div>
+    <div id="popup">
+        <h1>Song Visualizer</h1>
+        This app utilizes <strong>three.js</strong> and the <strong>WebAudio API</strong> to visualize songs onto a sphere through frequency analysis.<br><br>
+        To start visualizing, select a preset song from the <i>Parameters</i> panel or upload your own!<br><br>
+        Play around with the customization options to make you own unique visualization!
+        <button id="popupButton" onclick="closePopup()">Close</button>
+    </div>
     <div id="tweakpane"></div>
     <input id="songInput" type="file" accept="audio/*" onchange="onSongUpload(this)" />
     <script src="scripts/build.js"></script>

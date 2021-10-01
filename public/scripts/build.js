@@ -1,5 +1,14 @@
 const renderService = new RenderService();
 
+coverElement = document.getElementById('cover');
+coverElement.onclick = closePopup;
+popupElement = document.getElementById('popup');
+
+function closePopup() {
+    coverElement.classList.add('closed');
+    popupElement.classList.add('closed');
+}
+
 function onSongUpload(event) {
     if (event?.files && event.files[0]) {
         const songSelect = document.getElementsByTagName('select')[0];
