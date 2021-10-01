@@ -21,7 +21,8 @@ class RenderService {
         sphereDetail: 10,
         rotationSpeed: 5,
         trebleAmplitude: 1,
-        bassAmplitude: 1
+        bassAmplitude: 1,
+        volume: 20
     };
 
     simplexNoise = new SimplexNoise();
@@ -69,9 +70,16 @@ class RenderService {
         this.songLoaded = true;
     }
 
+    changeVolume(volume) {
+        this.parameters.volume = volume;
+        if (this.audio) {
+            this.audio.volume = volume / 100;
+        }
+    }
+
     createAudioContext() {
         this.audio = new Audio();
-        this.audio.volume = 0.2;
+        this.audio.volume = this.parameters.volume / 100;
         this.audioContext = new AudioContext();
         const audioSource = this.audioContext.createMediaElementSource(this.audio);
 
@@ -119,8 +127,8 @@ class RenderService {
         this.maxHighFrequency = highFrequencyAverage > this.maxHighFrequency ?  highFrequencyAverage : this.maxHighFrequency;
 
         // normalize average frequencies
-        const normalizedLFA = this.normalizeFrequency(lowFrequencyAverage, this.maxLowFrequency);
-        const normalizeHFA = this.normalizeFrequency(highFrequencyAverage,  this.maxHighFrequency);
+        const normalizedLFA = this.normalizeFrequency(lowFrequencyAverage, this.maxLowFrequency * 2);
+        const normalizeHFA = this.normalizeFrequency(highFrequencyAverage,  this.maxHighFrequency * 2);
 
         // render sphere
         this.rotateSphere(0.00004, 0.0002)
