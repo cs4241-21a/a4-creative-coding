@@ -1,6 +1,6 @@
 ## Audio Visualizer
 
-https://a4-ke-zhao.glitch.me
+Link: https://a4-ke-zhao.glitch.me
 
 This app can visualize the frequencies of the music.
 I follow the instruction and recommandation in the project instruction.
