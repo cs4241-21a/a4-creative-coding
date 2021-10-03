@@ -22,13 +22,15 @@ const visualize_sound = function() {
   const ctx = canvas.getContext( '2d' )
 
   // audio init
-  // const audioCtx = howls[0].ctx
-  const audioCtx = new AudioContext()
+  // console.log('howler context', Howler.ctx)
+  const audioCtx = Howler.ctx
+  console.log('audio context', audioCtx)
   const audioElement = document.createElement( 'audio' )
   document.body.appendChild( audioElement )
 
   // audio graph setup
   const analyser = audioCtx.createAnalyser()
+  // const howlAnalyser = howlaudioCtx.createAnalyser()
   analyser.fftSize = 1024 // 512 bins
   const player = audioCtx.createMediaElementSource( audioElement )
   player.connect( audioCtx.destination )
@@ -37,7 +39,7 @@ const visualize_sound = function() {
   // make sure, for this example, that your audiofle is accesssible
   // from your server's root directory... here we assume the file is
   // in the ssame location as our index.html file
-  audioElement.src = '../sounds/rain.wav'
+  // audioElement.src = '../sounds/rain.wav'
   audioElement.play()
 
   const results = new Uint8Array( analyser.frequencyBinCount )
@@ -127,6 +129,9 @@ const submit = function( e ) {
       playNewSound(json)
       setBG(json.environment)
       updateHistory()
+      console.log('howl', howls[0])
+      console.log('howl context after submit', howls[0].ctx)
+
       visualize_sound(json)
         // howls[1].volume(0.5)
     })
@@ -138,8 +143,10 @@ window.onload = function() {
   const vis_button = document.getElementById('vis')
 
   play_button.onclick = submit
+  // if (howls[0] != undefined)
   vis_button.onclick = visualize_sound
   updateHistory()
+  
   
 
   // const play_history_button = document.getElementById('play_history')
