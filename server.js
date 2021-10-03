@@ -13,7 +13,8 @@ app.use( cors() )
 
 // make all the files available
 // https://expressjs.com/en/starter/static-files.html
-app.use( express.static('./') )
+app.use( express.static('public') )
+app.use( express.static('assets') )
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
