@@ -1,53 +1,14 @@
-// const express = require('express'),
-//       http = require('http'),
-//       fs   = require('fs'),
-//       port = 3000,
-//       app = express()
+const express = require("express");
 
-// const server = http.createServer( function( request,response ) {
-//   switch( request.url ) {
-//     case '/':
-//       sendFile( response, 'index.html' )
-//       break
-//     case '/index.html':
-//       sendFile( response, 'index.html' )
-//       break
-//     default:
-//       response.end( '404 Error: File Not Found' )
-//   }
-// })
+const app = express();
+app.use(express.urlencoded({ extended: true }));
 
-// server.listen( process.env.PORT || port )
+app.use(express.static("public"));
 
-// const sendFile = function( response, filename ) {
-//    fs.readFile( filename, function( err, content ) {
-//      file = content
-//      response.end( content, 'utf-8' )
-//    })
-// }
-
-const http = require("http"),
-  fs = require("fs"),
-  port = 3000;
-
-const server = http.createServer(function(request, response) {
-  switch (request.url) {
-    case "/":
-      sendFile(response, "index.html");
-      break;
-    case "/index.html":
-      sendFile(response, "index.html");
-      break;
-    default:
-      response.end("404 Error: File Not Found");
-  }
+app.get("/", (request, response) => {
+  response.sendFile(__dirname + "/index.html");
 });
 
-server.listen(process.env.PORT || port);
-
-const sendFile = function(response, filename) {
-  fs.readFile(filename, function(err, content) {
-    //file = content;
-    response.end(content, "utf-8");
-  });
-};
+const server = app.listen(3000, () => {
+  console.log("Server is listening on port", server.address().port);
+});
