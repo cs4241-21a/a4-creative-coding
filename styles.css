@@ -1,0 +1,35 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  html, body {
+    padding-top: 1em;
+    padding-left: 7em;
+    padding-right: 7em;
+    padding-bottom: 1em;
+    height:90%;
+  }
+  
+  #gameCanvas {
+    height:100%;
+    width:100%
+  }
+  
+  #gameContainer {
+    width:95%;
+    height:95%
+  }
+  
+  #header {
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  #start {
+    margin: .3em
+  }
+  
+  #score {
+    margin: .3em
+  }
