@@ -1,0 +1,4570 @@
+[
+  {
+    "mass": "256.8",
+    "name": "Northwest Africa 5815",
+    "year": "5815"
+  },
+  {
+    "mass": "472",
+    "name": "Nogata",
+    "year": "0861"
+  },
+
+  {
+    "mass": "107000",
+    "name": "Elbogen",
+    "year": "1400"
+  },
+  {
+    "mass": "103.3",
+    "name": "Rivolta de Bassi",
+    "year": "1491"
+  },
+  {
+    "mass": "127000",
+    "name": "Ensisheim",
+    "year": "1492"
+  },
+
+  {
+    "mass": "15000",
+    "name": "Castrovillari",
+    "year": "1583"
+  },
+  {
+    "mass": "1967",
+    "name": "Jalandhar",
+    "year": "1621"
+  },
+  {
+    "mass": "10400",
+    "name": "Stretchleigh",
+    "year": "1623"
+  },
+  {
+    "mass": "29000",
+    "name": "Hatford",
+    "year": "1628"
+  },
+  {
+    "mass": "1040",
+    "name": "Minamino",
+    "year": "1632"
+  },
+
+  {
+    "mass": "17000",
+    "name": "Mount Vaisi",
+    "year": "1637"
+  },
+
+  {
+    "mass": "4500",
+    "name": "Ortenau",
+    "year": "1671"
+  },
+  {
+    "mass": "695",
+    "name": "Sasagase",
+    "year": "1688"
+  },
+  {
+    "mass": null,
+    "name": "Barcelona (stone)",
+    "year": "1704"
+  },
+  {
+    "mass": "7000",
+    "name": "Schellin",
+    "year": "1715"
+  },
+  {
+    "mass": "39",
+    "name": "Ploschkovitz",
+    "year": "1723"
+  },
+  {
+    "mass": "24700",
+    "name": "Rasgrad",
+    "year": "1740"
+  },
+  {
+    "mass": "14360",
+    "name": "Ogi",
+    "year": "1741"
+  },
+  {
+    "mass": "49000",
+    "name": "Hraschina",
+    "year": "1751"
+  },
+  {
+    "mass": "14000",
+    "name": "Luponnas",
+    "year": "1753"
+  },
+  {
+    "mass": "2000",
+    "name": "Albareto",
+    "year": "1766"
+  },
+
+  {
+    "mass": "19000",
+    "name": "Mauerkirchen",
+    "year": "1768"
+  },
+
+  {
+    "mass": "4000",
+    "name": "Sena",
+    "year": "1773"
+  },
+
+  {
+    "mass": "2900",
+    "name": "Rodach",
+    "year": "1775"
+  },
+
+  {
+    "mass": "3000",
+    "name": "Eichstädt",
+    "year": "1785"
+  },
+  {
+    "mass": "1500",
+    "name": "Kharkov",
+    "year": "1787"
+  },
+  {
+    "mass": "6400",
+    "name": "Barbotan",
+    "year": "1790"
+  },
+
+  {
+    "mass": "3700",
+    "name": "Siena",
+    "year": "1794"
+  },
+  {
+    "mass": "25.5",
+    "name": "Mulletiwu",
+    "year": "1795"
+  },
+  {
+    "mass": "4500",
+    "name": "Portugal",
+    "year": "1796"
+  },
+
+  {
+    "mass": "9000",
+    "name": "Salles",
+    "year": "1798"
+  },
+  {
+    "mass": "220",
+    "name": "Mauritius",
+    "year": "1801"
+  },
+
+  {
+    "mass": "37000",
+    "name": "L'Aigle",
+    "year": "1803"
+  },
+
+  {
+    "mass": "4500",
+    "name": "High Possil",
+    "year": "1804"
+  },
+
+  {
+    "mass": "3891",
+    "name": "Doroninsk",
+    "year": "1805"
+  },
+  {
+    "mass": "6000",
+    "name": "Alais",
+    "year": "1806"
+  },
+  {
+    "mass": "65500",
+    "name": "Timochin",
+    "year": "1807"
+  },
+
+  {
+    "mass": "52000",
+    "name": "Stannern",
+    "year": "1808"
+  },
+  {
+    "mass": "195",
+    "name": "Kikino",
+    "year": "1809"
+  },
+
+  {
+    "mass": "27000",
+    "name": "Charsonville",
+    "year": "1810"
+  },
+
+  {
+    "mass": "6000",
+    "name": "Kuleschovka",
+    "year": "1811"
+  },
+
+  {
+    "mass": "31500",
+    "name": "Chantonnay",
+    "year": "1812"
+  },
+
+  {
+    "mass": "50000",
+    "name": "Limerick",
+    "year": "1813"
+  },
+
+  {
+    "mass": "30000",
+    "name": "Agen",
+    "year": "1814"
+  },
+
+  {
+    "mass": "13200",
+    "name": "Durala",
+    "year": "1815"
+  },
+  {
+    "mass": "0.2",
+    "name": "Hachi-oji",
+    "year": "1817"
+  },
+  {
+    "mass": "8500",
+    "name": "Seres",
+    "year": "1818"
+  },
+
+  {
+    "mass": "5000",
+    "name": "Jonzac",
+    "year": "1819"
+  },
+
+  {
+    "mass": "5213",
+    "name": "Lixna",
+    "year": "1820"
+  },
+  {
+    "mass": "91000",
+    "name": "Juvinas",
+    "year": "1821"
+  },
+
+
+  {
+    "mass": "4000",
+    "name": "Futtehpur",
+    "year": "1822"
+  },
+
+
+  {
+    "mass": "2300",
+    "name": "Nobleborough",
+    "year": "1823"
+  },
+  {
+    "mass": "1000",
+    "name": "Renazzo",
+    "year": "1824"
+  },
+
+  {
+    "mass": "7500",
+    "name": "Nanjemoy",
+    "year": "1825"
+  },
+
+  {
+    "mass": "40000",
+    "name": "Pavlograd",
+    "year": "1826"
+  },
+
+  {
+    "mass": "5000",
+    "name": "Drake Creek",
+    "year": "1827"
+  },
+
+  {
+    "mass": "1800",
+    "name": "Richmond",
+    "year": "1828"
+  },
+
+  {
+    "mass": "16300",
+    "name": "Forsyth",
+    "year": "1829"
+  },
+
+  {
+    "mass": "1060",
+    "name": "Launton",
+    "year": "1830"
+  },
+
+  {
+    "mass": "470",
+    "name": "Blansko",
+    "year": "1833"
+  },
+  {
+    "mass": "12000",
+    "name": "Charwallas",
+    "year": "1834"
+  },
+
+
+  {
+    "mass": "4300",
+    "name": "Charlotte",
+    "year": "1835"
+  },
+
+  {
+    "mass": "1500",
+    "name": "Macau",
+    "year": "1836"
+  },
+
+
+  {
+    "mass": "10500",
+    "name": "Gross-Divina",
+    "year": "1837"
+  },
+
+  {
+    "mass": "8800",
+    "name": "Chandakapur",
+    "year": "1838"
+  },
+
+
+
+  {
+    "mass": "491",
+    "name": "Little Piney",
+    "year": "1839"
+  },
+  {
+    "mass": "6460",
+    "name": "Cereseto",
+    "year": "1840"
+  },
+
+  {
+    "mass": "30000",
+    "name": "Château-Renard",
+    "year": "1841"
+  },
+
+
+
+  {
+    "mass": "3200",
+    "name": "Barea",
+    "year": "1842"
+  },
+
+
+  {
+    "mass": "6000",
+    "name": "Bishopville",
+    "year": "1843"
+  },
+
+
+
+  {
+    "mass": "1200",
+    "name": "Cosina",
+    "year": "1844"
+  },
+
+  {
+    "mass": "3000",
+    "name": "Le Pressoir",
+    "year": "1845"
+  },
+
+  {
+    "mass": "2300",
+    "name": "Cape Girardeau",
+    "year": "1846"
+  },
+
+  {
+    "mass": "39000",
+    "name": "Braunau",
+    "year": "1847"
+  },
+
+  {
+    "mass": "3000",
+    "name": "Marmande",
+    "year": "1848"
+  },
+
+  {
+    "mass": "8600",
+    "name": "Monroe",
+    "year": "1849"
+  },
+  {
+    "mass": "135000",
+    "name": "Kesen",
+    "year": "1850"
+  },
+
+
+  {
+    "mass": "5000",
+    "name": "Nulles",
+    "year": "1851"
+  },
+
+
+  {
+    "mass": "22700",
+    "name": "Mezö-Madaras",
+    "year": "1852"
+  },
+
+  {
+    "mass": "18000",
+    "name": "Girgenti",
+    "year": "1853"
+  },
+
+  {
+    "mass": "1862",
+    "name": "Linum",
+    "year": "1854"
+  },
+
+  {
+    "mass": "7250",
+    "name": "Bremervörde",
+    "year": "1855"
+  },
+
+  {
+    "mass": "205",
+    "name": "Oviedo",
+    "year": "1856"
+  },
+
+  {
+    "mass": "77600",
+    "name": "Parnallee",
+    "year": "1857"
+  },
+
+
+
+  {
+    "mass": "144000",
+    "name": "Molina",
+    "year": "1858"
+  },
+  {
+    "mass": "13.9",
+    "name": "Bethlehem",
+    "year": "1859"
+  },
+  {
+    "mass": "2000",
+    "name": "Beuste",
+    "year": "1859"
+  },
+  {
+    "mass": "680",
+    "name": "Harrison County",
+    "year": "1859"
+  },
+  {
+    "mass": "10500",
+    "name": "Pampanga",
+    "year": "1859"
+  },
+  {
+    "mass": "908",
+    "name": "Alessandria",
+    "year": "1860"
+  },
+  {
+    "mass": "32000",
+    "name": "Dhurmsala",
+    "year": "1860"
+  },
+  {
+    "mass": "450",
+    "name": "Kheragur",
+    "year": "1860"
+  },
+  {
+    "mass": "5",
+    "name": "Kusiali",
+    "year": "1860"
+  },
+  {
+    "mass": "230000",
+    "name": "New Concord",
+    "year": "1860"
+  },
+  {
+    "mass": "54",
+    "name": "Sologne",
+    "year": "1860"
+  },
+  {
+    "mass": "29000",
+    "name": "Butsura",
+    "year": "1861"
+  },
+  {
+    "mass": "945",
+    "name": "Cañellas",
+    "year": "1861"
+  },
+  {
+    "mass": "3500",
+    "name": "Grosnaja",
+    "year": "1861"
+  },
+  {
+    "mass": "22",
+    "name": "Meerut",
+    "year": "1861"
+  },
+  {
+    "mass": "10500",
+    "name": "Menow",
+    "year": "1862"
+  },
+  {
+    "mass": "180",
+    "name": "Sevilla",
+    "year": "1862"
+  },
+  {
+    "mass": "5000",
+    "name": "Buschhof",
+    "year": "1863"
+  },
+  {
+    "mass": "1700",
+    "name": "Manbhoom",
+    "year": "1863"
+  },
+  {
+    "mass": "23250",
+    "name": "Pillistfer",
+    "year": "1863"
+  },
+  {
+    "mass": "560",
+    "name": "Pulsora",
+    "year": "1863"
+  },
+  {
+    "mass": "3200",
+    "name": "Shytal",
+    "year": "1863"
+  },
+  {
+    "mass": "1600",
+    "name": "Dolgovoli",
+    "year": "1864"
+  },
+  {
+    "mass": "10250",
+    "name": "Nerft",
+    "year": "1864"
+  },
+  {
+    "mass": "14000",
+    "name": "Orgueil",
+    "year": "1864"
+  },
+  {
+    "mass": "50000",
+    "name": "Aumale",
+    "year": "1865"
+  },
+  {
+    "mass": "2270",
+    "name": "Dundrum",
+    "year": "1865"
+  },
+  {
+    "mass": "1600",
+    "name": "Gopalpur",
+    "year": "1865"
+  },
+  {
+    "mass": "4400",
+    "name": "Muddoor",
+    "year": "1865"
+  },
+  {
+    "mass": "5000",
+    "name": "Shergotty",
+    "year": "1865"
+  },
+  {
+    "mass": "7235",
+    "name": "Supuhee",
+    "year": "1865"
+  },
+  {
+    "mass": "34000",
+    "name": "Cangas de Onis",
+    "year": "1866"
+  },
+  {
+    "mass": "22",
+    "name": "Jamkheir",
+    "year": "1866"
+  },
+  {
+    "mass": "500000",
+    "name": "Knyahinya",
+    "year": "1866"
+  },
+  {
+    "mass": "350",
+    "name": "Pokhra",
+    "year": "1866"
+  },
+  {
+    "mass": "17100",
+    "name": "Sone",
+    "year": "1866"
+  },
+  {
+    "mass": "8300",
+    "name": "St. Mesmin",
+    "year": "1866"
+  },
+  {
+    "mass": "100",
+    "name": "Khetri",
+    "year": "1867"
+  },
+  {
+    "mass": "6510",
+    "name": "Otomi",
+    "year": "1867"
+  },
+  {
+    "mass": "9000",
+    "name": "Tadjera",
+    "year": "1867"
+  },
+  {
+    "mass": "1064",
+    "name": "Daniel's Kuil",
+    "year": "1868"
+  },
+  {
+    "mass": "2000",
+    "name": "Danville",
+    "year": "1868"
+  },
+  {
+    "mass": "650",
+    "name": "Frankfort (stone)",
+    "year": "1868"
+  },
+  {
+    "mass": "1000",
+    "name": "Lodran",
+    "year": "1868"
+  },
+  {
+    "mass": "1500",
+    "name": "Moti-ka-nagla",
+    "year": "1868"
+  },
+  {
+    "mass": "9150",
+    "name": "Motta di Conti",
+    "year": "1868"
+  },
+  {
+    "mass": "6000",
+    "name": "Ornans",
+    "year": "1868"
+  },
+  {
+    "mass": "96",
+    "name": "Pnompehn",
+    "year": "1868"
+  },
+  {
+    "mass": "250000",
+    "name": "Pultusk",
+    "year": "1868"
+  },
+  {
+    "mass": "4000",
+    "name": "Sauguis",
+    "year": "1868"
+  },
+  {
+    "mass": "1708",
+    "name": "Slavetic",
+    "year": "1868"
+  },
+  {
+    "mass": "1500",
+    "name": "Angra dos Reis (stone)",
+    "year": "1869"
+  },
+  {
+    "mass": "20000",
+    "name": "Hessle",
+    "year": "1869"
+  },
+  {
+    "mass": "80000",
+    "name": "Kernouve",
+    "year": "1869"
+  },
+  {
+    "mass": "16500",
+    "name": "Krähenberg",
+    "year": "1869"
+  },
+  {
+    "mass": "340",
+    "name": "Lumpkin",
+    "year": "1869"
+  },
+  {
+    "mass": "20000",
+    "name": "Tjabe",
+    "year": "1869"
+  },
+  {
+    "mass": "25000",
+    "name": "Cabezo de Mayo",
+    "year": "1870"
+  },
+  {
+    "mass": "2000",
+    "name": "Ibbenbüren",
+    "year": "1870"
+  },
+  {
+    "mass": "4500",
+    "name": "Nedagolla",
+    "year": "1870"
+  },
+  {
+    "mass": "11500",
+    "name": "Bandong",
+    "year": "1871"
+  },
+  {
+    "mass": "3833",
+    "name": "Laborel",
+    "year": "1871"
+  },
+  {
+    "mass": "400",
+    "name": "Roda",
+    "year": "1871"
+  },
+  {
+    "mass": "5400",
+    "name": "Searsmont",
+    "year": "1871"
+  },
+  {
+    "mass": "300",
+    "name": "Dyalpur",
+    "year": "1872"
+  },
+  {
+    "mass": "51700",
+    "name": "Lancé",
+    "year": "1872"
+  },
+  {
+    "mass": "3400",
+    "name": "Orvinio",
+    "year": "1872"
+  },
+  {
+    "mass": "28500",
+    "name": "Tennasilm",
+    "year": "1872"
+  },
+  {
+    "mass": "3200",
+    "name": "Aleppo",
+    "year": "1873"
+  },
+  {
+    "mass": "5900",
+    "name": "Jhung",
+    "year": "1873"
+  },
+  {
+    "mass": "13600",
+    "name": "Khairpur",
+    "year": "1873"
+  },
+  {
+    "mass": "400",
+    "name": "Santa Barbara",
+    "year": "1873"
+  },
+  {
+    "mass": "7300",
+    "name": "Castalia",
+    "year": "1874"
+  },
+  {
+    "mass": "5000",
+    "name": "Kerilis",
+    "year": "1874"
+  },
+  {
+    "mass": "101000",
+    "name": "Sevrukovo",
+    "year": "1874"
+  },
+  {
+    "mass": "380",
+    "name": "Feid Chair",
+    "year": "1875"
+  },
+  {
+    "mass": "230000",
+    "name": "Homestead",
+    "year": "1875"
+  },
+  {
+    "mass": "1300",
+    "name": "Mornans",
+    "year": "1875"
+  },
+  {
+    "mass": "20",
+    "name": "Nagaria",
+    "year": "1875"
+  },
+  {
+    "mass": "1600",
+    "name": "Sitathali",
+    "year": "1875"
+  },
+  {
+    "mass": "680",
+    "name": "Judesegeri",
+    "year": "1876"
+  },
+  {
+    "mass": "340",
+    "name": "Rochester",
+    "year": "1876"
+  },
+  {
+    "mass": "3500",
+    "name": "Rowton",
+    "year": "1876"
+  },
+  {
+    "mass": "34000",
+    "name": "Ställdalen",
+    "year": "1876"
+  },
+  {
+    "mass": "18",
+    "name": "Bhagur",
+    "year": "1877"
+  },
+  {
+    "mass": "3650",
+    "name": "Cronstad",
+    "year": "1877"
+  },
+  {
+    "mass": "6000",
+    "name": "Cynthiana",
+    "year": "1877"
+  },
+  {
+    "mass": "112",
+    "name": "Hungen",
+    "year": "1877"
+  },
+  {
+    "mass": "30",
+    "name": "Jodzie",
+    "year": "1877"
+  },
+  {
+    "mass": "80000",
+    "name": "Soko-Banja",
+    "year": "1877"
+  },
+  {
+    "mass": "5650",
+    "name": "Dandapur",
+    "year": "1878"
+  },
+  {
+    "mass": "1000",
+    "name": "Haraiya",
+    "year": "1878"
+  },
+  {
+    "mass": "399",
+    "name": "La Charca",
+    "year": "1878"
+  },
+  {
+    "mass": "4000",
+    "name": "Mern",
+    "year": "1878"
+  },
+  {
+    "mass": "9000",
+    "name": "Rakovka",
+    "year": "1878"
+  },
+  {
+    "mass": "28000",
+    "name": "Tieschitz",
+    "year": "1878"
+  },
+  {
+    "mass": "320000",
+    "name": "Estherville",
+    "year": "1879"
+  },
+  {
+    "mass": "1750",
+    "name": "Gnadenfrei",
+    "year": "1879"
+  },
+  {
+    "mass": "2024",
+    "name": "Itapicuru-Mirim",
+    "year": "1879"
+  },
+  {
+    "mass": "4500",
+    "name": "Kalumbi",
+    "year": "1879"
+  },
+  {
+    "mass": "2800",
+    "name": "La Bécasse",
+    "year": "1879"
+  },
+  {
+    "mass": "4000",
+    "name": "Nogoya",
+    "year": "1879"
+  },
+  {
+    "mass": "160000",
+    "name": "Tenham",
+    "year": "1879"
+  },
+  {
+    "mass": "2700",
+    "name": "Andhara",
+    "year": "1880"
+  },
+  {
+    "mass": "8000",
+    "name": "Grossliebenthal",
+    "year": "1881"
+  },
+  {
+    "mass": "1600",
+    "name": "Middlesbrough",
+    "year": "1881"
+  },
+  {
+    "mass": "3400",
+    "name": "Pacula",
+    "year": "1881"
+  },
+  {
+    "mass": "37",
+    "name": "Piquetberg",
+    "year": "1881"
+  },
+  {
+    "mass": "11620",
+    "name": "Fukutomi",
+    "year": "1882"
+  },
+  {
+    "mass": "300000",
+    "name": "Mocs",
+    "year": "1882"
+  },
+  {
+    "mass": "2000",
+    "name": "Pavlovka",
+    "year": "1882"
+  },
+  {
+    "mass": "842",
+    "name": "Pirgunje",
+    "year": "1882"
+  },
+  {
+    "mass": "228000",
+    "name": "Alfianello",
+    "year": "1883"
+  },
+  {
+    "mass": "1393",
+    "name": "Ngawi",
+    "year": "1883"
+  },
+  {
+    "mass": "360",
+    "name": "St. Caprais-de-Quinsac",
+    "year": "1883"
+  },
+  {
+    "mass": "166000",
+    "name": "Djati-Pengilon",
+    "year": "1884"
+  },
+  {
+    "mass": "1161",
+    "name": "Pirthalla",
+    "year": "1884"
+  },
+  {
+    "mass": "1100",
+    "name": "Chandpur",
+    "year": "1885"
+  },
+  {
+    "mass": "4000",
+    "name": "Mazapil",
+    "year": "1885"
+  },
+  {
+    "mass": "2000",
+    "name": "Assisi",
+    "year": "1886"
+  },
+  {
+    "mass": "17",
+    "name": "Barntrup",
+    "year": "1886"
+  },
+  {
+    "mass": "762",
+    "name": "Bradford Woods",
+    "year": "1886"
+  },
+  {
+    "mass": "48500",
+    "name": "Cabin Creek",
+    "year": "1886"
+  },
+  {
+    "mass": "45000",
+    "name": "Kyushu",
+    "year": "1886"
+  },
+  {
+    "mass": "4500",
+    "name": "Nammianthal",
+    "year": "1886"
+  },
+  {
+    "mass": "1900",
+    "name": "Novo-Urei",
+    "year": "1886"
+  },
+  {
+    "mass": "1900",
+    "name": "Bielokrynitschie",
+    "year": "1887"
+  },
+  {
+    "mass": "340",
+    "name": "De Cewsville",
+    "year": "1887"
+  },
+  {
+    "mass": "372",
+    "name": "Lalitpur",
+    "year": "1887"
+  },
+  {
+    "mass": "500000",
+    "name": "Ochansk",
+    "year": "1887"
+  },
+  {
+    "mass": "500",
+    "name": "Phu Hong",
+    "year": "1887"
+  },
+  {
+    "mass": "20000",
+    "name": "Ergheo",
+    "year": "1889"
+  },
+  {
+    "mass": "220",
+    "name": "Ferguson",
+    "year": "1889"
+  },
+  {
+    "mass": "34000",
+    "name": "Jelica",
+    "year": "1889"
+  },
+  {
+    "mass": "11000",
+    "name": "Lundsgård",
+    "year": "1889"
+  },
+  {
+    "mass": "8000",
+    "name": "Mighei",
+    "year": "1889"
+  },
+  {
+    "mass": "5000",
+    "name": "Collescipoli",
+    "year": "1890"
+  },
+  {
+    "mass": "89400",
+    "name": "Farmington",
+    "year": "1890"
+  },
+  {
+    "mass": "152000",
+    "name": "Forest City",
+    "year": "1890"
+  },
+  {
+    "mass": "1250",
+    "name": "Hassi-Jekna",
+    "year": "1890"
+  },
+  {
+    "mass": "600000",
+    "name": "Jianshi",
+    "year": "1890"
+  },
+  {
+    "mass": "350",
+    "name": "Kakangari",
+    "year": "1890"
+  },
+  {
+    "mass": "5800",
+    "name": "Misshof",
+    "year": "1890"
+  },
+  {
+    "mass": "105",
+    "name": "Nawapali",
+    "year": "1890"
+  },
+  {
+    "mass": "4000",
+    "name": "St. Germain-du-Pinel",
+    "year": "1890"
+  },
+  {
+    "mass": "1915",
+    "name": "Guêa",
+    "year": "1891"
+  },
+  {
+    "mass": "27000",
+    "name": "Indarch",
+    "year": "1891"
+  },
+  {
+    "mass": "15000",
+    "name": "Bansur",
+    "year": "1892"
+  },
+  {
+    "mass": "21000",
+    "name": "Bath",
+    "year": "1892"
+  },
+  {
+    "mass": "167",
+    "name": "Cross Roads",
+    "year": "1892"
+  },
+  {
+    "mass": "39000",
+    "name": "Guareña",
+    "year": "1892"
+  },
+  {
+    "mass": "14000",
+    "name": "Beaver Creek",
+    "year": "1893"
+  },
+  {
+    "mass": "100",
+    "name": "Bherai",
+    "year": "1893"
+  },
+  {
+    "mass": "900",
+    "name": "Pricetown",
+    "year": "1893"
+  },
+  {
+    "mass": "8600",
+    "name": "Bori",
+    "year": "1894"
+  },
+  {
+    "mass": "17600",
+    "name": "Fisher",
+    "year": "1894"
+  },
+  {
+    "mass": "25",
+    "name": "Los Martinez",
+    "year": "1894"
+  },
+  {
+    "mass": "2500",
+    "name": "Savtschenskoje",
+    "year": "1894"
+  },
+  {
+    "mass": "6400",
+    "name": "Ambapur Nagla",
+    "year": "1895"
+  },
+  {
+    "mass": "1039",
+    "name": "Bishunpur",
+    "year": "1895"
+  },
+  {
+    "mass": "6100",
+    "name": "Nagy-Borové",
+    "year": "1895"
+  },
+  {
+    "mass": "1641",
+    "name": "Rockhampton",
+    "year": "1895"
+  },
+  {
+    "mass": "94.2",
+    "name": "Atemajac",
+    "year": "1896"
+  },
+  {
+    "mass": "2000",
+    "name": "Lesves",
+    "year": "1896"
+  },
+  {
+    "mass": "400",
+    "name": "Madrid",
+    "year": "1896"
+  },
+  {
+    "mass": "840",
+    "name": "Ottawa",
+    "year": "1896"
+  },
+  {
+    "mass": "0.8",
+    "name": "Delhi",
+    "year": "1897"
+  },
+  {
+    "mass": "6400",
+    "name": "Gambat",
+    "year": "1897"
+  },
+  {
+    "mass": "750",
+    "name": "Higashi-koen",
+    "year": "1897"
+  },
+  {
+    "mass": "400",
+    "name": "Kangra Valley",
+    "year": "1897"
+  },
+  {
+    "mass": "7000",
+    "name": "Lancon",
+    "year": "1897"
+  },
+  {
+    "mass": "870",
+    "name": "Meuselbach",
+    "year": "1897"
+  },
+  {
+    "mass": "467",
+    "name": "Nio",
+    "year": "1897"
+  },
+  {
+    "mass": "3200",
+    "name": "Andover",
+    "year": "1898"
+  },
+  {
+    "mass": "340",
+    "name": "Mariaville",
+    "year": "1898"
+  },
+  {
+    "mass": "100.7",
+    "name": "Mjelleim",
+    "year": "1898"
+  },
+  {
+    "mass": "10750",
+    "name": "Quesa",
+    "year": "1898"
+  },
+  {
+    "mass": "32000",
+    "name": "Allegan",
+    "year": "1899"
+  },
+  {
+    "mass": "330000",
+    "name": "Bjurböle",
+    "year": "1899"
+  },
+  {
+    "mass": "230",
+    "name": "Donga Kohrod",
+    "year": "1899"
+  },
+  {
+    "mass": "5000",
+    "name": "Magnesia",
+    "year": "1899"
+  },
+  {
+    "mass": "165",
+    "name": "Peramiho",
+    "year": "1899"
+  },
+  {
+    "mass": "300",
+    "name": "Rancho de la Presa",
+    "year": "1899"
+  },
+  {
+    "mass": "9251",
+    "name": "Alexandrovsky",
+    "year": "1900"
+  },
+  {
+    "mass": "127",
+    "name": "Emmaville",
+    "year": "1900"
+  },
+  {
+    "mass": "3200",
+    "name": "Felix",
+    "year": "1900"
+  },
+  {
+    "mass": "240",
+    "name": "Forsbach",
+    "year": "1900"
+  },
+  {
+    "mass": "700",
+    "name": "Leonovka",
+    "year": "1900"
+  },
+  {
+    "mass": "37500",
+    "name": "N'Goureyma",
+    "year": "1900"
+  },
+  {
+    "mass": "3750",
+    "name": "Ofehértó",
+    "year": "1900"
+  },
+  {
+    "mass": "121.5",
+    "name": "Ovambo",
+    "year": "1900"
+  },
+  {
+    "mass": "705",
+    "name": "Chervettaz",
+    "year": "1901"
+  },
+  {
+    "mass": "14000",
+    "name": "Hvittis",
+    "year": "1901"
+  },
+  {
+    "mass": "450",
+    "name": "Jemlapur",
+    "year": "1901"
+  },
+  {
+    "mass": "57900",
+    "name": "Phillips County (stone)",
+    "year": "1901"
+  },
+  {
+    "mass": "8400",
+    "name": "Sindhri",
+    "year": "1901"
+  },
+  {
+    "mass": "780",
+    "name": "Achiras",
+    "year": "1902"
+  },
+  {
+    "mass": "86000",
+    "name": "Bath Furnace",
+    "year": "1902"
+  },
+  {
+    "mass": "8",
+    "name": "Caratash",
+    "year": "1902"
+  },
+  {
+    "mass": "4255",
+    "name": "Crumlin",
+    "year": "1902"
+  },
+  {
+    "mass": "1293",
+    "name": "Kamsagar",
+    "year": "1902"
+  },
+  {
+    "mass": "45000",
+    "name": "Marjalahti",
+    "year": "1902"
+  },
+  {
+    "mass": "11300",
+    "name": "Mount Browne",
+    "year": "1902"
+  },
+  {
+    "mass": "3840",
+    "name": "Dokachi",
+    "year": "1903"
+  },
+  {
+    "mass": "48000",
+    "name": "Jackalsfontein",
+    "year": "1903"
+  },
+  {
+    "mass": "28.9",
+    "name": "Menziswyl",
+    "year": "1903"
+  },
+  {
+    "mass": "668",
+    "name": "Rich Mountain",
+    "year": "1903"
+  },
+  {
+    "mass": "13780",
+    "name": "St. Mark's",
+    "year": "1903"
+  },
+  {
+    "mass": "23.2",
+    "name": "Barnaul",
+    "year": "1904"
+  },
+  {
+    "mass": "5700",
+    "name": "Gumoschnik",
+    "year": "1904"
+  },
+  {
+    "mass": "4742",
+    "name": "Okano",
+    "year": "1904"
+  },
+  {
+    "mass": "18600",
+    "name": "Shelburne",
+    "year": "1904"
+  },
+  {
+    "mass": "2500",
+    "name": "Bholghati",
+    "year": "1905"
+  },
+  {
+    "mass": "22000",
+    "name": "Karkh",
+    "year": "1905"
+  },
+  {
+    "mass": "550",
+    "name": "Minnichhof",
+    "year": "1905"
+  },
+  {
+    "mass": "35000",
+    "name": "Modoc (1905)",
+    "year": "1905"
+  },
+  {
+    "mass": "600",
+    "name": "Tomakovka",
+    "year": "1905"
+  },
+  {
+    "mass": "2381",
+    "name": "Blackwell",
+    "year": "1906"
+  },
+  {
+    "mass": "1000",
+    "name": "Diep River",
+    "year": "1906"
+  },
+  {
+    "mass": "331",
+    "name": "Kijima (1906)",
+    "year": "1906"
+  },
+  {
+    "mass": "97.7",
+    "name": "Kirbyville",
+    "year": "1906"
+  },
+  {
+    "mass": "845.2",
+    "name": "Krutikha",
+    "year": "1906"
+  },
+  {
+    "mass": "3719",
+    "name": "Kulp",
+    "year": "1906"
+  },
+  {
+    "mass": "1000",
+    "name": "Bali",
+    "year": "1907"
+  },
+  {
+    "mass": "8200",
+    "name": "Chainpur",
+    "year": "1907"
+  },
+  {
+    "mass": "438",
+    "name": "Domanitch",
+    "year": "1907"
+  },
+  {
+    "mass": "877",
+    "name": "Leighton",
+    "year": "1907"
+  },
+  {
+    "mass": "1230",
+    "name": "Avce",
+    "year": "1908"
+  },
+  {
+    "mass": "1900",
+    "name": "Kagarlyk",
+    "year": "1908"
+  },
+  {
+    "mass": "1630",
+    "name": "Kangean",
+    "year": "1908"
+  },
+  {
+    "mass": "4500",
+    "name": "Mokoia",
+    "year": "1908"
+  },
+  {
+    "mass": "1001",
+    "name": "Novy-Projekt",
+    "year": "1908"
+  },
+  {
+    "mass": "350",
+    "name": "Sete Lagoas",
+    "year": "1908"
+  },
+  {
+    "mass": "5100",
+    "name": "Blanket",
+    "year": "1909"
+  },
+  {
+    "mass": "14290",
+    "name": "Gifu",
+    "year": "1909"
+  },
+  {
+    "mass": "4500",
+    "name": "Baroti",
+    "year": "1910"
+  },
+  {
+    "mass": "690",
+    "name": "Grzempach",
+    "year": "1910"
+  },
+  {
+    "mass": "1110.5999999999999",
+    "name": "Hashima",
+    "year": "1910"
+  },
+  {
+    "mass": "6100",
+    "name": "Hedjaz",
+    "year": "1910"
+  },
+  {
+    "mass": "9700",
+    "name": "Khohar",
+    "year": "1910"
+  },
+  {
+    "mass": "212.5",
+    "name": "Lakangaon",
+    "year": "1910"
+  },
+  {
+    "mass": "8510",
+    "name": "Mirzapur",
+    "year": "1910"
+  },
+  {
+    "mass": "515",
+    "name": "Paitan",
+    "year": "1910"
+  },
+  {
+    "mass": null,
+    "name": "Palahatchie",
+    "year": "1910"
+  },
+  {
+    "mass": "17000",
+    "name": "St. Michel",
+    "year": "1910"
+  },
+  {
+    "mass": "16400",
+    "name": "Demina",
+    "year": "1911"
+  },
+  {
+    "mass": "107.2",
+    "name": "Erevan",
+    "year": "1911"
+  },
+  {
+    "mass": "772",
+    "name": "Kilbourn",
+    "year": "1911"
+  },
+  {
+    "mass": "10000",
+    "name": "Nakhla",
+    "year": "1911"
+  },
+  {
+    "mass": "220000",
+    "name": "Holbrook",
+    "year": "1912"
+  },
+  {
+    "mass": "460",
+    "name": "Leeuwfontein",
+    "year": "1912"
+  },
+  {
+    "mass": "17200",
+    "name": "N'Kandhla",
+    "year": "1912"
+  },
+  {
+    "mass": "5000",
+    "name": "Shupiyan",
+    "year": "1912"
+  },
+  {
+    "mass": "14",
+    "name": "Banswal",
+    "year": "1913"
+  },
+  {
+    "mass": "448",
+    "name": "Kamiomi",
+    "year": "1913"
+  },
+  {
+    "mass": "1880",
+    "name": "Moore County",
+    "year": "1913"
+  },
+  {
+    "mass": "4180",
+    "name": "Sakauchi",
+    "year": "1913"
+  },
+  {
+    "mass": "15000",
+    "name": "Appley Bridge",
+    "year": "1914"
+  },
+  {
+    "mass": "1550",
+    "name": "Kisvarsány",
+    "year": "1914"
+  },
+  {
+    "mass": "45000",
+    "name": "Kuttippuram",
+    "year": "1914"
+  },
+  {
+    "mass": "1100",
+    "name": "Nyirábrany",
+    "year": "1914"
+  },
+  {
+    "mass": "18000",
+    "name": "Palinshih",
+    "year": "1914"
+  },
+  {
+    "mass": "13000",
+    "name": "Ryechki",
+    "year": "1914"
+  },
+  {
+    "mass": "14000",
+    "name": "Saint-Sauveur",
+    "year": "1914"
+  },
+  {
+    "mass": "24750",
+    "name": "Meester-Cornelis",
+    "year": "1915"
+  },
+  {
+    "mass": "611",
+    "name": "Baxter",
+    "year": "1916"
+  },
+  {
+    "mass": "256000",
+    "name": "Boguslavka",
+    "year": "1916"
+  },
+  {
+    "mass": "2400",
+    "name": "Calivo",
+    "year": "1916"
+  },
+  {
+    "mass": "840",
+    "name": "Ekh Khera",
+    "year": "1916"
+  },
+  {
+    "mass": "100",
+    "name": "Rampurhat",
+    "year": "1916"
+  },
+  {
+    "mass": "355",
+    "name": "Renqiu",
+    "year": "1916"
+  },
+  {
+    "mass": "1455",
+    "name": "Sinai",
+    "year": "1916"
+  },
+  {
+    "mass": "1710.5",
+    "name": "Sultanpur",
+    "year": "1916"
+  },
+  {
+    "mass": "104000",
+    "name": "Colby (Wisconsin)",
+    "year": "1917"
+  },
+  {
+    "mass": "1460",
+    "name": "Cranganore",
+    "year": "1917"
+  },
+  {
+    "mass": "380",
+    "name": "Garhi Yasin",
+    "year": "1917"
+  },
+  {
+    "mass": "880",
+    "name": "Independence",
+    "year": "1917"
+  },
+  {
+    "mass": "52900",
+    "name": "Nan Yang Pao",
+    "year": "1917"
+  },
+  {
+    "mass": "290.39999999999998",
+    "name": "Ranchapur",
+    "year": "1917"
+  },
+  {
+    "mass": "240",
+    "name": "Sediköy",
+    "year": "1917"
+  },
+  {
+    "mass": "0.15",
+    "name": "Silistra",
+    "year": "1917"
+  },
+  {
+    "mass": "13400",
+    "name": "Strathmore",
+    "year": "1917"
+  },
+  {
+    "mass": "152000",
+    "name": "Glasatovo",
+    "year": "1918"
+  },
+  {
+    "mass": "1050",
+    "name": "Norfork",
+    "year": "1918"
+  },
+  {
+    "mass": "90000",
+    "name": "Richardton",
+    "year": "1918"
+  },
+  {
+    "mass": "200000",
+    "name": "Saratov",
+    "year": "1918"
+  },
+  {
+    "mass": "905",
+    "name": "Tané",
+    "year": "1918"
+  },
+  {
+    "mass": "4239",
+    "name": "Adhi Kot",
+    "year": "1919"
+  },
+  {
+    "mass": "120000",
+    "name": "Bur-Gheluai",
+    "year": "1919"
+  },
+  {
+    "mass": "212",
+    "name": "Cacak",
+    "year": "1919"
+  },
+  {
+    "mass": "17000",
+    "name": "Cumberland Falls",
+    "year": "1919"
+  },
+  {
+    "mass": "4910",
+    "name": "Raoyang",
+    "year": "1919"
+  },
+  {
+    "mass": "10000",
+    "name": "Rembang",
+    "year": "1919"
+  },
+  {
+    "mass": "24.3",
+    "name": "St. Mary's County",
+    "year": "1919"
+  },
+  {
+    "mass": "1440",
+    "name": "Aguila Blanca",
+    "year": "1920"
+  },
+  {
+    "mass": "1280",
+    "name": "Atarra",
+    "year": "1920"
+  },
+  {
+    "mass": "4460",
+    "name": "Kushiike",
+    "year": "1920"
+  },
+  {
+    "mass": "71400",
+    "name": "Merua",
+    "year": "1920"
+  },
+  {
+    "mass": "1222",
+    "name": "Simmern",
+    "year": "1920"
+  },
+  {
+    "mass": "1100",
+    "name": "Beyrout",
+    "year": "1921"
+  },
+  {
+    "mass": "315",
+    "name": "Haripura",
+    "year": "1921"
+  },
+  {
+    "mass": "3760",
+    "name": "Pitts",
+    "year": "1921"
+  },
+  {
+    "mass": "10600",
+    "name": "Rose City",
+    "year": "1921"
+  },
+  {
+    "mass": "2462",
+    "name": "Samelia",
+    "year": "1921"
+  },
+  {
+    "mass": "1265",
+    "name": "Sharps",
+    "year": "1921"
+  },
+  {
+    "mass": "3679.7",
+    "name": "Shikarpur",
+    "year": "1921"
+  },
+  {
+    "mass": "345",
+    "name": "Baldwyn",
+    "year": "1922"
+  },
+  {
+    "mass": "3640",
+    "name": "Florence",
+    "year": "1922"
+  },
+  {
+    "mass": "3500",
+    "name": "Hedeskoga",
+    "year": "1922"
+  },
+  {
+    "mass": "1810",
+    "name": "Nagai",
+    "year": "1922"
+  },
+  {
+    "mass": "12",
+    "name": "Patti",
+    "year": "1922"
+  },
+  {
+    "mass": "16500",
+    "name": "Tjerebon",
+    "year": "1922"
+  },
+  {
+    "mass": "1300",
+    "name": "Ashdon",
+    "year": "1923"
+  },
+  {
+    "mass": "560",
+    "name": "Birni N'konni",
+    "year": "1923"
+  },
+  {
+    "mass": "1415",
+    "name": "Holetta",
+    "year": "1923"
+  },
+  {
+    "mass": "149000",
+    "name": "Montferré",
+    "year": "1923"
+  },
+  {
+    "mass": "23200",
+    "name": "Nakhon Pathom",
+    "year": "1923"
+  },
+  {
+    "mass": "1800",
+    "name": "Serra de Magé",
+    "year": "1923"
+  },
+  {
+    "mass": "18000",
+    "name": "Béréba",
+    "year": "1924"
+  },
+  {
+    "mass": "82",
+    "name": "Fenghsien-Ku",
+    "year": "1924"
+  },
+  {
+    "mass": "6067",
+    "name": "Forksville",
+    "year": "1924"
+  },
+  {
+    "mass": "40300",
+    "name": "Johnstown",
+    "year": "1924"
+  },
+  {
+    "mass": "2000",
+    "name": "La Colina",
+    "year": "1924"
+  },
+  {
+    "mass": "4703",
+    "name": "Muraid",
+    "year": "1924"
+  },
+  {
+    "mass": "150000",
+    "name": "Olivenza",
+    "year": "1924"
+  },
+  {
+    "mass": "5500",
+    "name": "Santa Isabel",
+    "year": "1924"
+  },
+  {
+    "mass": "3500",
+    "name": "Success",
+    "year": "1924"
+  },
+  {
+    "mass": "24000",
+    "name": "Aïr",
+    "year": "1925"
+  },
+  {
+    "mass": "2945",
+    "name": "Chaves",
+    "year": "1925"
+  },
+  {
+    "mass": "1470",
+    "name": "Ellemeet",
+    "year": "1925"
+  },
+  {
+    "mass": "7000",
+    "name": "Lanzenkirchen",
+    "year": "1925"
+  },
+  {
+    "mass": "114",
+    "name": "Maria Linden",
+    "year": "1925"
+  },
+  {
+    "mass": "363",
+    "name": "Numakai",
+    "year": "1925"
+  },
+  {
+    "mass": "7000",
+    "name": "Queen's Mercy",
+    "year": "1925"
+  },
+  {
+    "mass": "300",
+    "name": "Renca",
+    "year": "1925"
+  },
+  {
+    "mass": "973",
+    "name": "Jajh deh Kot Lalu",
+    "year": "1926"
+  },
+  {
+    "mass": "238",
+    "name": "Komagome",
+    "year": "1926"
+  },
+  {
+    "mass": "9241",
+    "name": "Lua",
+    "year": "1926"
+  },
+  {
+    "mass": "5850",
+    "name": "Ojuelos Altos",
+    "year": "1926"
+  },
+  {
+    "mass": "135",
+    "name": "Palmyra",
+    "year": "1926"
+  },
+  {
+    "mass": "1000",
+    "name": "Mamra Springs",
+    "year": "1927"
+  },
+  {
+    "mass": "1400",
+    "name": "Oesede",
+    "year": "1927"
+  },
+  {
+    "mass": "958",
+    "name": "Sopot",
+    "year": "1927"
+  },
+  {
+    "mass": "74800",
+    "name": "Tilden",
+    "year": "1927"
+  },
+  {
+    "mass": "3050",
+    "name": "Isthilart",
+    "year": "1928"
+  },
+  {
+    "mass": "17000",
+    "name": "Naoki",
+    "year": "1928"
+  },
+  {
+    "mass": "367.5",
+    "name": "Narellan",
+    "year": "1928"
+  },
+  {
+    "mass": "246",
+    "name": "Oterøy",
+    "year": "1928"
+  },
+  {
+    "mass": "3700",
+    "name": "Bald Mountain",
+    "year": "1929"
+  },
+  {
+    "mass": "16000",
+    "name": "Beardsley",
+    "year": "1929"
+  },
+  {
+    "mass": "6109",
+    "name": "Khmelevka",
+    "year": "1929"
+  },
+  {
+    "mass": "40000",
+    "name": "Olmedilla de Alarcón",
+    "year": "1929"
+  },
+  {
+    "mass": "3858",
+    "name": "Padvarninkai",
+    "year": "1929"
+  },
+  {
+    "mass": "3332",
+    "name": "Rewari",
+    "year": "1929"
+  },
+  {
+    "mass": "6000",
+    "name": "Tauk",
+    "year": "1929"
+  },
+  {
+    "mass": "1620",
+    "name": "Aguada",
+    "year": "1930"
+  },
+  {
+    "mass": "1342",
+    "name": "Boriskino",
+    "year": "1930"
+  },
+  {
+    "mass": "1320",
+    "name": "Gyokukei",
+    "year": "1930"
+  },
+  {
+    "mass": "41730",
+    "name": "Karoonda",
+    "year": "1930"
+  },
+  {
+    "mass": "6862",
+    "name": "Lillaverke",
+    "year": "1930"
+  },
+  {
+    "mass": "470",
+    "name": "Malampaka",
+    "year": "1930"
+  },
+  {
+    "mass": "16700",
+    "name": "Miller (Arkansas)",
+    "year": "1930"
+  },
+  {
+    "mass": "8887.5",
+    "name": "Moorleah",
+    "year": "1930"
+  },
+  {
+    "mass": "16570",
+    "name": "Oldenburg (1930)",
+    "year": "1930"
+  },
+  {
+    "mass": "408000",
+    "name": "Paragould",
+    "year": "1930"
+  },
+  {
+    "mass": "2085",
+    "name": "Plantersville",
+    "year": "1930"
+  },
+  {
+    "mass": "90",
+    "name": "Konovo",
+    "year": "1931"
+  },
+  {
+    "mass": null,
+    "name": "Malotas",
+    "year": "1931"
+  },
+  {
+    "mass": "157",
+    "name": "Pontlyfni",
+    "year": "1931"
+  },
+  {
+    "mass": "12000",
+    "name": "Tatahouine",
+    "year": "1931"
+  },
+  {
+    "mass": "5070",
+    "name": "Archie",
+    "year": "1932"
+  },
+  {
+    "mass": "1161",
+    "name": "Douar Mghila",
+    "year": "1932"
+  },
+  {
+    "mass": "22000",
+    "name": "Gualeguaychú",
+    "year": "1932"
+  },
+  {
+    "mass": "3698",
+    "name": "Khanpur",
+    "year": "1932"
+  },
+  {
+    "mass": "3200",
+    "name": "Khor Temiki",
+    "year": "1932"
+  },
+  {
+    "mass": "4047",
+    "name": "Kuznetzovo",
+    "year": "1932"
+  },
+  {
+    "mass": "2125",
+    "name": "Prambachkirchen",
+    "year": "1932"
+  },
+  {
+    "mass": "265",
+    "name": "Athens",
+    "year": "1933"
+  },
+  {
+    "mass": "629",
+    "name": "Banten",
+    "year": "1933"
+  },
+  {
+    "mass": "219",
+    "name": "Brient",
+    "year": "1933"
+  },
+  {
+    "mass": "18300",
+    "name": "Chajari",
+    "year": "1933"
+  },
+  {
+    "mass": "8400",
+    "name": "Cherokee Springs",
+    "year": "1933"
+  },
+  {
+    "mass": "188",
+    "name": "Dyarrl Island",
+    "year": "1933"
+  },
+  {
+    "mass": "150",
+    "name": "Malaga",
+    "year": "1933"
+  },
+  {
+    "mass": "807",
+    "name": "Malvern",
+    "year": "1933"
+  },
+  {
+    "mass": "250",
+    "name": "Noyan-Bogdo",
+    "year": "1933"
+  },
+  {
+    "mass": "5100",
+    "name": "Pasamonte",
+    "year": "1933"
+  },
+  {
+    "mass": "66000",
+    "name": "Pervomaisky",
+    "year": "1933"
+  },
+  {
+    "mass": "3393",
+    "name": "Pesyanoe",
+    "year": "1933"
+  },
+  {
+    "mass": "7800",
+    "name": "Phum Sambo",
+    "year": "1933"
+  },
+  {
+    "mass": "665",
+    "name": "Po-wang Chen",
+    "year": "1933"
+  },
+  {
+    "mass": "7000",
+    "name": "Repeev Khutor",
+    "year": "1933"
+  },
+  {
+    "mass": "4100",
+    "name": "Sioux County",
+    "year": "1933"
+  },
+  {
+    "mass": "10322",
+    "name": "Bahjoi",
+    "year": "1934"
+  },
+  {
+    "mass": "750",
+    "name": "Capilla del Monte",
+    "year": "1934"
+  },
+  {
+    "mass": "56000",
+    "name": "Farmville",
+    "year": "1934"
+  },
+  {
+    "mass": "2360",
+    "name": "Fayetteville",
+    "year": "1934"
+  },
+  {
+    "mass": "9000",
+    "name": "Hainaut",
+    "year": "1934"
+  },
+  {
+    "mass": "22300",
+    "name": "Mangwendi",
+    "year": "1934"
+  },
+  {
+    "mass": "1310",
+    "name": "Rio Negro",
+    "year": "1934"
+  },
+  {
+    "mass": "67",
+    "name": "Rumuruti",
+    "year": "1934"
+  },
+  {
+    "mass": "412",
+    "name": "Sazovice",
+    "year": "1934"
+  },
+  {
+    "mass": "230",
+    "name": "Tirupati",
+    "year": "1934"
+  },
+  {
+    "mass": "59000",
+    "name": "Łowicz",
+    "year": "1935"
+  },
+  {
+    "mass": "400",
+    "name": "Madiun",
+    "year": "1935"
+  },
+  {
+    "mass": "3996",
+    "name": "Nikolaevka",
+    "year": "1935"
+  },
+  {
+    "mass": "37350",
+    "name": "Patwar",
+    "year": "1935"
+  },
+  {
+    "mass": "23474",
+    "name": "Perpeti",
+    "year": "1935"
+  },
+  {
+    "mass": "637",
+    "name": "Sungach",
+    "year": "1935"
+  },
+  {
+    "mass": "78.400000000000006",
+    "name": "Crescent",
+    "year": "1936"
+  },
+  {
+    "mass": "3973",
+    "name": "Ichkala",
+    "year": "1936"
+  },
+  {
+    "mass": "1995",
+    "name": "Macibini",
+    "year": "1936"
+  },
+  {
+    "mass": "347",
+    "name": "Nassirah",
+    "year": "1936"
+  },
+  {
+    "mass": null,
+    "name": "Belville",
+    "year": "1937"
+  },
+  {
+    "mass": "200000",
+    "name": "Kainsaz",
+    "year": "1937"
+  },
+  {
+    "mass": "3500",
+    "name": "Kaptal-Aryk",
+    "year": "1937"
+  },
+  {
+    "mass": "540",
+    "name": "Mabwe-Khoywa",
+    "year": "1937"
+  },
+  {
+    "mass": "300000",
+    "name": "Putinga",
+    "year": "1937"
+  },
+  {
+    "mass": "3224.5",
+    "name": "Rangala",
+    "year": "1937"
+  },
+  {
+    "mass": "21000",
+    "name": "Tauti",
+    "year": "1937"
+  },
+  {
+    "mass": "2830",
+    "name": "Aztec",
+    "year": "1938"
+  },
+  {
+    "mass": "1770.5",
+    "name": "Benld",
+    "year": "1938"
+  },
+  {
+    "mass": "67.8",
+    "name": "Bloomington",
+    "year": "1938"
+  },
+  {
+    "mass": "303",
+    "name": "Chicora",
+    "year": "1938"
+  },
+  {
+    "mass": "704.5",
+    "name": "Ivuna",
+    "year": "1938"
+  },
+  {
+    "mass": "710",
+    "name": "Kasamatsu",
+    "year": "1938"
+  },
+  {
+    "mass": "2250",
+    "name": "Kukschin",
+    "year": "1938"
+  },
+  {
+    "mass": "800",
+    "name": "Lavrentievka",
+    "year": "1938"
+  },
+  {
+    "mass": "2130",
+    "name": "Pantar",
+    "year": "1938"
+  },
+  {
+    "mass": "142.5",
+    "name": "Pavlodar (stone)",
+    "year": "1938"
+  },
+  {
+    "mass": "17900",
+    "name": "Andura",
+    "year": "1939"
+  },
+  {
+    "mass": "1700",
+    "name": "Chervony Kut",
+    "year": "1939"
+  },
+  {
+    "mass": "47700",
+    "name": "Dresden (Ontario)",
+    "year": "1939"
+  },
+  {
+    "mass": "3336",
+    "name": "Ekeby",
+    "year": "1939"
+  },
+  {
+    "mass": "1303",
+    "name": "Glanggang",
+    "year": "1939"
+  },
+  {
+    "mass": "6937",
+    "name": "Kendleton",
+    "year": "1939"
+  },
+  {
+    "mass": "737.6",
+    "name": "Nyaung",
+    "year": "1939"
+  },
+  {
+    "mass": "60",
+    "name": "Santa Cruz",
+    "year": "1939"
+  },
+  {
+    "mass": "1590",
+    "name": "Selakopi",
+    "year": "1939"
+  },
+  {
+    "mass": "1047",
+    "name": "Bhola",
+    "year": "1940"
+  },
+  {
+    "mass": "113",
+    "name": "Erakot",
+    "year": "1940"
+  },
+  {
+    "mass": "3300",
+    "name": "Kediri",
+    "year": "1940"
+  },
+  {
+    "mass": "3766",
+    "name": "Ramnagar",
+    "year": "1940"
+  },
+  {
+    "mass": "691",
+    "name": "Semarkona",
+    "year": "1940"
+  },
+  {
+    "mass": "705",
+    "name": "Black Moshannan Park",
+    "year": "1941"
+  },
+  {
+    "mass": "600",
+    "name": "Mafra",
+    "year": "1941"
+  },
+  {
+    "mass": "3200",
+    "name": "Maridi",
+    "year": "1941"
+  },
+  {
+    "mass": "11000",
+    "name": "Phuoc-Binh",
+    "year": "1941"
+  },
+  {
+    "mass": "6500",
+    "name": "Ankober",
+    "year": "1942"
+  },
+  {
+    "mass": "357",
+    "name": "Bununu",
+    "year": "1942"
+  },
+  {
+    "mass": "26000",
+    "name": "Forest Vale",
+    "year": "1942"
+  },
+  {
+    "mass": "2770",
+    "name": "Kamalpur",
+    "year": "1942"
+  },
+  {
+    "mass": "11355",
+    "name": "Kapoeta",
+    "year": "1942"
+  },
+  {
+    "mass": "4975",
+    "name": "Maziba",
+    "year": "1942"
+  },
+  {
+    "mass": "800",
+    "name": "Parsa",
+    "year": "1942"
+  },
+  {
+    "mass": "253.6",
+    "name": "Pollen",
+    "year": "1942"
+  },
+  {
+    "mass": "3880",
+    "name": "Benoni",
+    "year": "1943"
+  },
+  {
+    "mass": "2117",
+    "name": "Duwun",
+    "year": "1943"
+  },
+  {
+    "mass": "51500",
+    "name": "Leedey",
+    "year": "1943"
+  },
+  {
+    "mass": null,
+    "name": "Fort Flatters",
+    "year": "1944"
+  },
+  {
+    "mass": "1456",
+    "name": "Hallingeberg",
+    "year": "1944"
+  },
+  {
+    "mass": "224.2",
+    "name": "Mike",
+    "year": "1944"
+  },
+  {
+    "mass": "1100",
+    "name": "Mtola",
+    "year": "1944"
+  },
+  {
+    "mass": "1384.2",
+    "name": "Atoka",
+    "year": "1945"
+  },
+  {
+    "mass": "23000",
+    "name": "Fuhe",
+    "year": "1945"
+  },
+  {
+    "mass": "6000",
+    "name": "Meru",
+    "year": "1945"
+  },
+  {
+    "mass": "2050",
+    "name": "Soroti",
+    "year": "1945"
+  },
+  {
+    "mass": "25000",
+    "name": "Bursa",
+    "year": "1946"
+  },
+  {
+    "mass": "4000",
+    "name": "Krasnyi Klyuch",
+    "year": "1946"
+  },
+  {
+    "mass": "50000",
+    "name": "Krymka",
+    "year": "1946"
+  },
+  {
+    "mass": "70000",
+    "name": "Peña Blanca Spring",
+    "year": "1946"
+  },
+  {
+    "mass": "10000",
+    "name": "Eagle",
+    "year": "1947"
+  },
+  {
+    "mass": "480",
+    "name": "Git-Git",
+    "year": "1947"
+  },
+  {
+    "mass": "2300",
+    "name": "Långhalsen",
+    "year": "1947"
+  },
+  {
+    "mass": "17300",
+    "name": "Reliegos",
+    "year": "1947"
+  },
+  {
+    "mass": "150",
+    "name": "Seldebourak",
+    "year": "1947"
+  },
+  {
+    "mass": "1000000",
+    "name": "Sikhote-Alin",
+    "year": "1947"
+  },
+  {
+    "mass": "4500",
+    "name": "Mardan",
+    "year": "1948"
+  },
+  {
+    "mass": "100000",
+    "name": "Norton County",
+    "year": "1948"
+  },
+  {
+    "mass": "20000",
+    "name": "Uzcudun",
+    "year": "1948"
+  },
+  {
+    "mass": "910",
+    "name": "Adzhi-Bogdo (stone)",
+    "year": "1949"
+  },
+  {
+    "mass": "779",
+    "name": "Akaba",
+    "year": "1949"
+  },
+  {
+    "mass": "625",
+    "name": "Alberta",
+    "year": "1949"
+  },
+  {
+    "mass": "794",
+    "name": "Beddgelert",
+    "year": "1949"
+  },
+  {
+    "mass": "2840",
+    "name": "Benton",
+    "year": "1949"
+  },
+  {
+    "mass": "968",
+    "name": "Guidder",
+    "year": "1949"
+  },
+  {
+    "mass": null,
+    "name": "Ibrisim",
+    "year": "1949"
+  },
+  {
+    "mass": "180",
+    "name": "Karewar",
+    "year": "1949"
+  },
+  {
+    "mass": "200000",
+    "name": "Kunashak",
+    "year": "1949"
+  },
+  {
+    "mass": "1300",
+    "name": "Mezel",
+    "year": "1949"
+  },
+  {
+    "mass": "682",
+    "name": "Palolo Valley",
+    "year": "1949"
+  },
+  {
+    "mass": "6000",
+    "name": "Rupota",
+    "year": "1949"
+  },
+  {
+    "mass": "7450",
+    "name": "Arroyo Aguiar",
+    "year": "1950"
+  },
+  {
+    "mass": "102",
+    "name": "Garland",
+    "year": "1950"
+  },
+  {
+    "mass": "725",
+    "name": "Geidam",
+    "year": "1950"
+  },
+  {
+    "mass": "1000",
+    "name": "Madhipura",
+    "year": "1950"
+  },
+  {
+    "mass": "4885",
+    "name": "Monte das Fortes",
+    "year": "1950"
+  },
+  {
+    "mass": null,
+    "name": "Monze",
+    "year": "1950"
+  },
+  {
+    "mass": "12600",
+    "name": "Murray",
+    "year": "1950"
+  },
+  {
+    "mass": "2121",
+    "name": "Patrimonio",
+    "year": "1950"
+  },
+  {
+    "mass": "1000",
+    "name": "St. Louis",
+    "year": "1950"
+  },
+  {
+    "mass": "342",
+    "name": "Thal",
+    "year": "1950"
+  },
+  {
+    "mass": "720",
+    "name": "Aarhus",
+    "year": "1951"
+  },
+  {
+    "mass": "1900",
+    "name": "Dubrovnik",
+    "year": "1951"
+  },
+  {
+    "mass": "54640",
+    "name": "Elenovka",
+    "year": "1951"
+  },
+  {
+    "mass": "950",
+    "name": "Kalaba",
+    "year": "1951"
+  },
+  {
+    "mass": null,
+    "name": "Lusaka",
+    "year": "1951"
+  },
+  {
+    "mass": "3555",
+    "name": "Manych",
+    "year": "1951"
+  },
+  {
+    "mass": "107000",
+    "name": "Abee",
+    "year": "1952"
+  },
+  {
+    "mass": "9330",
+    "name": "Avanhandava",
+    "year": "1952"
+  },
+  {
+    "mass": "36.1",
+    "name": "Galim (a)",
+    "year": "1952"
+  },
+  {
+    "mass": "28",
+    "name": "Galim (b)",
+    "year": "1952"
+  },
+  {
+    "mass": "5500",
+    "name": "Min-Fan-Zhun",
+    "year": "1952"
+  },
+  {
+    "mass": "31",
+    "name": "Medanitos",
+    "year": "1953"
+  },
+  {
+    "mass": "150",
+    "name": "Molteno",
+    "year": "1953"
+  },
+  {
+    "mass": "117.8",
+    "name": "Peckelsheim",
+    "year": "1953"
+  },
+  {
+    "mass": "810",
+    "name": "Arbol Solo",
+    "year": "1954"
+  },
+  {
+    "mass": "305.5",
+    "name": "Hökmark",
+    "year": "1954"
+  },
+  {
+    "mass": "1300",
+    "name": "Ishinga",
+    "year": "1954"
+  },
+  {
+    "mass": "6000",
+    "name": "Nikolskoe",
+    "year": "1954"
+  },
+  {
+    "mass": "5560",
+    "name": "Sylacauga",
+    "year": "1954"
+  },
+  {
+    "mass": "2950",
+    "name": "Karloowala",
+    "year": "1955"
+  },
+  {
+    "mass": "900",
+    "name": "Lahrauli",
+    "year": "1955"
+  },
+  {
+    "mass": "2405",
+    "name": "Messina",
+    "year": "1955"
+  },
+  {
+    "mass": "1500",
+    "name": "Breitscheid",
+    "year": "1956"
+  },
+  {
+    "mass": "45.6",
+    "name": "Centerville",
+    "year": "1956"
+  },
+  {
+    "mass": "180",
+    "name": "Hotse",
+    "year": "1956"
+  },
+  {
+    "mass": "3457",
+    "name": "Idutywa",
+    "year": "1956"
+  },
+  {
+    "mass": "8165",
+    "name": "Nadiabondi",
+    "year": "1956"
+  },
+  {
+    "mass": "100000",
+    "name": "Paranaiba",
+    "year": "1956"
+  },
+  {
+    "mass": "282",
+    "name": "San Pedro de Quiles",
+    "year": "1956"
+  },
+  {
+    "mass": "2000",
+    "name": "Sinnai",
+    "year": "1956"
+  },
+  {
+    "mass": "160",
+    "name": "Al Rais",
+    "year": "1957"
+  },
+  {
+    "mass": "400",
+    "name": "Distrito Quebracho",
+    "year": "1957"
+  },
+  {
+    "mass": "500",
+    "name": "Essebi",
+    "year": "1957"
+  },
+  {
+    "mass": "2500",
+    "name": "Ibitira",
+    "year": "1957"
+  },
+  {
+    "mass": "5000",
+    "name": "Raco",
+    "year": "1957"
+  },
+  {
+    "mass": "194",
+    "name": "Okabe",
+    "year": "1958"
+  },
+  {
+    "mass": "4682",
+    "name": "Ramsdorf",
+    "year": "1958"
+  },
+  {
+    "mass": "3000",
+    "name": "Akwanga",
+    "year": "1959"
+  },
+  {
+    "mass": "3710",
+    "name": "Hamlet",
+    "year": "1959"
+  },
+  {
+    "mass": "299",
+    "name": "Kandahar (Afghanistan)",
+    "year": "1959"
+  },
+  {
+    "mass": "5555",
+    "name": "Pribram",
+    "year": "1959"
+  },
+  {
+    "mass": "134.30000000000001",
+    "name": "St.-Chinian",
+    "year": "1959"
+  },
+  {
+    "mass": "303000",
+    "name": "Bruderheim",
+    "year": "1960"
+  },
+  {
+    "mass": null,
+    "name": "Gao-Guenie",
+    "year": "1960"
+  },
+  {
+    "mass": "330000",
+    "name": "Millbillillie",
+    "year": "1960"
+  },
+  {
+    "mass": "72.900000000000006",
+    "name": "Soheria",
+    "year": "1960"
+  },
+  {
+    "mass": "375",
+    "name": "Bells",
+    "year": "1961"
+  },
+  {
+    "mass": "3950",
+    "name": "Djermaia",
+    "year": "1961"
+  },
+  {
+    "mass": "2400",
+    "name": "Ehole",
+    "year": "1961"
+  },
+  {
+    "mass": "8360",
+    "name": "Harleton",
+    "year": "1961"
+  },
+  {
+    "mass": "85000",
+    "name": "Kayakent",
+    "year": "1961"
+  },
+  {
+    "mass": "453.6",
+    "name": "Kulak",
+    "year": "1961"
+  },
+  {
+    "mass": "6.1",
+    "name": "Ras Tanura",
+    "year": "1961"
+  },
+  {
+    "mass": "8800",
+    "name": "Bogou",
+    "year": "1962"
+  },
+  {
+    "mass": "25400",
+    "name": "Desuri",
+    "year": "1962"
+  },
+  {
+    "mass": "1250",
+    "name": "Dosso",
+    "year": "1962"
+  },
+  {
+    "mass": "737.6",
+    "name": "Kiel",
+    "year": "1962"
+  },
+  {
+    "mass": "927",
+    "name": "São Jose do Rio Preto",
+    "year": "1962"
+  },
+  {
+    "mass": "4960",
+    "name": "Ste. Marguerite",
+    "year": "1962"
+  },
+  {
+    "mass": "266.10000000000002",
+    "name": "Hoxie",
+    "year": "1963"
+  },
+  {
+    "mass": "3000",
+    "name": "Inner Mongolia",
+    "year": "1963"
+  },
+  {
+    "mass": "2220",
+    "name": "Karatu",
+    "year": "1963"
+  },
+  {
+    "mass": "7700",
+    "name": "Ohuma",
+    "year": "1963"
+  },
+  {
+    "mass": "45760",
+    "name": "Peace River",
+    "year": "1963"
+  },
+  {
+    "mass": "2250",
+    "name": "Bulls Run",
+    "year": "1964"
+  },
+  {
+    "mass": "4000",
+    "name": "Çanakkale",
+    "year": "1964"
+  },
+  {
+    "mass": "6000",
+    "name": "Chernyi Bor",
+    "year": "1964"
+  },
+  {
+    "mass": "9000",
+    "name": "Granes",
+    "year": "1964"
+  },
+  {
+    "mass": "222",
+    "name": "Jiange",
+    "year": "1964"
+  },
+  {
+    "mass": "1245",
+    "name": "Muzaffarpur",
+    "year": "1964"
+  },
+  {
+    "mass": "44000",
+    "name": "Barwell",
+    "year": "1965"
+  },
+  {
+    "mass": "20350",
+    "name": "Conquista",
+    "year": "1965"
+  },
+  {
+    "mass": "1",
+    "name": "Revelstoke",
+    "year": "1965"
+  },
+  {
+    "mass": "3850",
+    "name": "Taonan",
+    "year": "1965"
+  },
+  {
+    "mass": null,
+    "name": "Chitado",
+    "year": "1966"
+  },
+  {
+    "mass": "2968",
+    "name": "Pavel",
+    "year": "1966"
+  },
+  {
+    "mass": "271000",
+    "name": "Saint-Séverin",
+    "year": "1966"
+  },
+  {
+    "mass": "20000",
+    "name": "Seoni",
+    "year": "1966"
+  },
+  {
+    "mass": "230",
+    "name": "Denver",
+    "year": "1967"
+  },
+  {
+    "mass": "67.400000000000006",
+    "name": "Kingai",
+    "year": "1967"
+  },
+  {
+    "mass": "3.3",
+    "name": "Niger (L6)",
+    "year": "1967"
+  },
+  {
+    "mass": "3.3",
+    "name": "Niger (LL6)",
+    "year": "1967"
+  },
+  {
+    "mass": "2000",
+    "name": "Parambu",
+    "year": "1967"
+  },
+  {
+    "mass": "2500",
+    "name": "Tathlith",
+    "year": "1967"
+  },
+  {
+    "mass": "134",
+    "name": "Awere",
+    "year": "1968"
+  },
+  {
+    "mass": "25250",
+    "name": "Juromenha",
+    "year": "1968"
+  },
+  {
+    "mass": "13.1",
+    "name": "Piancaldoli",
+    "year": "1968"
+  },
+  {
+    "mass": "460",
+    "name": "San Pedro Jacuaro",
+    "year": "1968"
+  },
+  {
+    "mass": "283.3",
+    "name": "Schenectady",
+    "year": "1968"
+  },
+  {
+    "mass": "1000000",
+    "name": "Allende",
+    "year": "1969"
+  },
+  {
+    "mass": "600",
+    "name": "Andreevka",
+    "year": "1969"
+  },
+  {
+    "mass": "5460",
+    "name": "Bovedy",
+    "year": "1969"
+  },
+  {
+    "mass": "100000",
+    "name": "Murchison",
+    "year": "1969"
+  },
+  {
+    "mass": "4375",
+    "name": "Patora",
+    "year": "1969"
+  },
+  {
+    "mass": "815.3",
+    "name": "Suchy Dul",
+    "year": "1969"
+  },
+  {
+    "mass": "5500",
+    "name": "Dongtai",
+    "year": "1970"
+  },
+  {
+    "mass": "3230",
+    "name": "Dwaleni",
+    "year": "1970"
+  },
+  {
+    "mass": "1500",
+    "name": "Kiffa",
+    "year": "1970"
+  },
+  {
+    "mass": "17000",
+    "name": "Lost City",
+    "year": "1970"
+  },
+  {
+    "mass": "2000",
+    "name": "Malakal",
+    "year": "1970"
+  },
+  {
+    "mass": "2450",
+    "name": "Nejo",
+    "year": "1970"
+  },
+  {
+    "mass": "3000",
+    "name": "Tillaberi",
+    "year": "1970"
+  },
+  {
+    "mass": "2500",
+    "name": "Anlong",
+    "year": "1971"
+  },
+  {
+    "mass": "1544",
+    "name": "Haverö",
+    "year": "1971"
+  },
+  {
+    "mass": "13400",
+    "name": "Kabo",
+    "year": "1971"
+  },
+  {
+    "mass": "2500",
+    "name": "Marilia",
+    "year": "1971"
+  },
+  {
+    "mass": "177",
+    "name": "Noventa Vicentina",
+    "year": "1971"
+  },
+  {
+    "mass": "3900",
+    "name": "Shuangyang",
+    "year": "1971"
+  },
+  {
+    "mass": "288",
+    "name": "Guibga",
+    "year": "1972"
+  },
+  {
+    "mass": "7000",
+    "name": "Ipiranga",
+    "year": "1972"
+  },
+  {
+    "mass": "1400",
+    "name": "Canon City",
+    "year": "1973"
+  },
+  {
+    "mass": "4000",
+    "name": "Lichtenberg",
+    "year": "1973"
+  },
+  {
+    "mass": "1.4",
+    "name": "Natal",
+    "year": "1973"
+  },
+  {
+    "mass": "56",
+    "name": "San Juan Capistrano",
+    "year": "1973"
+  },
+  {
+    "mass": "1000",
+    "name": "Aioun el Atrouss",
+    "year": "1974"
+  },
+  {
+    "mass": "8000",
+    "name": "Enshi",
+    "year": "1974"
+  },
+  {
+    "mass": "3618",
+    "name": "Gorlovka",
+    "year": "1974"
+  },
+  {
+    "mass": "483",
+    "name": "Jolomba",
+    "year": "1974"
+  },
+  {
+    "mass": "4850",
+    "name": "Mayo Belwa",
+    "year": "1974"
+  },
+  {
+    "mass": "2700",
+    "name": "Naragh",
+    "year": "1974"
+  },
+  {
+    "mass": "50",
+    "name": "Stratford",
+    "year": "1974"
+  },
+  {
+    "mass": "7330",
+    "name": "Ijopega",
+    "year": "1975"
+  },
+  {
+    "mass": "14250",
+    "name": "Ningbo",
+    "year": "1975"
+  },
+  {
+    "mass": "10500",
+    "name": "Tambakwatu",
+    "year": "1975"
+  },
+  {
+    "mass": "1914",
+    "name": "Acapulco",
+    "year": "1976"
+  },
+  {
+    "mass": "45000",
+    "name": "Dhajala",
+    "year": "1976"
+  },
+  {
+    "mass": "642",
+    "name": "Dowa",
+    "year": "1976"
+  },
+  {
+    "mass": null,
+    "name": "Dunhua",
+    "year": "1976"
+  },
+  {
+    "mass": "45.5",
+    "name": "Grefsheim",
+    "year": "1976"
+  },
+  {
+    "mass": "1000000",
+    "name": "Jilin",
+    "year": "1976"
+  },
+  {
+    "mass": "950",
+    "name": "Junan",
+    "year": "1976"
+  },
+  {
+    "mass": "2600",
+    "name": "Qingzhen",
+    "year": "1976"
+  },
+  {
+    "mass": "465.5",
+    "name": "Ruhobobo",
+    "year": "1976"
+  },
+  {
+    "mass": "605",
+    "name": "Sheyang",
+    "year": "1976"
+  },
+  {
+    "mass": "6000",
+    "name": "Alta'ameem",
+    "year": "1977"
+  },
+  {
+    "mass": "7500",
+    "name": "Bo Xian",
+    "year": "1977"
+  },
+  {
+    "mass": "1810",
+    "name": "Changde",
+    "year": "1977"
+  },
+  {
+    "mass": "17226",
+    "name": "El Paso de Aguila",
+    "year": "1977"
+  },
+  {
+    "mass": "2500",
+    "name": "Fuyang",
+    "year": "1977"
+  },
+  {
+    "mass": "1200",
+    "name": "Iguaracu",
+    "year": "1977"
+  },
+  {
+    "mass": "4576",
+    "name": "Innisfree",
+    "year": "1977"
+  },
+  {
+    "mass": "23",
+    "name": "Kutais",
+    "year": "1977"
+  },
+  {
+    "mass": "1300",
+    "name": "Louisville",
+    "year": "1977"
+  },
+  {
+    "mass": "4000",
+    "name": "Chitenay",
+    "year": "1978"
+  },
+  {
+    "mass": "498",
+    "name": "Lishui",
+    "year": "1978"
+  },
+  {
+    "mass": "50000",
+    "name": "Nuevo Mercurio",
+    "year": "1978"
+  },
+  {
+    "mass": "1600",
+    "name": "Cilimus",
+    "year": "1979"
+  },
+  {
+    "mass": "20500",
+    "name": "Jartai",
+    "year": "1979"
+  },
+  {
+    "mass": "1900",
+    "name": "Guangrao",
+    "year": "1980"
+  },
+  {
+    "mass": "2000",
+    "name": "Kaidun",
+    "year": "1980"
+  },
+  {
+    "mass": "2520",
+    "name": "Lunan",
+    "year": "1980"
+  },
+  {
+    "mass": "1100",
+    "name": "Mianchi",
+    "year": "1980"
+  },
+  {
+    "mass": "1900",
+    "name": "Richland Springs",
+    "year": "1980"
+  },
+  {
+    "mass": "50000",
+    "name": "Akyumak",
+    "year": "1981"
+  },
+  {
+    "mass": "367",
+    "name": "Chiang Khan",
+    "year": "1981"
+  },
+  {
+    "mass": "18000",
+    "name": "Dahmani",
+    "year": "1981"
+  },
+  {
+    "mass": "34650",
+    "name": "Gursum",
+    "year": "1981"
+  },
+  {
+    "mass": "93200",
+    "name": "Machinga",
+    "year": "1981"
+  },
+  {
+    "mass": "250000",
+    "name": "Omolon",
+    "year": "1981"
+  },
+  {
+    "mass": "61.4",
+    "name": "Salem",
+    "year": "1981"
+  },
+  {
+    "mass": "2449",
+    "name": "Gujargaon",
+    "year": "1982"
+  },
+  {
+    "mass": "1275",
+    "name": "Qidong",
+    "year": "1982"
+  },
+  {
+    "mass": null,
+    "name": "Guangnan",
+    "year": "1983"
+  },
+  {
+    "mass": "100000",
+    "name": "Kidairat",
+    "year": "1983"
+  },
+  {
+    "mass": "1443",
+    "name": "Maryville",
+    "year": "1983"
+  },
+  {
+    "mass": "4610",
+    "name": "Ningqiang",
+    "year": "1983"
+  },
+  {
+    "mass": "67225",
+    "name": "Rahimyar Khan",
+    "year": "1983"
+  },
+  {
+    "mass": "320",
+    "name": "Aomori",
+    "year": "1984"
+  },
+  {
+    "mass": "488.1",
+    "name": "Binningup",
+    "year": "1984"
+  },
+  {
+    "mass": "1455",
+    "name": "Claxton",
+    "year": "1984"
+  },
+  {
+    "mass": "4162",
+    "name": "Gashua",
+    "year": "1984"
+  },
+  {
+    "mass": "100000",
+    "name": "Gujba",
+    "year": "1984"
+  },
+  {
+    "mass": "32490",
+    "name": "Jumapalo",
+    "year": "1984"
+  },
+  {
+    "mass": "529",
+    "name": "Nantong",
+    "year": "1984"
+  },
+  {
+    "mass": "45000",
+    "name": "La Criolla",
+    "year": "1985"
+  },
+  {
+    "mass": "43",
+    "name": "Salzwedel",
+    "year": "1985"
+  },
+  {
+    "mass": "11510",
+    "name": "Kokubunji",
+    "year": "1986"
+  },
+  {
+    "mass": "1282",
+    "name": "Lanxi",
+    "year": "1986"
+  },
+  {
+    "mass": "1215.5",
+    "name": "Oued el Hadjar",
+    "year": "1986"
+  },
+  {
+    "mass": "10200",
+    "name": "Raghunathpura",
+    "year": "1986"
+  },
+  {
+    "mass": "430",
+    "name": "Sayama",
+    "year": "1986"
+  },
+  {
+    "mass": "260000",
+    "name": "Suizhou",
+    "year": "1986"
+  },
+  {
+    "mass": "2232",
+    "name": "Tianzhang",
+    "year": "1986"
+  },
+  {
+    "mass": "14250",
+    "name": "Laochenzhen",
+    "year": "1987"
+  },
+  {
+    "mass": "1025",
+    "name": "Ceniceros",
+    "year": "1988"
+  },
+  {
+    "mass": "2936",
+    "name": "Chela",
+    "year": "1988"
+  },
+  {
+    "mass": "3920",
+    "name": "Chisenga",
+    "year": "1988"
+  },
+  {
+    "mass": "1430",
+    "name": "Palca de Aparzo",
+    "year": "1988"
+  },
+  {
+    "mass": "1557",
+    "name": "Bawku",
+    "year": "1989"
+  },
+  {
+    "mass": "10000",
+    "name": "El Idrissia",
+    "year": "1989"
+  },
+  {
+    "mass": null,
+    "name": "Pê",
+    "year": "1989"
+  },
+  {
+    "mass": "7000",
+    "name": "Sfax",
+    "year": "1989"
+  },
+  {
+    "mass": "40000",
+    "name": "Sivas",
+    "year": "1989"
+  },
+  {
+    "mass": "630",
+    "name": "Sixiangkou",
+    "year": "1989"
+  },
+  {
+    "mass": "1504",
+    "name": "Burnwell",
+    "year": "1990"
+  },
+  {
+    "mass": "670",
+    "name": "Glanerbrug",
+    "year": "1990"
+  },
+  {
+    "mass": "4720",
+    "name": "Itqiy",
+    "year": "1990"
+  },
+  {
+    "mass": "700",
+    "name": "Jalanash",
+    "year": "1990"
+  },
+  {
+    "mass": "666.6",
+    "name": "Magombedze",
+    "year": "1990"
+  },
+  {
+    "mass": "17450",
+    "name": "Quija",
+    "year": "1990"
+  },
+  {
+    "mass": "325000",
+    "name": "Sterlitamak",
+    "year": "1990"
+  },
+  {
+    "mass": "23680",
+    "name": "Campos Sales",
+    "year": "1991"
+  },
+  {
+    "mass": "767",
+    "name": "Glatton",
+    "year": "1991"
+  },
+  {
+    "mass": "110000",
+    "name": "Mount Tazerzait",
+    "year": "1991"
+  },
+  {
+    "mass": "483.7",
+    "name": "Noblesville",
+    "year": "1991"
+  },
+  {
+    "mass": "1000",
+    "name": "Tahara",
+    "year": "1991"
+  },
+  {
+    "mass": "150000",
+    "name": "Mbale",
+    "year": "1992"
+  },
+  {
+    "mass": "6380",
+    "name": "Mihonoseki",
+    "year": "1992"
+  },
+  {
+    "mass": "12570",
+    "name": "Peekskill",
+    "year": "1992"
+  },
+  {
+    "mass": "16700",
+    "name": "Ban Rong Du",
+    "year": "1993"
+  },
+  {
+    "mass": "5000",
+    "name": "El Tigre",
+    "year": "1993"
+  },
+  {
+    "mass": "866",
+    "name": "Senboku",
+    "year": "1993"
+  },
+  {
+    "mass": "36900",
+    "name": "Songyuan",
+    "year": "1993"
+  },
+  {
+    "mass": "15500",
+    "name": "Baszkówka",
+    "year": "1994"
+  },
+  {
+    "mass": "469",
+    "name": "Coleman",
+    "year": "1994"
+  },
+  {
+    "mass": "1140",
+    "name": "Devri-Khera",
+    "year": "1994"
+  },
+  {
+    "mass": "40000",
+    "name": "Lohawat",
+    "year": "1994"
+  },
+  {
+    "mass": "12000",
+    "name": "New Halfa",
+    "year": "1994"
+  },
+  {
+    "mass": "25400",
+    "name": "St-Robert",
+    "year": "1994"
+  },
+  {
+    "mass": "128800",
+    "name": "Dong Ujimqin Qi",
+    "year": "1995"
+  },
+  {
+    "mass": "5000",
+    "name": "Galkiv",
+    "year": "1995"
+  },
+  {
+    "mass": "420",
+    "name": "Neagari",
+    "year": "1995"
+  },
+  {
+    "mass": "189",
+    "name": "Pétèlkolé",
+    "year": "1995"
+  },
+  {
+    "mass": "1710",
+    "name": "Silao",
+    "year": "1995"
+  },
+  {
+    "mass": "1421",
+    "name": "Talampaya",
+    "year": "1995"
+  },
+  {
+    "mass": "10200",
+    "name": "Fermo",
+    "year": "1996"
+  },
+  {
+    "mass": "2910",
+    "name": "Guangmingshan",
+    "year": "1996"
+  },
+  {
+    "mass": "42000",
+    "name": "Piplia Kalan",
+    "year": "1996"
+  },
+  {
+    "mass": "100000",
+    "name": "Juancheng",
+    "year": "1997"
+  },
+  {
+    "mass": "3700",
+    "name": "Chadong",
+    "year": "1998"
+  },
+  {
+    "mass": "7000",
+    "name": "Dashoguz",
+    "year": "1998"
+  },
+  {
+    "mass": "680.5",
+    "name": "Elbert",
+    "year": "1998"
+  },
+  {
+    "mass": "202.6",
+    "name": "Kitchener",
+    "year": "1998"
+  },
+  {
+    "mass": "100000",
+    "name": "Kunya-Urgench",
+    "year": "1998"
+  },
+  {
+    "mass": "2587",
+    "name": "Monahans (1998)",
+    "year": "1998"
+  },
+  {
+    "mass": "20000",
+    "name": "Ourique",
+    "year": "1998"
+  },
+  {
+    "mass": "71400",
+    "name": "Portales Valley",
+    "year": "1998"
+  },
+  {
+    "mass": "25000",
+    "name": "Bilanga",
+    "year": "1999"
+  },
+  {
+    "mass": "10000",
+    "name": "Djoumine",
+    "year": "1999"
+  },
+  {
+    "mass": "30",
+    "name": "Dunbogan",
+    "year": "1999"
+  },
+  {
+    "mass": "1500",
+    "name": "Katagum",
+    "year": "1999"
+  },
+  {
+    "mass": "136",
+    "name": "Kobe",
+    "year": "1999"
+  },
+  {
+    "mass": "271.39999999999998",
+    "name": "Leighlinbridge",
+    "year": "1999"
+  },
+  {
+    "mass": "478",
+    "name": "Sabrum",
+    "year": "1999"
+  },
+  {
+    "mass": null,
+    "name": "Gasseltepaoua",
+    "year": "2000"
+  },
+  {
+    "mass": "633",
+    "name": "Morávka",
+    "year": "2000"
+  },
+  {
+    "mass": "10000",
+    "name": "Tagish Lake",
+    "year": "2000"
+  },
+  {
+    "mass": "700",
+    "name": "Al Zarnkh",
+    "year": "2001"
+  },
+  {
+    "mass": "19000",
+    "name": "Beni M'hira",
+    "year": "2001"
+  },
+  {
+    "mass": "5300",
+    "name": "Bukhara",
+    "year": "2001"
+  },
+  {
+    "mass": "12500",
+    "name": "Dergaon",
+    "year": "2001"
+  },
+  {
+    "mass": "12000",
+    "name": "Devgaon",
+    "year": "2001"
+  },
+  {
+    "mass": "252",
+    "name": "Alby sur Chéran",
+    "year": "2002"
+  },
+  {
+    "mass": "45000",
+    "name": "Bensour",
+    "year": "2002"
+  },
+  {
+    "mass": "678",
+    "name": "Bhawad",
+    "year": "2002"
+  },
+  {
+    "mass": "19000",
+    "name": "Kilabo",
+    "year": "2002"
+  },
+  {
+    "mass": "6000",
+    "name": "Maromandia",
+    "year": "2002"
+  },
+  {
+    "mass": "6189",
+    "name": "Neuschwanstein",
+    "year": "2002"
+  },
+  {
+    "mass": "69.5",
+    "name": "Dominion Range 03239",
+    "year": "2002"
+  },
+  {
+    "mass": "290.89999999999998",
+    "name": "Dominion Range 03240",
+    "year": "2002"
+  },
+  {
+    "mass": "237",
+    "name": "San Michele",
+    "year": "2002"
+  },
+  {
+    "mass": "45300",
+    "name": "Thuathe",
+    "year": "2002"
+  },
+  {
+    "mass": "190",
+    "name": "Boumdeid (2003)",
+    "year": "2003"
+  },
+  {
+    "mass": "414",
+    "name": "Hiroshima",
+    "year": "2003"
+  },
+  {
+    "mass": "167.7",
+    "name": "Hoima",
+    "year": "2003"
+  },
+  {
+    "mass": "16820",
+    "name": "Kasauli",
+    "year": "2003"
+  },
+  {
+    "mass": "6669.2",
+    "name": "Kendrapara",
+    "year": "2003"
+  },
+  {
+    "mass": "9.6",
+    "name": "Cumulus Hills 04075",
+    "year": "2003"
+  },
+  {
+    "mass": "19256",
+    "name": "New Orleans",
+    "year": "2003"
+  },
+  {
+    "mass": "4440",
+    "name": "Ouadangou",
+    "year": "2003"
+  },
+  {
+    "mass": "17000",
+    "name": "Oum Dreyga",
+    "year": "2003"
+  },
+  {
+    "mass": "18000",
+    "name": "Park Forest",
+    "year": "2003"
+  },
+  {
+    "mass": "25000",
+    "name": "Benguerir",
+    "year": "2004"
+  },
+  {
+    "mass": "960",
+    "name": "Berthoud",
+    "year": "2004"
+  },
+  {
+    "mass": "1600",
+    "name": "Kaprada",
+    "year": "2004"
+  },
+  {
+    "mass": "4629",
+    "name": "Maigatari-Danduma",
+    "year": "2004"
+  },
+  {
+    "mass": "180",
+    "name": "Orlando",
+    "year": "2004"
+  },
+  {
+    "mass": "29560",
+    "name": "Bassikounou",
+    "year": "2006"
+  },
+  {
+    "mass": "100",
+    "name": "Jodiya",
+    "year": "2006"
+  },
+  {
+    "mass": "6800",
+    "name": "Kavarpura",
+    "year": "2006"
+  },
+  {
+    "mass": "3763",
+    "name": "Moss",
+    "year": "2006"
+  },
+  {
+    "mass": "324",
+    "name": "Bunburra Rockhole",
+    "year": "2007"
+  },
+  {
+    "mass": "478",
+    "name": "Cali",
+    "year": "2007"
+  },
+  {
+    "mass": "342",
+    "name": "Carancas",
+    "year": "2007"
+  },
+  {
+    "mass": "100000",
+    "name": "Chergach ",
+    "year": "2007"
+  },
+  {
+    "mass": "3396",
+    "name": "Didim",
+    "year": "2007"
+  },
+  {
+    "mass": "70500",
+    "name": "Mahadevpur",
+    "year": "2007"
+  },
+  {
+    "mass": "500",
+    "name": "Puerto Lápice",
+    "year": "2007"
+  },
+  {
+    "mass": "18.41",
+    "name": "Red Canyon Lake",
+    "year": "2007"
+  },
+  {
+    "mass": "3950",
+    "name": "Almahata Sitta",
+    "year": "2008"
+  },
+  {
+    "mass": "270",
+    "name": "Berduc",
+    "year": "2008"
+  },
+  {
+    "mass": "41000",
+    "name": "Buzzard Coulee",
+    "year": "2008"
+  },
+  {
+    "mass": "6580",
+    "name": "Daule",
+    "year": "2008"
+  },
+  {
+    "mass": "5760",
+    "name": "Kemer",
+    "year": "2008"
+  },
+  {
+    "mass": "6913",
+    "name": "Pleşcoi",
+    "year": "2008"
+  },
+  {
+    "mass": "4000",
+    "name": "Santa Lucia (2008)",
+    "year": "2008"
+  },
+  {
+    "mass": "110000",
+    "name": "Sulagiri",
+    "year": "2008"
+  },
+  {
+    "mass": "100000",
+    "name": "Tamdakht",
+    "year": "2008"
+  },
+  {
+    "mass": "9500",
+    "name": "Ash Creek",
+    "year": "2009"
+  },
+  {
+    "mass": "215",
+    "name": "Grimsby",
+    "year": "2009"
+  },
+  {
+    "mass": "3667",
+    "name": "Jesenice",
+    "year": "2009"
+  },
+  {
+    "mass": "25.81",
+    "name": "Maribo",
+    "year": "2009"
+  },
+  {
+    "mass": "1600",
+    "name": "Huaxi",
+    "year": "2010"
+  },
+  {
+    "mass": "4300",
+    "name": "Košice",
+    "year": "2010"
+  },
+  {
+    "mass": "329.7",
+    "name": "Lorton",
+    "year": "2010"
+  },
+  {
+    "mass": "24.54",
+    "name": "Mason Gully",
+    "year": "2010"
+  },
+  {
+    "mass": "3584",
+    "name": "Mifflin",
+    "year": "2010"
+  },
+  {
+    "mass": "3599",
+    "name": "Boumdeid (2011)",
+    "year": "2011"
+  },
+  {
+    "mass": "1066",
+    "name": "Sołtmany",
+    "year": "2011"
+  },
+  {
+    "mass": "14200",
+    "name": "Thika",
+    "year": "2011"
+  },
+  {
+    "mass": "7000",
+    "name": "Tissint",
+    "year": "2011"
+  },
+  {
+    "mass": "2900",
+    "name": "Battle Mountain",
+    "year": "2012"
+  },
+  {
+    "mass": "992.5",
+    "name": "Sutter's Mill",
+    "year": "2012"
+  },
+  {
+    "mass": "100000",
+    "name": "Chelyabinsk",
+    "year": "2013"
+  }
+]

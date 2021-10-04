@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>Earth Meteorite Landings</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- import the webpage's client-side javascript file -->
+  </head>
+  <body>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <header>
+      <div >
+        <input  type="button" id="help" value="Help" style="float: right;" onclick="displayHelp()">
+      <h1>Meteorite Landings</h1>
+      </div>
+      <p>
+        Shooting stars, or meteors, are bits of interplanetary material falling through Earth's 
+        atmosphere and heated to incandescence by friction. These objects are called meteoroids 
+        as they are hurtling through space, becoming meteors for the few seconds they streak across 
+        the sky and create glowing trails.
+
+        Scientists estimate that 44 tonnes (44,000 kilograms, about 48.5 tons) of meteoritic material 
+        falls on the Earth each day. 
+      </p>
+      <div>
+        <label>
+          Color:
+        </label>
+        <select id="color" onchange="updateColor()">
+          <option value="#EA593C">Red</option>
+          <option value="#FFFFFF">White</option>
+          <option value="#FFFF00">Yellow</option>
+        </select>
+        <label>
+          circle Width:
+        </label>
+        <select id="scale" onchange="updateScale()">
+          <option value="0">N/A</option>
+          <option value="0.1">0.1</option>
+          <option value="0.01">0.01</option>
+        </select>
+        <label>
+          Century:
+        </label>
+        <select id="range" onchange="updateRange()">
+          <option value="All">All</option>
+          <option value="1600">1600</option>
+          <option value="1700">1700</option>
+          <option value="1800">1800</option>
+          <option value="1900">1900</option>
+          <option value="2000">2000</option>
+        </select>
+        <label>
+          High/Low by Mass:
+        </label>
+        <select id="top" onchange="updateRange()">
+          <option value="0">All</option>
+          <option value="1">Highest 5</option>
+          <option value="2">Lowest 5</option>
+        </select>
+        <label>
+          Sort By Mass:
+        </label>
+        <select id="sort" onchange="updateRange()">
+          <option value="0">N/A</option>
+          <option value="1">Descending</option>
+          <option value="2">Ascending</option>
+        </select>
+         <label>
+          Value type:
+        </label>
+        <select id="type" onchange="updateRange()">
+          <option value="0">ALL</option>
+          <option value="1">Small</option>
+          <option value="2">Huge</option>
+        </select> 
+      </div>
+      <div class="svg-container">
+        <script src="/script.js" defer></script>
+      </div>
+    </header>
+  </body>
+</html>

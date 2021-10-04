@@ -1,0 +1,72 @@
+h1 {
+    font-size: 36px;
+    line-height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white
+  }
+  p {
+    font-size: 24px;
+    line-height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray
+  }
+  body {
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .dot:hover {
+    fill: lightgray;
+  }
+  
+  
+  #help{
+  background-color: rgba(253, 253, 93, 0.692);
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: yellow;
+    cursor: pointer;
+  }
+  label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: lightgray;
+  }
+  
+  .axis {
+    font: 10px sans-serif;
+    color:lightgray;
+  }
+  select {
+    background-color: rgba(253, 253, 93, 0.692);
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: yellow;
+    cursor: pointer;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: lightgray;
+    shape-rendering: crispEdges;
+  }
+  .svg-container {
+    display: inline-block;
+    margin: 0 auto;
+  }
+  .d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+
+  
