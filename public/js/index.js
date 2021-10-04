@@ -1,5 +1,5 @@
 
-const CELLS = 20;
+
 const PRIMARY_COLOR = "rgba(0, 0, 0, .25)";
 const SECONDARY_COLOR = "rgba(188, 188, 188, 0)";
 const SEARCH_COLOR = "#6EB5FF";
@@ -63,8 +63,9 @@ function setupRerunButton(maze) {
 
 function createMaze() {
     let canvas = document.getElementById('canvas');
-    let walls = document.getElementById('wall-density').value;
-    let maze = new RandomMaze(CELLS, walls, canvas);
+    let cells = document.getElementById("cell-count").value
+    let walls = document.getElementById('wall-density').value * cells * cells / 100;
+    let maze = new RandomMaze(cells, walls, canvas);
     maze.render();
     return maze;
 }
@@ -224,9 +225,9 @@ class Grid {
         let cellWidth = this.canvas.width / this.size;
         let cellHeight = this.canvas.height / this.size;
         let currY = 0;
-        for (let y = 0; y < CELLS; y++) {
+        for (let y = 0; y < this.size; y++) {
             let currX = 0;
-            for (let x = 0; x < CELLS; x++) {
+            for (let x = 0; x < this.size; x++) {
                 let cell = this._grid[y][x];
                 cell.render(ctx);
                 currX += cellWidth;
@@ -241,12 +242,14 @@ class RandomMaze {
     constructor(size, numWalls, canvas) {
         this.canvas = canvas;
         this.grid = new Grid(size, canvas);
+        this.size = size
         for (let i = 0; i < numWalls; i++) {
             this._randomCell().isWall = true;
         }
         this.start = this._randomCell();
         this.end = this._randomCell();
-        while (this.end.equal(this.start) || this.start._taxicabDistance(this.end) < 30) {
+        while (this.end.equal(this.start) || this.start._taxicabDistance(this.end) <
+            Math.sqrt(2 * size * size)) {
             this.start = this._randomCell();
             this.end = this._randomCell();
         }
@@ -257,8 +260,8 @@ class RandomMaze {
     }
 
     _randomCell() {
-        let x = Math.floor(Math.random() * CELLS);
-        let y = Math.floor(Math.random() * CELLS);
+        let x = Math.floor(Math.random() * this.size);
+        let y = Math.floor(Math.random() * this.size);
         return this.grid.get(x, y);
     }
 
