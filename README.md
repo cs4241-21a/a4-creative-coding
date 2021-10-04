@@ -6,7 +6,7 @@ lofi pitter patters to study to
 
 *website links:*
 
-i couldn't get glitch or heroku to host the site but it works fine locally.
+[glitch link](https://a4-jwu2018.glitch.me/)
 
 description
 ---
