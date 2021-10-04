@@ -1,3 +1,9 @@
+// a4-creative-coding
+// Music Maker
+// by David Mahany
+//
+// This code is not particularly good, and I know the rendering performance could
+//   be better if it used batches more but that would make the code even worse so whatever
 
 let mainCanvas = document.querySelector("#mainCanvas");
 
