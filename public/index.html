@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Urbanist">
+  <link rel="icon" href="favicon.ico?v=1.1">
+
+  <title>CS4241 Assignment 4</title>
+  <meta charset="utf-8">
+  <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+
+  <div class="bar">
+    <img src="assets/WPI.png" alt="WPI logo" width = 300px height = 100px>
+  </div>
+
+  <div class="round centered">
+      <h1 class="title">Conway's Game of Life</h1>
+      <h3>Click the grid to add or remove cells!</h3>
+      <div class="grid">
+        <div id="pane">
+            <div id="interactPane">
+              <div class="title bigger">
+                <label for="sizebar">Grid Size</label>
+                <h1 id="gridDisplay"></h1>
+                <input type="range" id="sizebar" name="sizebar" min="5" max="40" value="30" step="1">
+              </div>
+              <div class="title bigger">
+                <label for="speedbar">Evolution Speed</label>
+                <h2 id="speedDisplay"></h2>
+                <p>Evolutions per 3 seconds</p>
+                <input type="range" id="speedbar" name="speedbar" min="0" max="10" value="0" step="1">
+              </div>
+              <div class='stacked'>
+                <button id='evButton'>Evolve</button>
+                <button id='sButton'>Stop</button>
+                <button id='cButton'>Clear</button>
+              </div>
+            </div>
+        </div>
+        <div id="conways">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id="info">
+            <div id="infoPane">
+              <div class="title bigger">
+                <label for="crowdbar">Crowding Threshold</label>
+                <h2 id="crowdDisplay"></h2>
+                <p>Min neighbors before death</p>
+                <input type="range" id="crowdbar" name="crowdbar" min="3" max="8" value="4" step="1">
+              </div>
+              <div class="title bigger">
+                <label for="spawnbar">Spawning Threshold</label>
+                <h2 id="spawnDisplay"></h2>
+                <p>Neighbors required to spawn</p>
+                <input type="range" id="spawnbar" name="spawnbar" min="1" max="8" value="3" step="1">
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+</body>
+
+</html>
