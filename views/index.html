@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang='en'>
+  <head></head>
+  <p>
+    Use the interface to change the colors, volume, and font style for the audio visualizer!
+  </p>
+  <body><button>Click me to continue!</button></body>
+  <script>
+    
+  const start = function() {
+    
+    const phoebe = 'https://cdn.glitch.com/884f2a87-2464-4c11-b3ae-bbdc1bfda71d%2Fpb_teenagedirtbag.mp3?v=1632932176760'
+    
+    const PARAMS = {
+      audio_color: '#fffee3',
+      background_color: '#c4cfff',
+      volume: 0.5,
+      font: '22px sans-serif'
+    };
+    
+    document.body.innerHTML = ''
+    const canvas = document.createElement( 'canvas' )
+    document.body.appendChild( canvas )
+    canvas.width = canvas.height = 512
+    const ctx = canvas.getContext( '2d' )
+  
+    // audio init
+    const audioCtx = new AudioContext()
+    const audioElement = document.createElement( 'audio' )
+    document.body.appendChild( audioElement )
+    
+    const pane = new Tweakpane.Pane();
+
+    //pane.addInput(PARAMS, 'factor');
+    //pane.addInput(PARAMS, 'title');
+    pane.addInput(PARAMS, 'audio_color');
+    pane.addInput(PARAMS, 'background_color');
+    pane.addInput(PARAMS, 'volume', {
+      min: 0,
+      max: 1,
+    });
+    pane.addInput(PARAMS, 'font', {
+      options: {
+        serif: '25px serif',
+        sans_serif: '22px sans-serif',
+      },
+    });
+
+  
+    // audio graph setup
+    const analyser = audioCtx.createAnalyser()
+    analyser.fftSize = 1024 // 512 bins
+    const player = audioCtx.createMediaElementSource( audioElement )
+    player.connect( audioCtx.destination )
+    player.connect( analyser )
+    
+
+    // make sure, for this example, that your audiofle is accesssible
+    // from your server's root directory... here we assume the file is
+    // in the ssame location as our index.html file
+    audioElement.src = phoebe
+    audioElement.play()
+    audioElement.crossOrigin = 'anonymous'
+    
+
+    const results = new Uint8Array( analyser.frequencyBinCount )
+    
+    draw = function() {
+      
+      // temporal recursion, call tthe function in the future
+      window.requestAnimationFrame( draw )
+      
+      // fill our canvas with a black box
+      // by doing this every frame we 'clear' the canvas
+      ctx.fillStyle = PARAMS.background_color.toString() 
+      ctx.fillRect( 0,0,canvas.width,canvas.height )
+      
+      // set the color to white for drawing our visuaization
+      ctx.fillStyle = PARAMS.audio_color.toString()
+      
+      
+      const x = canvas.width / 2;
+      ctx.font = PARAMS.font.toString();
+      ctx.textAlign = 'center';
+      ctx.fillText('Phoebe Bridgers, Teenage Dirtbag', x, 500);
+      
+      analyser.getByteFrequencyData( results )
+      
+      audioElement.volume = PARAMS.volume
+      
+      for( let i = 0; i < analyser.frequencyBinCount; i++ ) {
+        ctx.fillRect( i, 0, 1, results[i] ) // upside down!
+      }
+    }
+    draw()
+    
+    
+
+  }
+
+  window.onload = ()=> document.querySelector('button').onclick = start
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+  
+</html>
