@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node server.improved.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
