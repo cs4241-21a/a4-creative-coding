@@ -4,7 +4,8 @@
 <body><button>click me</button></body>
 <script>
     const start = function() {
-        document.body.innerHTML = '<button>start/stop</button>'
+        document.body.innerHTML = '<button data-playing="false" class="tape-controls-play" role="switch" aria-checked="false">' +
+            'start/stop</button>'
         const canvas = document.createElement( 'canvas' )
         document.body.appendChild( canvas )
         canvas.width = canvas.height = 512
@@ -49,7 +50,23 @@
             }
         }
         draw()
+        const playButton = document.querySelector('.tape-controls-play');
+        playButton.addEventListener('click', (function (){
+            if (audioCtx.state === 'suspended'){
+                audioCtx.resume()
+            }
+            if (this.dataset.playing === 'false') {
+                audioElement.play();
+                this.dataset.playing = 'true';
+                // if track is playing pause it
+            } else if (this.dataset.playing === 'true') {
+                audioElement.pause();
+                this.dataset.playing = 'false';
+            }
 
+            let state = this.getAttribute('aria-checked') === "true" ? true : false;
+            this.setAttribute( 'aria-checked', state ? "false" : "true" );
+        }), false)
     }
 
     window.onload = ()=> document.querySelector('button').onclick = start
