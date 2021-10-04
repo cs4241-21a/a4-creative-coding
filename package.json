@@ -1,0 +1,16 @@
+{
+    "name": "CS_4241_Assignment_4",
+    "version": "0.1.0",
+    "description": "My own interpretation of the game, Space Invaders",
+    "author": "Joseph Scheufele",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    },
+    "engines": {
+      "node": "14.x"
+    }
+  }
+  
