@@ -17,19 +17,11 @@
 
 </svg>
 <svg class="stateName" width="200" height="40" style="background-color: white">
-    <div class="Content">
-
-        <h2> Northeast </h2>
-        <input type="checkbox" name="nameOfChoice" value="1" class="state-checkbox">
-        <h2> West </h2>
-        <input type="checkbox" name="nameOfChoice" value="1" class="state-checkbox">
-        <h2> Midwest </h2>
-        <input type="checkbox" name="nameOfChoice" value="1" class="state-checkbox">
-        <h2> South </h2>
-        <input type="checkbox" name="nameOfChoice" value="1" class="state-checkbox">
-    </div>
 </svg>
 <script>
+    function checkAll(){
+        d3.selectAll(".stateName").attr("checked", true)
+    }
     const margin = {top: 10, right: 30, bottom: 40, left: 60},
         width = 1100 - margin.left - margin.right,
         height = 700 - margin.top - margin.bottom;
