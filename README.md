@@ -2,7 +2,7 @@
 
 https://a4-niko-pelletier.glitch.me/
 
-This project is meant to allow a user to create some cool visuals with a bunch of random 3D boxes. I wanted to use three.js and a whole lot of randomness to create something that I thought looked interesting. However, I also wanted a mechanism to recreate the same visuals despite the randomness, which is why I included a way to enter a seed.
+This project is meant to allow a user to create some cool visuals with a bunch of random 3D boxes. I wanted to use three.js and a whole lot of randomness to create something that I thought looked interesting. However, I also wanted a mechanism to save and recreate past visuals despite the randomness, which is why I included a way to enter a seed.
 
 The first main problem I encountered was the desire to have a seeded random number generator, since JS does not provide a way to seed its random number generator natively. The solution to this was pretty simple though, since I was able to find a library for creating seeded random number generators.
 
