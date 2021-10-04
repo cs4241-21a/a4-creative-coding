@@ -1,0 +1,14 @@
+{
+  "name": "a4-bplima",
+  "version": "0.1.0",
+  "description": "WPI CS4241 Assignment 4",
+  "author": "Bryan Lima",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "express": "^4.17.1",
+    "tweakpane": "^3.0.5"
+  }
+}
