@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+
+    <title>Who Views</title>
+  </head>
+  <body>
+    <header>
+      <h1>Who Views</h1>
+    </header>
+
+    <img
+      src="https://github.com/alexiscaira/a4-creative-coding/blob/main/findwhoheader.png?raw=true"
+      alt="headerphototardis"
+      width="100%"
+      height="500"
+    />
+
+    <main>
+      <h2>Data Views From New Who</h2>
+
+      <form>
+        <label>
+          Who's your fav?
+          <input
+            name="form"
+            type="text"
+            maxlength="100"
+            required
+            placeholder="enter a doctor/companion/whoever"
+          />
+        </label>
+        <button type="submit" id="submit-doctor">Add</button>
+      </form>
+
+      <section class="doctors">
+        <ul id="doctors">
+          <em>loading doctors&hellip;</em>
+        </ul>
+      </section>
+
+      <section class="dataChart"></section>
+
+      <p>let me see some cool sunburst charts!</p>
+    </main>
+  </body>
+  <svg></svg>
+  <script>
+    var nodeData = {
+      name: "Doctor",
+      children: [
+        {
+          name: "First Doctor",
+          children: [
+            { name: "Season 1", size: 1 },
+            { name: "Season 2", size: 1 },
+            { name: "Season 3", size: 1 }
+          ]
+        },
+
+        {
+          name: "Second Doctor",
+          children: [
+            { name: "Season 4", size: 1 },
+            { name: "Season 5", size: 1 },
+            { name: "Season 6", size: 1 }
+          ]
+        },
+        {
+          name: "Third Doctor",
+          children: [
+            { name: "Season 7", size: 1 },
+            { name: "Season 8", size: 1 },
+            { name: "Season 9", size: 1 },
+            { name: "Season 10", size: 1 },
+            { name: "Season 11", size: 1 }
+          ]
+        },
+        {
+          name: "Fourth Doctor",
+          children: [
+            { name: "Season 12", size: 1 },
+            { name: "Season 13", size: 1 },
+            { name: "Season 14", size: 1 },
+            { name: "Season 15", size: 1 },
+            { name: "Season 16", size: 1 },
+            { name: "Season 17", size: 1 },
+            { name: "Season 18", size: 1 }
+          ]
+        },
+        {
+          name: "Fifth Doctor",
+          children: [
+            { name: "Season 19", size: 1 },
+            { name: "Season 20", size: 1 },
+            { name: "Season 21", size: 1 },
+            { name: "20th Anniversary Special", size: 1 }
+          ]
+        },
+        {
+          name: "Sixth Doctor",
+          children: [
+            { name: "Season 22", size: 1 },
+            { name: "Season 23", size: 1 }
+          ]
+        },
+
+        {
+          name: "Seventh Doctor",
+          children: [
+            { name: "Season 24", size: 1 },
+            { name: "Season 25", size: 1 },
+            { name: "Season 26", size: 1 }
+          ]
+        },
+
+        {
+          name: "Eighth Doctor",
+          children: [
+            { name: "Doctor Who: The Television Movie (1996)", size: 1 }
+          ]
+        },
+
+        {
+          name: "Ninth Doctor",
+          children: [{ name: "Series 1 (New Who)", size: 1 }]
+        },
+        {
+          name: "Tenth Doctor",
+          children: [
+            { name: "Series 2 (New Who)", size: 1 },
+            { name: "Series 3 (New Who)", size: 1 },
+            {
+              name: "Series 4 (New Who)",
+              size: 1
+            },
+            { name: "2005 Christmas Special", size: 1 },
+            { name: "2006 Christmas Special", size: 1 },
+            { name: "2007 Christmas Special", size: 1 },
+            { name: "2008 Special: The Next Doctor", size: 1 },
+            { name: "2009 Special: Planet of the Dead", size: 1 },
+            { name: "2009 Special: The Waters of Mars", size: 1 },
+            { name: "2009 Special: The End of Time – Part One", size: 1 },
+            { name: "2009 Special: The End of Time – Part Two", size: 1 }
+          ]
+        },
+        {
+          name: "Eleventh Doctor",
+          children: [
+            { name: "Series 5 (New Who)", size: 1 },
+            { name: "Series 6 (New Who)", size: 1 },
+            {
+              name: "Series 7 (New Who)",
+              size: 1
+            },
+            { name: "2010 Christmas Special", size: 1 },
+            { name: "2011 Christmas Special", size: 1 },
+            { name: "2012 Christmas Special", size: 1 },
+            { name: "2013 Christmas Special", size: 1 },
+            { name: "2013 Special: The Day Of The Doctor", size: 1 },
+            { name: "2013 Special: The Time of the Doctor", size: 1 }
+          ]
+        },
+        {
+          name: "Twelfth Doctor",
+          children: [
+            { name: "Series 8 (New Who)", size: 1 },
+            { name: "Series 9 (New Who)", size: 1 },
+            {
+              name: "Series 10 (New Who)",
+              size: 1
+            },
+            { name: "2014 Christmas Special", size: 1 },
+            { name: "2015 Christmas Special", size: 1 },
+            { name: "2016 Christmas Special", size: 1 },
+            { name: "2017 Special: The Next Doctor", size: 1 }
+          ]
+        },
+        {
+          name: "Thirteenth Doctor",
+          children: [
+            { name: "Series 11 (New Who)", size: 1 },
+            { name: "Series 12 (New Who)", size: 1 },
+            {
+              name: "Series 13 (New Who)",
+              size: 1
+            },
+            { name: "2019 Christmas Special", size: 1 },
+            { name: "2020 Christmas Special", size: 1 },
+            { name: "2021 Christmas Special", size: 1 }
+          ]
+        }
+      ]
+    };
+    // Variables
+    var width = 500;
+    var height = 500;
+    var radius = Math.min(width, height) / 2;
+    var color = d3.scaleOrdinal(d3.schemeCategory20b);
+
+    // Create primary <g> element
+    var g = d3
+      .select("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .append("g")
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    // Data strucure
+    var partition = d3.partition().size([2 * Math.PI, radius]);
+
+    // Find data root
+    var root = d3.hierarchy(nodeData).sum(function(d) {
+      return d.size;
+    });
+
+    // Size arcs
+    partition(root);
+    var arc = d3
+      .arc()
+      .startAngle(function(d) {
+        return d.x0;
+      })
+      .endAngle(function(d) {
+        return d.x1;
+      })
+      .innerRadius(function(d) {
+        return d.y0;
+      })
+      .outerRadius(function(d) {
+        return d.y1;
+      });
+
+    // Put it all together
+    g.selectAll("path")
+      .data(root.descendants())
+      .enter()
+      .append("path")
+      .attr("display", function(d) {
+        return d.depth ? null : "none";
+      })
+      .attr("d", arc)
+      .style("stroke", "#fff")
+      .style("fill", function(d) {
+        return color((d.children ? d : d.parent).data.name);
+      });
+  </script>
+</html>
