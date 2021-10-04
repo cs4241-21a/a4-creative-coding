@@ -37,8 +37,8 @@ const start = function() {
     ctx.fillStyle = "gray";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "white";
-    const x = canvas.width / 2;
-    ctx.textAlign = "center";
+    //const x = canvas.width / 2;
+    //ctx.textAlign = "center";
     analyser.getByteFrequencyData(results);
     for (let i = 0; i < analyser.frequencyBinCount; i++) {
       ctx.fillRect(i, canvas.height, 25, -results[i]);
