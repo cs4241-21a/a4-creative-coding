@@ -7,6 +7,7 @@
 - The site allows you to make simple pieces of music and share them by copy pasting a code (or the URL if it's short enough).
 - The functionality is entirely client side, and any stored data is in localStorage - no data is stored on the server, it just exists to serve files.
 - I made heavy use of the WebAudio and Canvas APIs for playback and rendering.
+- I used [Tweakpane](https://cocopon.github.io/tweakpane/) for some UI things.
 - I used a slightly modified version of the [JSONCrush](https://github.com/KilledByAPixel/JSONCrush) library for json string compression.
 - I used [Intro.js](https://introjs.com/) for the tour/help dialogue, which should explain the UI and controls.
 
