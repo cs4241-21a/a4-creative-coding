@@ -1,0 +1,25 @@
+{
+  "name": "a4-creative-coding",
+  "version": "1.0.0",
+  "description": "Assignment 4 - Creative Coding: Interactive Multimedia Experiences\r ===",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhsul/a4-creative-coding.git"
+  },
+  "author": "Jack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhsul/a4-creative-coding/issues"
+  },
+  "homepage": "https://github.com/jhsul/a4-creative-coding#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "snowpack": "^3.8.8",
+    "three": "^0.133.0"
+  }
+}

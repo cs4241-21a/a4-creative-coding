@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS4241 Assignment 2</title>
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <audio src="gangnamstyle.mp3"></audio>
+  <body>
+    <div id="container">
+      <canvas></canvas>
+      <div id="overlay" class="card" style="margin: 10px">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <p>Background:</p>
+            <input
+              type="text"
+              class="form-control"
+              id="backgroundInput"
+              value="#000000"
+            />
+          </li>
+          <li class="list-group-item">
+            <p>Foreground:</p>
+            <input
+              type="text"
+              class="form-control"
+              id="foregroundInput"
+              value="#ffffff"
+            />
+          </li>
+          <li class="list-group-item">Current Song: Gangnam Style</li>
+        </ul>
+        <button
+          data-playing="false"
+          role="switch"
+          aria-checked="false"
+          class="btn btn-primary"
+        >
+          Play
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
