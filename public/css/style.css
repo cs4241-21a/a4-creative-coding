@@ -1,0 +1,14 @@
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.nav {
+    background-color: aqua;
+}
+
+#game-area {
+    display: block;
+    width: 95%;
+    background-color: lightblue;
+}

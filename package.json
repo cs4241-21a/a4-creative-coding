@@ -1,0 +1,23 @@
+{
+  "name": "a4-creative-coding",
+  "version": "1.0.0",
+  "description": "project 4 for cs4241",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgovilla/a4-creative-coding.git"
+  },
+  "author": "mgovilla@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgovilla/a4-creative-coding/issues"
+  },
+  "homepage": "https://github.com/mgovilla/a4-creative-coding#readme",
+  "dependencies": {
+    "@types/jquery": "^3.5.6",
+    "express": "^4.17.1"
+  }
+}
