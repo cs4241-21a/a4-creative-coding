@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>boxes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+        <script src="/script.js" type="module"></script>
+    </head>
+    <body>
+        <canvas id="c"></canvas>
+
+        <div id="overlay">
+            <div>
+                <h1>boxes</h1>
+                <h2>a web app for making random boxes</h2>
+                <p>Boxes uses <a href="https://threejs.org">three.js</a> to 
+                    create a bunch of random boxes based on parameters given to it. 
+                    Those parameters can be changed in the upper-right corner of the screen.</p>
+                <p>Parameters:</p>
+                <ul>
+                    <li><em>seed:</em> Pass a seed to the random number generator.</li>
+                    <li><em>color:</em> When this is checked, the colors of the boxes will be randomly determined. Otherwise, the boxes will all be gray.</li>
+                    <li><em>rotate:</em> Determines whether the boxes will be rotating.</li>
+                    <li><em>scale:</em> Determines whether the boxes will change size. When unchecked, the dimensions are still randomly generated,
+                    but they will not change over time.</li>
+                    <li><em>loCount:</em> The minimum number of cubes that will be generated.</li>
+                    <li><em>hiCount:</em> The maximum number of cubes that will be generated.</li>
+                </ul>
+                <p>Make sure to click "Generate" after changing the seed, loCount, or hiCount paramters!</p>
+                <button type="button" id="overlay-off-btn">Let's make some boxes!</button>
+            </div>
+        </div>
+    </body>
+</html>
