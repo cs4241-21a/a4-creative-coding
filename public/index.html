@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Music Maker">
+
+    <title>CS4241 Assignment 4</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/lib/JSONCrush/JSONCrush.js" defer></script>
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js" defer></script>
+    <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet" defer>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Music Maker</h1>
+      <button id="enterButton">Enter Code</button>
+      <button id="copyButton">Copy Code</button>
+      <br>
+      <button id="clearButton">Clear Cache</button>
+      <button id="helpButton">Show Help</button>
+    </div>
+    <div id="content">
+      <div id="left">
+
+      </div>
+      <div id="right">
+        <canvas id="mainCanvas" tabindex=0></canvas>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

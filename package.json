@@ -1,0 +1,15 @@
+{
+  "name": "a4-david-mahany",
+  "version": "0.1.0",
+  "description": "WPI CS 4241 fourth assignment",
+  "author": "David Mahany",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
