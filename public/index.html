@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Needs to be added later">
-        <title>WIP</title>
-        <script src="js/script.js"></script>
-        <script src="js/d3.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    </head>
-    <body>
-        <h1>Assignment 4</h1>
-        <p>Welcome to assignment 4...</p>
-        <div id="my_dataviz"></div>
-        <input type="text" placeholder="symbol" id="symbolText">
-        <button type="button" id="quoteButton" onclick="getQuote()">GET QUOTE</button>
-    </body>
+<html>
+<head>
+  <title>Sorting Visualizer</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+  <script src="js/quicksort.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .rect:hover { opacity: 0.5; }
+  </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Sorting Visualizer</h1>
+    <div style="text-align: center;" id="outside-container">
+        <div id="d3-container" />
+    </div>
+    <script type="text/javascript" src="js/d3script.js"></script>
+</body>
 </html>
