@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Drawing Pad</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple online drawing pad">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h2>Drawing Pad</h2>
+        <canvas id="canvas" height="650" width="1200" onmouseout="mouseOff()"></canvas>
+        <br>
+        <input id="colorpicker" type="color" value="#FF0000">
+        <label id="colorlabel" for="colorpicker">Choose Brush Color</label>
+        <input id="bgpicker" type="color" value="#FFFFFF">
+        <label id="bgPickerLabel" for="bgpicker">Choose Background Color</label>
+        <input type="number" id="alphapicker" value="255">
+        <label for="alphapicker" id="alphalabel">Choose Transparency (A Value between 0 and 255)</label>
+        <input type="range" min="1" max="100" value="5" id="brushSlider">
+        <label for="brushSlider" id="brushSliderLabel">Brush Size: 5</label>
+        <h3>To use, simply hold down a mouse button and draw! There are options above, including a background, color and transparency picker and a brush size option!</h3>
+        <script src="index.js"></script>
+    </body>
+</html>
