@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <script src="NexusUI.js"></script>
+    <script src="https://unpkg.com/tone"></script>
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Devonshire&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    div {
+      margin: auto;
+    }
+    h1,
+    h2,
+    p {
+      text-align: center;
+      font-family: Devonshire;
+    }
+  </style>
+  <body>
+    <h1>
+      Michael's Simple Piano and Percussion Ensemble
+    </h1>
+    <div id="instrument"></div>
+    <h2>
+      Percussion
+    </h2>
+    <div id="seq"></div>
+    <p>
+      Percussion Value
+    </p>
+    <div id="num"></div>
+
+    <script>
+      var piano = new Nexus.Piano("#instrument", {
+        size: [400, 150],
+        mode: "button",
+        lowNote: 60,
+        highNote: 84
+      });
+      var sequencer = new Nexus.Sequencer("#seq", {
+        size: [400, 50],
+        mode: "toggle",
+        rows: 1,
+        columns: 8,
+        paddingRow: 10,
+        paddingColumn: 10
+      });
+      var number = new Nexus.Number("#num", {
+        size: [115, 40],
+        value: 40,
+        min: 0,
+        max: 20000,
+        step: 1
+      });
+
+      let percValue = number.value;
+
+      number.on("change", function(v) {
+        percValue = v;
+      });
+
+      const synth = new Tone.Synth();
+      synth.toDestination();
+      const perc = new Tone.Synth();
+      perc.toDestination();
+      const notes = [
+        "C4",
+        "C#4",
+        "D4",
+        "D#4",
+        "E4",
+        "F4",
+        "F#4",
+        "G4",
+        "G#4",
+        "A4",
+        "A#4",
+        "B4",
+        "C5",
+        "C#5",
+        "D5",
+        "D#5",
+        "E5",
+        "F5",
+        "F#5",
+        "G5",
+        "G#5",
+        "A5",
+        "A#5",
+        "B5",
+        "C6"
+      ];
+
+      piano.on("change", function(v) {
+        console.log(v);
+        if (v.state) {
+          let value = "C4";
+          value = notes[v.note - 60];
+          synth.triggerAttack(value);
+        } else {
+          synth.triggerRelease();
+        }
+      });
+
+      sequencer.on("step", function(v) {
+        if (v[0]) {
+          perc.triggerAttackRelease(percValue, "8n");
+        }
+      });
+
+      $(document).ready(function() {
+        sequencer.start(200);
+      });
+    </script>
+  </body>
+</html>
