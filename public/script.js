@@ -27,6 +27,7 @@ const app = {
    app.scene.add(pointLight); 
    
    app.knot = app.createKnot();
+   
 
     // ...the rare and elusive hard binding appears! but why?
     app.render = app.render.bind(app);
@@ -60,6 +61,35 @@ const app = {
 
     app.results = new Uint8Array(app.analyser.frequencyBinCount);
 
+        
+    const pane = new Tweakpane.Pane();
+
+    const objcolor = 0x0088ff;
+
+    const PARAMS = {
+      song: "Observer by Avalon",
+      dodecahedron_color: 0x0088ff,
+      volume: 0.5,
+
+    };
+
+    
+
+   // const changeColor = (color) => app.changeObjectColor( color);
+
+    pane.addInput(PARAMS, 'song')
+
+
+    pane.addInput(PARAMS, 'dodecahedron_color', {
+      view: 'color',
+    });
+
+    pane.addInput(PARAMS, 'volume', {
+      min: 0,
+      max: 1,
+    });
+
+     
     app.render();
   },
 
@@ -69,13 +99,15 @@ const app = {
   //   app.scene.add(pointLight);
   // },
 
+
   createKnot() {
-    const knotgeo = new THREE.TorusKnotGeometry(10, 0.1, 128, 16, 5, 21);
+    const knotgeo = new THREE.DodecahedronGeometry(10,0);
     const mat = new THREE.MeshPhongMaterial({
-      color: 0xff0000,
+      color: 0x0088ff,
       shininess: 2000
     });
     const knot = new THREE.Mesh(knotgeo, mat);
+    knot.wireframe = true;
 
     app.scene.add(knot);
     return knot;
@@ -87,6 +119,10 @@ const app = {
     //have the knot rotate in accordance with the sound frequency
     for (let i = 0; i < app.analyser.frequencyBinCount; i++) {
       app.knot.rotation.x += app.results[i];
+      app.knot.rotation.y += app.results[i];
+      app.knot.shininess += app.results[i];
+      app.knot.rotation.z += app.results[i];
+
     }
     app.renderer.render(app.scene, app.camera);
     window.requestAnimationFrame(app.render);
