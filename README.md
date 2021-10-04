@@ -8,6 +8,7 @@ Due: October 4th, by 11:59 AM.
 
 - I Designed a 2D audio visualizer for 2 songs(Billie Eilish bad guy and Vivaldi's spring). User interaction can control 4 visual aspects : Bar width, Barcolor, Background color and Rotation. 
 
+    -rotate looks better with bar width set to min
 
 Images of application:
 
