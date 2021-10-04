@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=12.20.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "tone": "^14.7.77"
+  }
+}
