@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+hr {
+    color: white;
+    height: 10px;
+    border-width: 0px;
+}
+
+.container {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    max-width: 100%;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 66%;
+}
