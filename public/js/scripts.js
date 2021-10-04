@@ -174,9 +174,10 @@ const submit = function( e ) {
 
 window.onload = function() {
   const play_button = document.getElementById( 'play' )
-  const vis_button = document.getElementById('vis')
+  const stop_button = document.getElementById('stop')
 
   play_button.onclick = submit
+  stop_button.onclick = stop
   // if (howls[0] != undefined)
   // vis_button.onclick = visualize_sound
   updateHistory()
@@ -185,6 +186,13 @@ window.onload = function() {
 
   // const play_history_button = document.getElementById('play_history')
   // play_history_button.onclick = playHistory
+}
+
+const stop = function() {
+  howls[0].stop()
+  if (howls[1] != undefined) {
+    howls[1].stop()
+  }
 }
 
 /**
