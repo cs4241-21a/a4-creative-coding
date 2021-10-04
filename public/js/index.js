@@ -1,7 +1,7 @@
 var speedMap = {
-    75: 'Easy',
-    100: 'Medium',
-    125: 'Hard'
+    50: 'Hard',
+    75: 'Medium',
+    100: 'Easy'
 }
 
 // map from key to direction
@@ -51,9 +51,9 @@ jQuery(() => {
     let s = localStorage.getItem('speed') || 100;
     setSpeed(s)
 
-    $('#easy-button').on('click', () => setSpeed(75))
-    $('#med-button').on('click', () => setSpeed(100))
-    $('#hard-button').on('click', () => setSpeed(125))
+    $('#easy-button').on('click', () => setSpeed(100))
+    $('#med-button').on('click', () => setSpeed(75))
+    $('#hard-button').on('click', () => setSpeed(50))
 
     var startGame = () => {
         gameStarted = true;
