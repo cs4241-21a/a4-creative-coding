@@ -99,7 +99,6 @@ const visualize_sound = function() {
   draw()
 }
 
-// window.onload = ()=> document.querySelector('button').onclick = visualize_sound
 
 
 /**
@@ -175,9 +174,11 @@ const submit = function( e ) {
 window.onload = function() {
   const play_button = document.getElementById( 'play' )
   const stop_button = document.getElementById('stop')
+  const mute_button = document.getElementById('mute')
 
   play_button.onclick = submit
   stop_button.onclick = stop
+  mute_button.onclick = mute
   // if (howls[0] != undefined)
   // vis_button.onclick = visualize_sound
   updateHistory()
@@ -192,6 +193,28 @@ const stop = function() {
   howls[0].stop()
   if (howls[1] != undefined) {
     howls[1].stop()
+  }
+}
+
+const mute = function() {
+  const mute_button = document.getElementById('mute')
+  console.log('muting...')
+  console.log('mute button', mute_button.textContent)
+  var to_mute
+
+  switch(mute_button.textContent) {
+    case "mute":
+      to_mute = true
+      mute_button.textContent = "unmute"
+      break
+    case "unmute":
+      to_mute = false
+      mute_button.textContent = "mute"
+      break
+  }
+  howls[0].mute(to_mute)
+  if (howls[1] != undefined) {
+    howls[1].mute(to_mute)
   }
 }
 

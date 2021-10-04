@@ -2,6 +2,11 @@ h5 {
   margin-top: 20px;
 }
 
+#mute {
+  margin-top: 15px;
+  position:fixed;
+  right:15px;
+}
 
 canvas {
   /* background: #ffb9b9; */
