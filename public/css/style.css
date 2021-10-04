@@ -1,1 +1,85 @@
+body {
+  background-image: url("https://cdn.glitch.com/36ac2734-bfac-4c98-b919-aaedd40cac6c%2Fwp4660137-anime-lofi-wallpapers%20(1).jpg?v=1633329175627");
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  font-family: "Courier Prime", sans-serif;
+  margin-left: 25%;
+  margin-right: auto;
+  display: block;
+  border: 1em;
+}
+p {
+  padding-top: 0.5em;
+}
+h2 {
+  padding-top: 1em;
+}
+h1 {
+  padding-top: 1em;
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+input {
+  background-color: transparent;
+  color: #fff;
+}
+textarea {
+  background-color: #295FA8;
+  color: #fff;
+  border: none;
+  border-radius: 1em;
+  width: 100%;
+  resize: none;
+}
+label {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+#close {
+  font-size: 20px;
+  border-radius: 50px;
+  width: 130px;
+  height: 45px;
+  margin-left: 180px;
+}
 
+#instructions {
+  background-color: transparent;
+  border-radius: 10px;
+  height: 375px;
+  width: 500px;
+  margin-left: 25%;
+  margin-right: auto;
+}
+#canvas {
+  background-color: transparent;
+  margin-left: 50%;
+}
+#settings {
+}
+
+.checkBox {
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 20px;
+}
+#volume {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 20px;
+  background: gray;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-left: auto;
+}
+#volume::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: white;
+  cursor: pointer;
+}
