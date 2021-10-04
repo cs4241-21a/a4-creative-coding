@@ -23,6 +23,10 @@ body {
   width: 480px !important;
 }
 
+#navigation > .btn-group {
+  width: 100%;
+}
+
 #navigation > .btn {
   width: 25%;
 }

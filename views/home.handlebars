@@ -16,12 +16,12 @@
   <body>
     <!-- Layout -->
     <div id="app">
-      <div id="header" class="w-50 text-center d-block">
+      <div id="header" class="w-75 text-center d-block">
         <h1>Eat: A Boring Grid Game</h1>
       </div>
       <div class="container">
         <div class="row">
-          <div id="sidebar" class="col-md-3">
+          <div id="sidebar" class="col-md-4">
             <div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Name</span>
@@ -31,6 +31,21 @@
                 <h4>Score: <b>\{{score}}</b></h4>
                 <button v-on:click="removeScore" :disabled="username.length === 0" class="btn btn-danger btn-sm ml-auto">Remove</button>
                 <button v-on:click="submitScore" :disabled="username.length === 0" class="btn btn-success btn-sm ml-auto">Submit</button>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-4">
+                  <span class="badge" v-bind:style="{backgroundColor: getColorByIndex(game.userColor)}">User Color</span>
+                </div>
+                <div class="col-8">
+                  <input type="range" class="form-range" min="0" max="7" step="1" v-model="game.userColor">
+                </div>
+                <div class="col-4">
+                  <span class="badge" v-bind:style="{backgroundColor: getColorByIndex(game.foodColor)}">Food Color</span>
+                </div>
+                <div class="col-8">
+                  <input type="range" class="form-range" min="0" max="7" step="1" v-model="game.foodColor">
+                </div>
               </div>
               <hr>
             </div>
@@ -43,17 +58,25 @@
             </div>
             <div>
               <h4>Instructions</h4>
-              <p>You're the blue square. Using WASD, the arrow keys, or the buttons, navigate the 8x8 grid to eat tasty, green, square chunks of food. Each square is worth one (1) point. When you're ready to save your progress, enter a username and submit your score to the server.</p>
+              <p>You're the user square. Using WASD, the arrow keys, or the buttons, navigate the 8x8 grid to eat tasty, food-colored, square chunks of food. Each square is worth one (1) point. When you're ready to save your progress, enter a username and submit your score to the server.</p>
               <br>
             </div>
           </div>
-          <div id="game" class="col-md-9">
-            <canvas id="canvas" width="480" height="480"></canvas>
-            <div class="btn-group" id="navigation" role="group" width="480">
-              <button type="button" class="btn btn-primary" v-on:click="moveUp">Up</button>
-              <button type="button" class="btn btn-primary" v-on:click="moveDown">Down</button>
-              <button type="button" class="btn btn-primary" v-on:click="moveLeft">Left</button>
-              <button type="button" class="btn btn-primary" v-on:click="moveRight">Right</button>
+          <div id="game" class="col-md-8">
+            <canvas id="canvas" tabindex="1" width="480" height="480"></canvas>
+            <div id="navigation" role="group" width="480">
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary" v-on:click="moveUp">Up</button>
+                <button type="button" class="btn btn-primary" v-on:click="moveDown">Down</button>
+                <button type="button" class="btn btn-primary" v-on:click="moveLeft">Left</button>
+                <button type="button" class="btn btn-primary" v-on:click="moveRight">Right</button>
+              </div>
+              <hr>
+              <div>
+                <h4>Note</h4>
+                <p>If keyboard-based navigation isn't working, make sure to select the game canvas by clicking on it!</p>
+                <br>
+              </div>
             </div>
           </div>
         </div>

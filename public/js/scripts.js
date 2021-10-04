@@ -2,6 +2,18 @@
 
 console.log('Welcome to assignment 2!')
 
+
+const COLORS = [
+  '#007991',
+  '#888098',
+  '#F26A8D',
+  '#8FCB9B',
+  '#F7B05B',
+  '#66CED6',
+  '#645DD7',
+  '#198754'
+]
+
 const USER_COLOR = '#007991'
 const FOOD_COLOR = '#198754'
 
@@ -33,14 +45,17 @@ function coordsMatching(a, b) {
   return a.toString() === b.toString()
 }
 
-function render(ctx, user, food, path) {
+function render(ctx, user, food, path, userColor, foodColor) {
+  let userColorHex = COLORS[parseInt(userColor)]
+  let foodColorHex = COLORS[parseInt(foodColor)]
+
   ctx.clearRect(0, 0, CANVAS_X, CANVAS_Y)
-  drawSquare(ctx, user, USER_COLOR)
-  drawSquare(ctx, food, FOOD_COLOR)
+  drawSquare(ctx, user, userColorHex)
+  drawSquare(ctx, food, foodColorHex)
   
   ctx.globalAlpha = 0.5
   path.forEach(coords => {
-    drawSquare(ctx, coords, USER_COLOR)
+    drawSquare(ctx, coords, userColorHex)
   })
   ctx.globalAlpha = 1
 }
@@ -50,6 +65,8 @@ const app = Vue.createApp({
     return {
       token: '',
       game: {
+        userColor: '0',
+        foodColor: '7',
         user: [],
         path: [],
         food: [],
@@ -82,22 +99,26 @@ const app = Vue.createApp({
     let ctx = canvas.getContext('2d')
     ctx.scale(SCALE, SCALE)
 
-    document.onkeyup = (event) => {
+    canvas.onkeyup = (event) => {
       switch (event.key) {
         case 'a':
         case 'ArrowLeft':
+          event.preventDefault()
           this.moveLeft()
           break
         case 'd':
         case 'ArrowRight':
+          event.preventDefault()
           this.moveRight()
           break
         case 'w':
         case 'ArrowUp':
+          event.preventDefault()
           this.moveUp()
           break
         case 's':
         case 'ArrowDown':
+          event.preventDefault()
           this.moveDown()
           break
       }
@@ -108,7 +129,7 @@ const app = Vue.createApp({
         this.score++
         this.game.food = randomCoords()
       }
-      render(ctx, this.game.user, this.game.food, this.game.path)
+      render(ctx, this.game.user, this.game.food, this.game.path, this.game.userColor, this.game.foodColor)
     }, 50)
 
     this.getScores()
@@ -160,6 +181,9 @@ const app = Vue.createApp({
       })
       this.results = await response.json()
       this.score = 0
+    },
+    getColorByIndex(index) {
+      return COLORS[parseInt(index)]
     },
     trackPath() {
       console.log(JSON.stringify(this.game.user))
