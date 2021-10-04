@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A*</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/index.js"></script>
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+<div class="popup-container" id="popup-container">
+    <div class="popup">
+        <h1>A* Algorithm</h1>
+        <h3>Mark Forte</h3>
+        <fieldset class="info">
+            <legend>Info</legend>
+            <p>A* is a search algorithm used to find the shortest path between between the initial and final
+                node on a graph. It is typically used on a map to find the shortest or most cost effective way to
+                get from Point A to Point B. This app shows a visualization of the A* search process with useful
+                information to help understand how it works.</p>
+        </fieldset>
+        <fieldset class="info">
+            <legend>Usage</legend>
+            <p>The panel on the right contains several options to configure the search process. Changing
+                any of the features will affect the current search in real time, potentially making it unsolvable so
+                careful. </p>
+        </fieldset>
+        <button id="disable-popup">Close</button>
+    </div>
+</div>
+<div class="left-align sidebar center-vertical">
+    <div class="center-horizontal">
+        <h1>A* Algorithm</h1>
+        <h3>Mark Forte</h3>
+    </div>
+</div>
+<div class="right-align sidebar center-vertical">
+    <div class="center-horizontal">
+        <fieldset class="info">
+            <legend>Grid Info</legend>
+            <p>Green: Start</p>
+            <p>Red: Target</p>
+            <p>Black: Wall</p>
+            <p>Blue: Visited Square</p>
+            <p>Dark Pink: Last Explored Cell</p>
+            <p>Light Pink: Path</p>
+        </fieldset>
+        <fieldset>
+            <legend>A* Stats</legend>
+            <p>Cells Explored: <var id="cells-explored">0</var></p>
+            <p>Path Length: <var id="path-length">n/a</var></p>
+            <p>Time: <var id="time">0.00</var> seconds</p>
+        </fieldset>
+        <fieldset>
+            <legend>Config</legend>
+            <div>
+                <label for="stepping-speed">Stepping Speed (ms)</label>
+                <input id="stepping-speed" type="text" value="100">
+            </div>
+            <div>
+                <label for="cell-count">Maze Size</label>
+                <input id="cell-count" type="range" min="10" max="300" value="20">
+            </div>
+            <div>
+                <label for="wall-density">Wall Density</label>
+                <input id="wall-density" type="range" min="0" max="100" value="30">
+            </div>
+            <div>
+                <label for="show-values">Show Cell Values</label>
+                <input id="show-values" type="checkbox">
+            </div>
+            <div>
+                <label for="show-last-explored">Show Last Explored Cell</label>
+                <input id="show-last-explored" type="checkbox">
+            </div>
+            <div>
+                <label for="diagonal-moves">Allow Diagonal Moves</label>
+                <input id="diagonal-moves" type="checkbox">
+            </div>
+            <hr>
+            <div class="distance">
+                <p>Distance Function</p>
+                <label for="taxicab">Taxicab</label>
+                <input type="radio" name="distance-option" id="taxicab" checked>
+                <label for="pythagorean">Pythagorean</label>
+                <input type="radio" name="distance-option" id="pythagorean">
+            </div>
+        </fieldset>
+        <div>
+            <button name="Rerun A*" id="rerun">Rerun A*</button>
+        </div>
+        <div>
+            <button name="Generate Maze" id="new-maze">Generate New Maze</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

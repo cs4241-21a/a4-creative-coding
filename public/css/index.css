@@ -1,0 +1,118 @@
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #EEEEEE;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: calc((100vw - 100vh)/2);
+}
+
+.right-align {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.left-align {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sidebar {
+    width: calc((100vw - 100vh)/2);
+    height: 100vh;
+}
+
+.center-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.center-horizontal {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 10vw;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding-left: 0.25vw;
+}
+
+input[type=range], input[type=checkbox] {
+    margin: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+button {
+    width: 15vw;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    margin: 0.25vw;
+    background-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.distance p {
+    margin: 0;
+}
+
+.info p {
+    margin: 0.25vh;
+}
+
+.popup-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 100;
+
+}
+
+.popup {
+    position: absolute;
+    width: 75vh;
+    height: 75vh;
+    margin-left: calc((100vw - 75vh)/2);
+    margin-top: 12.5vh;
+    background-color: white;
+    z-index: 101;
+    border-radius: 5vh;
+    text-align: center;
+}
+
+.popup h1 {
+    margin-bottom: 0;
+}
+
+.popup h3 {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.popup hr {
+    width: 75%;
+}
+
+.popup fieldset {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+

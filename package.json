@@ -1,0 +1,23 @@
+{
+  "name": "a4-creative-coding",
+  "version": "1.0.0",
+  "description": "CS4241 A4 Creative Coding",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markjforte2000/a4-creative-coding.git"
+  },
+  "author": "Mark Forte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markjforte2000/a4-creative-coding/issues"
+  },
+  "homepage": "https://github.com/markjforte2000/a4-creative-coding#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
