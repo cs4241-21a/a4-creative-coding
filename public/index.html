@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS4241 Assignment 4</title>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/36ac2734-bfac-4c98-b919-aaedd40cac6c%2FLofiGirl.png?v=1633329653689"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="chill lofi station" />
+  </head>
+
+  <body>
+    <script src="js/main.js" defer></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <div id="overlay">
+      <div id="instructions">
+        <h2>Instructions</h2>
+        <p>
+          This is a place for you to listen to some chill lofi beats for you to
+          study and relax to. You can change various settings of the music
+          whilst also viewing a live visualizer. You can also upload your own
+          song to the simple visualizer. Relax and enjoy! Once you've "gotten
+          it" music will start.
+        </p>
+        <button id="close">Got it</button>
+      </div>
+    </div>
+    <div id="content">
+      <h1>Chill Lofi Beats</h1>
+      <div id="player">
+        <div id="options">
+          <div id="songs">
+            <label id="songList">Choose a song</label>
+            <div></div>
+            <button id="lofi" class="song">Lofi Beats</button>
+            <input type="file" id="thefile" accept="audio/*" />
+          </div>
+        </div>
+        <div id="settingsBox">
+          <label id="settingsLabel">Settings</label>
+          <div id="settings">
+            <div></div>
+            <button id="play" class="setBtn">Play</button>
+            <button id="pause" class="setBtn">Pause</button>
+            <div></div>
+            <label class="setLabels">Volume</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="100"
+              step="1"
+              id="volume"
+            />
+            <div></div>
+            <label class="setLabels">Mute</label>
+            <input type="checkbox" class="checkBox" id="mute" />
+            <label class="setLabels">Loop</label>
+            <input type="checkbox" class="checkBox" id="loop" />
+            <div></div>
+            <label class="setLabels">Playing: </label>
+            <input type="text" id="currentSong" />
+          </div>
+        </div>
+        <div id="canvasBox">
+          <canvas id="canvas" width="600" height="400"/canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
