@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang='en'>
+<head><title>The Roll</title>
+<body>
+    <button>Start the Roll</button>
+    <select id="colorSelect" size="5">
+        <option>blue</option>
+        <option>black</option>
+        <option>red</option>
+        <option>green</option>
+        <option>white</option>
+    </select><label for="colorSelect">Select the audio color of the visualizer</label>
+    <select id="bgcolorSelect" size="5">
+        <option>blue</option>
+        <option>black</option>
+        <option>red</option>
+        <option>green</option>
+        <option>white</option>
+    </select><label for="bgcolorSelect">Select the background audio color of the visualizer</label>
+    <input type="range" id="sizor" min="10" max="500" value="400" step="1"/><label for="sizor">size of visualizer</label>
+</body>
+<script>
+    const start = function() {
+        const sixe = document.getElementById("sizor").valueAsNumber
+        const color = document.getElementById('colorSelect'),
+            bgcolor = document.getElementById('bgcolorSelect')
+        document.body.innerHTML = '<button data-playing="false" class="tape-controls-play" role="switch" aria-checked="false">' +
+            'start/stop</button>' +
+            '<link rel="stylesheet" href="rick.css">'
+        const canvas = document.createElement( 'canvas' )
+        document.body.appendChild( canvas )
+        canvas.width = canvas.height = sixe
+        const ctx = canvas.getContext( '2d' )
+
+        // audio init
+        const audioCtx = new AudioContext()
+        const audioElement = document.createElement( 'audio' )
+        document.body.appendChild( audioElement )
+
+        // audio graph setup
+        const analyser = audioCtx.createAnalyser()
+        analyser.fftSize = 1024 // 512 bins
+        const player = audioCtx.createMediaElementSource( audioElement )
+        player.connect( audioCtx.destination )
+        player.connect( analyser )
+
+        // make sure, for this example, that your audiofile is accessible
+        // from your server's root directory... here we assume the file is
+        // in the same location as our index.html file
+        audioElement.src = 'NGGYU.wav'
+        audioElement.play()
+
+        const results = new Uint8Array( analyser.frequencyBinCount )
+
+        draw = function() {
+            // temporal recursion, call the function in the future
+            window.requestAnimationFrame(draw)
+
+            // fill our canvas with a black box
+            // by doing this every frame we 'clear' the canvas
+            ctx.fillStyle = bgcolor.options[bgcolor.selectedIndex].value;
+            ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+            // set the color to white for drawing our visualization
+            ctx.fillStyle = color.options[color.selectedIndex].value
+
+            analyser.getByteFrequencyData( results )
+
+            for( let i = 0; i < analyser.frequencyBinCount; i++ ) {
+                ctx.fillRect( i, 0, 1, results[i] ) // upside down!
+            }
+        }
+        draw()
+        const playButton = document.querySelector('.tape-controls-play');
+        playButton.addEventListener('click', (function (){
+            if (audioCtx.state === 'suspended'){
+                audioCtx.resume()
+            }
+            if (this.dataset.playing === 'false') {
+                audioElement.play();
+                this.dataset.playing = 'true';
+                // if track is playing pause it
+            } else if (this.dataset.playing === 'true') {
+                audioElement.pause();
+                this.dataset.playing = 'false';
+            }
+
+            let state = this.getAttribute('aria-checked') === "true" ? true : false;
+            this.setAttribute( 'aria-checked', state ? "false" : "true" );
+        }), false)
+    }
+
+    window.onload = ()=> document.querySelector('button').onclick = start
+</script>
+</html>

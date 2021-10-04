@@ -1,0 +1,16 @@
+{
+  "name": "a4-creative-coding",
+  "version": "1.0.0",
+  "dependencies": {
+    "nodemon": "^2.0.13",
+    "three": "^0.133.0"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  }
+}
