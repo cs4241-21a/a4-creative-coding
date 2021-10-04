@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ephesis&family=Staatliches&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sigmar+One&family=Staatliches&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div id="grid">
+      <div id="left">
+        <script src="js/scripts.js" defer></script>
+        <link href="css/style.css" rel="stylesheet" />
+
+        <h1 class="setLabels">Select song to play</h1>
+        <label type="text" id="song" />
+        <input type="button" id="BillieEilish" class="song" value="Billie Eilish: Bad Guy"/>
+        <br /><br />
+        <div></div>
+        <input type="button" id="Vivaldi" class="song" value="Vivaldi: Spring"/>
+        <br /><br />
+        <br /><br />
+        <h2>Visual Aspects control</h2>
+        <div class="slidecontainer">
+          Bar Width
+          <input
+            type="range"
+            min="1"
+            max="20"
+            value="10"
+            class="slider"
+            id="barWidth"
+          />
+          <br /><br />
+          <label for="backgroundColorLable">Choose Background color:</label>
+          <select name="BackgroundColor" id="BackgroundColor">
+            <option value="black">black</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+          </select>
+          <div class="result"></div>
+          <br /><br />
+          <label for="barColor">Choose Bar color:</label>
+          <select name="BarColor" id="BarColor">
+            <option value="red">red</option>
+            <option value="black">black</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+          </select>
+          <div class="result2"></div>
+          <br /><br />
+          <label class="switch">
+            Rotate On
+            <input type="checkbox" id="rotate" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div id="canvasHolder">
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+    </div>
+  </body>
+</html>
