@@ -25,7 +25,6 @@ pane.addInput({ song: 'WROR-FM (LIVE)' }, 'song', {
         'Dream War': 'music/DreamWar.opus',
         'Worlds End': 'music/WorldsEnd.opus',
         'Silent Voyage': 'music/SilentVoyage.opus',
-        'Dream War': 'music/DreamWar.opus'
     }
 }).on('change', (ev) => {
     audioElement.src = ev.value

@@ -7,9 +7,7 @@ function VisualizeSong() {
         mediaPlayer.connect(analyser)
         let results = new Uint8Array( analyser.frequencyBinCount )
         function draw() {
-            
             window.requestAnimationFrame( draw )
-            
             ctx.fillStyle = backColor
             ctx.fillRect( 0,0,canvas.width,canvas.height )
             ctx.fillStyle = freqColor
@@ -18,8 +16,6 @@ function VisualizeSong() {
                 ctx.fillRect(i*(canvas.width/results.length), canvas.height, Math.ceil((canvas.width/results.length)), -results[i]*freqMult)
             }
           }
-          
-          
           draw()
 
     }
