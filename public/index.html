@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Audio Visualizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
+    
+</head>
+
+<body>
+    <center>
+        <p>Audio Visualizer</p>
+        <audio crossOrigin="anonymous" src="https://22063.live.streamtheworld.com/WRORFM.mp3" id="music"></audio>
+        <canvas id="canvas" width="512" height="512" style="border: 1px solid black;"></canvas>
+        <h3>How to use the visualizer:</h3>
+        <ul style="text-align: center; list-style-type: none;">
+            <li>- Use the control panel on the top right to modify the visualization</li>
+            <li>- Choose a song from the drop down, then click play</li>
+            <li>- Once a song/stream is playing, modify the visualization by changing colors or slider values!</li>
+        </ul>
+    </center>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+<script src="js/controlPane.js"></script>
+<script src="js/script.js"></script>
+
+</html>
