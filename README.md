@@ -1,4 +1,4 @@
-Mago Sheehy - http://a4-sheehy98.glitch.me
+Mago Sheehy - http://a4-mago-sheehy.glitch.me
 
 ## Conway's Game of Life
 My application allows users to 'play' Conway's Game of Life.  Users can place cells, set the size of the grid, set the evolution speed, evolve one step at a time, stop the evolutions, clear the board, and change the parameters of the game.  Users can use the application to learn about Conway's and experiment with different rules.
