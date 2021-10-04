@@ -1,44 +1,25 @@
-let isPainting = false;
-let c, canvas;
-
-const doodleBtn = document.getElementById("doodle"),
-  redBtn = document.getElementById("red"),
-  blueBtn = document.getElementById("blue"),
-  yellowBtn = document.getElementById("yellow"),
-  greenBtn = document.getElementById("green"),
-  blackBtn = document.getElementById("black"),
-  squareBtn = document.getElementById("square"),
-  circleBtn = document.getElementById("circle"),
-  triangleBtn = document.getElementById("triangle"),
-  lineBtn = document.getElementById("line"),
-  popup = document.getElementById("popup"),
-  welcomeScreen = document.getElementById("welcomeScreen");
-
-const doodle = function(e) {
-  if (!isPainting) return;
-
-  c.lineWidth = 5;
-  c.lineCap = "round";
-  c.strokeStyle = "black";
-
-  c.lineTo(e.clientX, e.clientY);
-  c.stroke();
-  c.beginPath();
-  c.moveTo(e.clientX, e.clientY);
-};
-
-popup.onclick = closePopup;
-
-function closePopup() {
-    document.body.removeChild(popup);
-    document.body.removeChild(welcomeScreen);
-}
-
 window.addEventListener("load", () => {
-  canvas = document.querySelector("canvas");
-  c = canvas.getContext("2d");
+  const canvas = document.querySelector("canvas"),
+    c = canvas.getContext("2d"),
+    doodleBtn = document.getElementById("doodle"),
+    redBtn = document.getElementById("red"),
+    blueBtn = document.getElementById("blue"),
+    yellowBtn = document.getElementById("yellow"),
+    greenBtn = document.getElementById("green"),
+    blackBtn = document.getElementById("black"),
+    whiteBtn = document.getElementById("white"),
+    pinkBtn = document.getElementById("pink"),
+    purpleBtn = document.getElementById("purple"),
+    clearBtn = document.getElementById("clear"),
+    popup = document.getElementById("popup"),
+    welcomeScreen = document.getElementById("welcomeScreen");
+
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  c.lineCap = "round";
+  c.lineWidth = 10;
+
+  let isPainting = false;
 
   function startPosition(e) {
     isPainting = true;
@@ -50,15 +31,48 @@ window.addEventListener("load", () => {
     c.beginPath();
   }
 
-  doodleBtn.addEventListener("click", function() {
-    document.body.removeChild(popup);
-    document.body.removeChild(welcomeScreen);
-    c.style.display = "block";
+  function checkKey(e) {
+    e = e || window.event;
 
-    doodle(e);
-  });
+    //Up Arrow
+    if (e.keyCode == "38") {
+      c.lineWidth += 1;
+    }
+    
+    //Down Arrow
+    else if (e.keyCode == "40") {
+      c.lineWidth -= 1;
+    }
 
-  //Changes color of audio wave when clicked
+    //X Key
+    else if (e.keyCode == "88") {
+      c.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    //R Key
+    else if (e.keyCode == "82") {
+      c.lineCap = "round";
+    }
+    
+    //B Key
+    else if (e.keyCode == "66") {
+      c.lineCap = "butt";
+    }
+    
+    //S Key
+    else if (e.keyCode == "83") {
+      c.lineCap = "square";
+    }
+  }
+
+  function doodle(e) {
+    if (!isPainting) return;
+    
+    c.lineTo(e.clientX, e.clientY);
+    c.stroke();
+    c.beginPath();
+    c.moveTo(e.clientX, e.clientY);
+  }
 
   redBtn.addEventListener("click", function() {
     c.strokeStyle = "red";
@@ -80,6 +94,24 @@ window.addEventListener("load", () => {
     c.strokeStyle = "black";
   });
 
+  whiteBtn.addEventListener("click", function() {
+    c.strokeStyle = "white";
+  });
+
+  pinkBtn.addEventListener("click", function() {
+    c.strokeStyle = "pink";
+  });
+
+  purpleBtn.addEventListener("click", function() {
+    c.strokeStyle = "purple";
+  });
+
+  clearBtn.addEventListener("click", function() {
+    c.clearRect(0, 0, canvas.width, canvas.height);
+  });
+  
+  window.addEventListener("keydown", checkKey);
+  
   canvas.addEventListener("mousedown", startPosition);
   canvas.addEventListener("mouseup", endPosition);
   canvas.addEventListener("mousemove", doodle);

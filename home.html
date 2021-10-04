@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <script type="text/javascript" src="/home.js"></script>
-
     <title>DoodleBoard</title>
 
     <meta charset="utf-8" />
@@ -49,10 +48,12 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
+        opacity: 0.95;
       }
 
       p {
         font-family: "Azeret Mono", monospace;
+        font-size: 24px;
       }
 
       #popup {
@@ -74,101 +75,30 @@
         display: block;
       }
 
-      #doodle {
-        font-family: "Azeret Mono", monospace;
-      }
-
-      #toolbar {
-        font-family: "Azeret Mono", monospace;
-        display: block;
-      }
-
-      #colors {
-        font-family: "Azeret Mono", monospace;
-        display: block;
-      }
-
-      #red {
-        background-color: red;
+      #doodleBtn {
+        background-image: linear-gradient(
+          to left,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red
+        );
+        border: none;
         color: white;
-        padding: 5px;
-      }
-
-      #blue {
-        background-color: blue;
-        color: white;
-        padding: 5px;
-      }
-
-      #yellow {
-        background-color: yellow;
-        color: black;
-        padding: 5px;
-      }
-
-      #green {
-        background-color: green;
-        color: white;
-        padding: 5px;
-      }
-
-      #black {
-        background-color: black;
-        color: white;
-        padding: 5px;
-      }
-
-      #shapes {
-        font-family: "Azeret Mono", monospace;
-      }
-
-      #square {
-      }
-
-      #circle {
-      }
-
-      #triangle {
-      }
-
-      #line {
-      }
-
-      #canvasDiv {
-        display: block;
-      }
-
-      #canvas {
-        background-color: white;
-        border: 2px solid black;
-        display: block;
-        background: #FFFFFF;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        font-weight: bold;
         border: 5px solid #000;
         border-radius: 25px;
-        position: relative;
-        padding: 25;
+        cursor: pointer;
       }
-
-      #homebody {
-      }
-
-      label {
-        font-family: "Azeret Mono", monospace;
-        color: white;
-        font-weight: bold;
-      }
-
-      .shape {
-        font-family: "Azeret Mono", monospace;
-      }
-
-      .color:hover {
-        background-color: black;
-      }
-
-      .shape:hover {
-        background-color: yellow;
-      }
+      
     </style>
   </head>
   <body id="homebody">
@@ -184,9 +114,12 @@
         <p>
           Once you hit the Doodle button, feel free to draw whatever you desire!
         </p>
-        <button id="doodleBtn" onclick="window.open('index.html')">
+        <button id="doodleBtn" onclick="window.location.href='canvas.html'">
           Doodle!
         </button>
+        <p>
+          Just left click, drag your mouse, and put together a masterpiece!
+        </p>
       </div>
     </div>
   </body>

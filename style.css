@@ -14,6 +14,12 @@ h1 {
   -webkit-text-fill-color: transparent;
   text-align: center;
   font-weight: bold;
+  border: 5px solid #000;
+  border-radius: 25px;
+}
+
+.demo-wrap {
+  background: white;
 }
 
 h2 {
@@ -58,60 +64,88 @@ p {
 
 #toolbar {
   font-family: "Azeret Mono", monospace;
-  display: block;
+  background: white;
+  opacity: 0.95;
+  position: fixed;
+  bottom: 0;
+  border: 2px solid black;
+}
+
+#toolbar-content {
+  font-family: "Azeret Mono", monospace;
+  background: white;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #colors {
   font-family: "Azeret Mono", monospace;
-  display: block;
+  color: black;
+  font-size: 50px;
 }
 
 #red {
   background-color: red;
   color: white;
   padding: 5px;
+  display: inline-block;
 }
 
 #blue {
   background-color: blue;
   color: white;
   padding: 5px;
+  display: inline-block;
 }
 
 #yellow {
   background-color: yellow;
   color: black;
   padding: 5px;
+  display: inline-block;
 }
 
 #green {
   background-color: green;
   color: white;
   padding: 5px;
+  display: inline-block;
 }
 
 #black {
   background-color: black;
   color: white;
   padding: 5px;
+  display: inline-block;
 }
 
-#shapes {
-  font-family: "Azeret Mono", monospace;
+#white {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  display: inline-block;
 }
 
-#square {
+#pink {
+  background-color: pink;
+  color: white;
+  padding: 5px;
+  display: inline-block;
 }
 
-#circle {
+#purple {
+  background-color: purple;
+  color: white;
+  padding: 5px;
+  display: inline-block;
 }
 
-#triangle {
+#clear {
+  background-color: gray;
+  color: white;
+  padding: 5px;
+  display: inline-block;
 }
-
-#line {
-}
-
 #canvasDiv {
   display: block;
 }
@@ -119,16 +153,6 @@ p {
 #canvas {
   background-color: white;
   border: 2px solid black;
-  display: block;
-  background: #FFFFFF;
-  border: 5px solid #000;
-  border-radius: 25px;
-  position: relative;
-  padding: 25;
-}
-
-#homebody {
-  
 }
 
 label {
@@ -137,14 +161,13 @@ label {
   font-weight: bold;
 }
 
-.shape {
-  font-family: "Azeret Mono", monospace;
-}
-
-.color:hover {
-  background-color: black;
-}
-
-.shape:hover {
-  background-color: yellow;
+#instructions {
+  position: absolute;
+  display: inline-block;
+  opacity: 0.95;
+  background: white;
+  color: black;
+  top: 0;
+  border: 2px solid black;
+  font-size: 16px;
 }

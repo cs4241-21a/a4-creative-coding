@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static("/"));
+app.use(express.static("./"));
 
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/home.html");
