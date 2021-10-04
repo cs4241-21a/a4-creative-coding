@@ -1,6 +1,6 @@
-#Audio Visualizer
+##Audio Visualizer
 
-hosting link e.g. http://a4-charlieroberts.glitch.me
+hosting link e.g. https://a4-praisex.glitch.me/
 
 Include a very brief summary of your project here. Images are encouraged when needed, along with concise, high-level text. Be sure to include:
 
