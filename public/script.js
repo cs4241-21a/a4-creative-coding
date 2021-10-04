@@ -95,7 +95,7 @@ const createComics = async function() {
     data = await getMarvelNameData(comics)
 
     $('#graph-area').empty()
-
+    
     let svgNode = createGraph(data, "letter", "total", comics)
     $('#graph-area').append(svgNode)
 }
