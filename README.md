@@ -5,7 +5,7 @@ Due: October 4th, by 11:59 AM.
 
 ## Snake Game
 
-your hosting link e.g. http://a4-charlieroberts.glitch.me
+Link: https://a4-mgovilla.glitch.me/
 
 Created a web page to play snake online with the canvas API that allows 2d graphics for any modern browser. 
 - Goal: implement snake with just plain javascript
