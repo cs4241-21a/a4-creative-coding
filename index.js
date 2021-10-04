@@ -1,10 +1,9 @@
 const audioContext = new AudioContext();
 
 const analyzer = audioContext.createAnalyser();
-// get the audio element
+
 const audioElement = document.querySelector("audio");
 
-// pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
 
 const playButton = document.querySelector("button");
