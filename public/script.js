@@ -30,6 +30,7 @@ const params = {seed: "seed", loCount: 50, hiCount: 150, color: true, rotate: tr
     limits.addInput(params, "loCount", {min:1, step:1});
     limits.addInput(params, "hiCount", {min:1, step:1});
 
+    pane.addSeparator();
     const generateBtn = pane.addButton({title: "Generate"});
     pane.addSeparator();
     const onBtn = pane.addButton({title: "See Instructions"});

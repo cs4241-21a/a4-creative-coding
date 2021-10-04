@@ -10,7 +10,7 @@ html, body{
 }
 
 #overlay{
-
+    overflow: auto;
     box-sizing: border-box;
     position: fixed;
     display: block;
