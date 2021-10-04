@@ -1,0 +1,30 @@
+#canvasHolder{
+  grid-column-start:2;
+}
+
+#grid{
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 100% ;
+}
+
+#left{
+  font-family: 'Staatliches', cursive;
+  grid-column-start:1;
+}
+
+#BillieEilish{
+  font-family: 'Sigmar One', cursive;
+  background-color: red;
+}
+
+#Vivaldi{
+  font-family: 'Ephesis', cursive;
+  font-size:25px;
+  background-color: lightgreen;
+}
+
+.song{
+  
+  background-color: lightgreen
+}
