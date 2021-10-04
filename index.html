@@ -2,15 +2,24 @@
   <head>
     <script src="NexusUI.js"></script>
     <script src="https://unpkg.com/tone"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Devonshire&display=swap" rel="stylesheet">
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Devonshire&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <style>
-  div{
+    div {
       margin: auto;
     }
-    h1,h2,p{
+    h1,
+    h2,
+    p {
       text-align: center;
       font-family: Devonshire;
     }
@@ -101,12 +110,14 @@
         }
       });
 
-      sequencer.start();
-
       sequencer.on("step", function(v) {
         if (v[0]) {
           perc.triggerAttackRelease(percValue, "8n");
         }
+      });
+
+      $(document).ready(function() {
+        sequencer.start(200);
       });
     </script>
   </body>
