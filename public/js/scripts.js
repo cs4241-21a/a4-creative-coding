@@ -11,15 +11,36 @@ let rain_sound, lofi_music
  */
 const visualize_sound = function() {
   console.log('visualizing...')
-  console.log('the json:', json)
+  // console.log('the json:', json)
+  var color = "red"
   // console.log('the howls', howls)
   // document.body.innerHTML = ''
   // const canvas = document.createElement( 'canvas' )
   const canvas = document.getElementById('vis_canvas')
   // document.body.appendChild( canvas )
-  canvas.width = 512
-  canvas.height = 512
+  // canvas.width = 512
+  // canvas.height = 512
   const ctx = canvas.getContext( '2d' )
+
+  // console.log('environment', json.environment)
+  // get the color of the vis depending on the bg image
+  switch (json.environment) {
+    case "train": 
+      color = "#ffb9b9"
+      break
+    case "home": 
+      color = "#8ef5e7"
+      break
+    case "car": 
+      color = "#ff7474"
+      break
+    case "forest": 
+      color = "#ffe489"
+      break
+    default: 
+      color = "white"
+  }
+  console.log('color', color)
 
   // audio init
   // console.log('howler context', Howler.ctx)
@@ -32,15 +53,27 @@ const visualize_sound = function() {
   const analyser = audioCtx.createAnalyser()
   // const howlAnalyser = howlaudioCtx.createAnalyser()
   analyser.fftSize = 1024 // 512 bins
-  const player = audioCtx.createMediaElementSource( audioElement )
-  player.connect( audioCtx.destination )
-  player.connect( analyser )
+  // const player = audioCtx.createMediaElementSource( audioElement )
+  // player.connect( audioCtx.destination )
+  // player.connect( analyser )
+
+
+  // Create an analyser node in the Howler WebAudio context
+  // const analyser = Howler.ctx.createAnalyser();
+
+  // Connect the masterGain -> analyser (disconnecting masterGain -> destination)
+  Howler.masterGain.connect(analyser)
+
+  // Connect the analyser -> destination
+  analyser.connect(Howler.ctx.destination)
+
+
 
   // make sure, for this example, that your audiofle is accesssible
   // from your server's root directory... here we assume the file is
   // in the ssame location as our index.html file
   // audioElement.src = '../sounds/rain.wav'
-  audioElement.play()
+  // audioElement.play()
 
   const results = new Uint8Array( analyser.frequencyBinCount )
 
@@ -50,16 +83,17 @@ const visualize_sound = function() {
     
     // fill our canvas with a black box
     // by doing this every frame we 'clear' the canvas
-    ctx.fillStyle = 'black' 
-    ctx.fillRect( 0,0,canvas.width,canvas.height )
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    // ctx.fillRect( 0,0,canvas.width,canvas.height )
     
     // set the color to white for drawing our visuaization
-    ctx.fillStyle = 'white' 
+    // ctx.fillStyle = 'rgba(255, 255, 255, 0)'
+    ctx.fillStyle = color
     
     analyser.getByteFrequencyData( results )
     
     for( let i = 0; i < analyser.frequencyBinCount; i++ ) {
-      ctx.fillRect( i, 0, 1, results[i] ) // upside down!
+      ctx.fillRect( i, results[i], 1, canvas.height - results[i] ) // upside down!
     }
   }
   draw()
@@ -144,7 +178,7 @@ window.onload = function() {
 
   play_button.onclick = submit
   // if (howls[0] != undefined)
-  vis_button.onclick = visualize_sound
+  // vis_button.onclick = visualize_sound
   updateHistory()
   
   
