@@ -1,17 +1,8 @@
 {
-  "name": "a4-Ash",
+  "name": "04-Remix",
   "version": "1.0.0",
-  "description": "WPI CS4241 Assignment 3",
-  "author": "Ashwin Pai",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "dependencies": {
-    "d3": "^7.0.4",
-    "express": "^4.17.1",
-    "serve-static": "^1.14.1"
+  "dependencies": {},
+  "devDependencies": {
+    "d3-composite-projections": "^1.4.0"
   }
 }
