@@ -15,7 +15,7 @@ Your application is required to implement the following functionalities:
 
 - A server created using Express. This server can be as simple as needed.
 - A client-side interactive experience using at least one of the following web technologies frameworks.
-  - [Three.js](https://threejs.org/): A library for 3D graphics / VR experiences
+  - [Three.js]( ): A library for 3D graphics / VR experiences
   - [D3.js](https://d3js.org): A library that is primarily used for interactive data visualizations
   - [Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API): A 2D raster drawing API included in all modern browsers
   - [SVG](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API): A 2D vector drawing framework that enables shapes to be defined via XML.
