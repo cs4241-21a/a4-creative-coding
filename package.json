@@ -1,5 +1,5 @@
 {
-  "name": "a4-audio_visualizer",
+  "name": "a4-music_visualizer",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
