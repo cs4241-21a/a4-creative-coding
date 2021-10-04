@@ -1,4 +1,4 @@
-##Audio Visualizer
+Audio Visualizer
 
 hosting link e.g. https://a4-praisex.glitch.me/
 
