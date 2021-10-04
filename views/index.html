@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="./main.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        /*         background-color: black; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Pokemon Information
+    </h1>
+    <p style="font-family:sans-serif">
+      Use the sliders and checkboxes to filter the Pokemon (to filter by type or
+      weakness, open each respective folder)
+    </p>
+    <p style="font-family:sans-serif">
+      You can also use the sort tab to sort the Pokemon in various ways
+    </p>
+    <p style="font-family:sans-serif">
+      All data is from <a href="https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json">https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json</a>
+    </p>
+    <div id="pane" style="width:300px">
+      <script>
+        const pane = new Tweakpane.Pane();
+
+        pane.on("change", () => {
+          updateSet();
+        });
+      </script>
+    </div>
+    <div id="listing"></div>
+  </body>
+</html>
