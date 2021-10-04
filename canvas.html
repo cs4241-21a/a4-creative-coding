@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="/canvas.js"></script>
+    <script type="text/javascript" src="/controller.js"></script>
+    <link type="text/css" rel="stylesheet" href="/style.css" />
+
+    <title>DoodleBoard</title>
+
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="indexbody">
+
+    <div id="instructions">
+    <ul>
+      Controls:
+      <li>Click & Drag: Doodle!</li>
+      <li>Up Arrow: Increase Brush Size</li>
+      <li>Down Arrow: Decrease Brush Size</li>
+      <li>X: Clear Drawing</li>
+      <li>B: Butt Brush</li>
+      <li>R: Round Brush</li>
+      <li>S: Square Brush</li>
+    </ul></div>
+
+    <div id="toolbar">
+      <div id="toolbar-content">
+        <label id="colors">Color Picker:</label>
+        <input type="button" id="red" class="color" value="Red" />
+        <input type="button" id="blue" class="color" value="Blue" />
+        <input type="button" id="yellow" class="color" value="Yellow" />
+        <input type="button" id="green" class="color" value="Green" />
+        <input type="button" id="black" class="color" value="Black" />
+        <input type="button" id="white" class="color" value="White" />
+        <input type="button" id="pink" class="color" value="Pink" />
+        <input type="button" id="purple" class="color" value="Purple" />
+        <input type="button" id="clear" value="Clear Drawing" />
+      </div>
+    </div>
+    
+    <div id="canvasDiv">
+      <canvas tabindex="0" id="canvas"></canvas>
+    </div>
+  </body>
+</html>

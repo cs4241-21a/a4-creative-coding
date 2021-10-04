@@ -1,0 +1,173 @@
+h1 {
+  font-family: "Azeret Mono", monospace;
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: bold;
+  border: 5px solid #000;
+  border-radius: 25px;
+}
+
+.demo-wrap {
+  background: white;
+}
+
+h2 {
+  font-family: "Azeret Mono", monospace;
+  text-align: center;
+}
+
+body {
+  font-family: "Azeret Mono", monospace;
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F86215940-4642-4ac3-952e-0c81a0f637a0.jpg?fit=scale-down&source=next&width=700");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+p {
+  font-family: "Azeret Mono", monospace;
+}
+
+#popup {
+  font-family: "Azeret Mono", monospace;
+  display: block;
+  width: 555px;
+  height: 375px;
+  background: #FFFFFF;
+  border: 5px solid #000;
+  border-radius: 25px;
+  position: relative;
+  top: 150px;
+  left: 375px;
+  text-align: center;
+}
+
+#welcomeScreen {
+  font-family: "Azeret Mono", monospace;
+  display: block;
+}
+
+#doodle {
+  font-family: "Azeret Mono", monospace;
+}
+
+#toolbar {
+  font-family: "Azeret Mono", monospace;
+  background: white;
+  opacity: 0.95;
+  position: fixed;
+  bottom: 0;
+  border: 2px solid black;
+}
+
+#toolbar-content {
+  font-family: "Azeret Mono", monospace;
+  background: white;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#colors {
+  font-family: "Azeret Mono", monospace;
+  color: black;
+  font-size: 50px;
+}
+
+#red {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+}
+
+#blue {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+}
+
+#yellow {
+  background-color: yellow;
+  color: black;
+  padding: 5px;
+  display: inline-block;
+}
+
+#green {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+}
+
+#black {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+}
+
+#white {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  display: inline-block;
+}
+
+#pink {
+  background-color: pink;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+}
+
+#purple {
+  background-color: purple;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+}
+
+#clear {
+  background-color: gray;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+}
+#canvasDiv {
+  display: block;
+}
+
+#canvas {
+  background-color: white;
+  border: 2px solid black;
+}
+
+label {
+  font-family: "Azeret Mono", monospace;
+  color: white;
+  font-weight: bold;
+}
+
+#instructions {
+  position: absolute;
+  display: inline-block;
+  opacity: 0.95;
+  background: white;
+  color: black;
+  top: 0;
+  border: 2px solid black;
+  font-size: 16px;
+}
