@@ -1,15 +1,5 @@
 Assignment 4 - Creative Coding: Interactive Multimedia Experiences
 ===
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Glitch/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. *NOTE: If you don't use Glitch for hosting (where we can see the files) then you must include all project files that you author in your repo for this assignment*.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
 
 ## Minimum Wage by State Visualization
 
@@ -20,6 +10,7 @@ For my project I created 2 visualizations based on a minimum wage per state info
 interactive map, and the second visualization is a linked visualization which displays a state's minimum wage on a bar 
 graph below the map of the states. 
 
+![img](imgs/finalScreenshot.png)
 ### Points of Interaction Used: 
 1. Hover on State for Map: The first point of interaction included is the ability for a user to hover over a state and see the states name along with the minimum wage. 
 2. Click on State to Highlight: The second point of interaction included is the ability for a user to select a state by clicking on it. Clicking on the state does the following 2 things: 
