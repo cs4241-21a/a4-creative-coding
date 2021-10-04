@@ -1,0 +1,41 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool thing made with Glitch">
+
+    <title>CS4241 A4 Creative Coding</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- add tweakpane -->
+    <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+    
+    <!-- add d3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Meteorite Landings</h1>
+    <p>
+      The visualization below shows the relative mass sizes of documented meteorite landings. Using the tweakpane, the colors and the size of the circles can change. 
+      The data can also be filtered out using the type and minimum tweakpane parameters. The type parameter will choose how the meteorite was discovered (whether it was seen falling or just found on the ground). The minimum parameter will display the meteorites with that mass or greater. Note: The minimum parameter only works with all selected for type.
+    </p>
+    <div id="tweakpane"></div>
+    <div id="masssize"></div>
+    <p>
+      The visualization below shows how many meteorites were discovered falling and how many were found. The tweakpane above can change the color of the bars.
+    </p>
+    <div id="yearsdocumented"></div>
+
+  </body>
+</html>
