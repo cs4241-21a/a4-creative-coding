@@ -10,7 +10,9 @@ const doodleBtn = document.getElementById("doodle"),
   squareBtn = document.getElementById("square"),
   circleBtn = document.getElementById("circle"),
   triangleBtn = document.getElementById("triangle"),
-  lineBtn = document.getElementById("line");
+  lineBtn = document.getElementById("line"),
+  popup = document.getElementById("popup"),
+  welcomeScreen = document.getElementById("welcomeScreen");
 
 const doodle = function(e) {
   if (!isPainting) return;
@@ -24,6 +26,13 @@ const doodle = function(e) {
   c.beginPath();
   c.moveTo(e.clientX, e.clientY);
 };
+
+popup.onclick = closePopup;
+
+function closePopup() {
+    document.body.removeChild(popup);
+    document.body.removeChild(welcomeScreen);
+}
 
 window.addEventListener("load", () => {
   canvas = document.querySelector("canvas");
@@ -40,6 +49,36 @@ window.addEventListener("load", () => {
     isPainting = false;
     c.beginPath();
   }
+
+  doodleBtn.addEventListener("click", function() {
+    document.body.removeChild(popup);
+    document.body.removeChild(welcomeScreen);
+    c.style.display = "block";
+
+    doodle(e);
+  });
+
+  //Changes color of audio wave when clicked
+
+  redBtn.addEventListener("click", function() {
+    c.strokeStyle = "red";
+  });
+
+  blueBtn.addEventListener("click", function() {
+    c.strokeStyle = "blue";
+  });
+
+  yellowBtn.addEventListener("click", function() {
+    c.strokeStyle = "yellow";
+  });
+
+  greenBtn.addEventListener("click", function() {
+    c.strokeStyle = "green";
+  });
+
+  blackBtn.addEventListener("click", function() {
+    c.strokeStyle = "black";
+  });
 
   canvas.addEventListener("mousedown", startPosition);
   canvas.addEventListener("mouseup", endPosition);

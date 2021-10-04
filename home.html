@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="/home.js"></script>
+
+    <title>DoodleBoard</title>
+
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      h1 {
+        font-family: "Azeret Mono", monospace;
+        background-image: linear-gradient(
+          to left,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        font-weight: bold;
+        border: 5px solid #000;
+        border-radius: 25px;
+      }
+
+      .demo-wrap {
+        background: white;
+      }
+
+      h2 {
+        font-family: "Azeret Mono", monospace;
+        text-align: center;
+      }
+
+      body {
+        font-family: "Azeret Mono", monospace;
+        background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F86215940-4642-4ac3-952e-0c81a0f637a0.jpg?fit=scale-down&source=next&width=700");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+
+      p {
+        font-family: "Azeret Mono", monospace;
+      }
+
+      #popup {
+        font-family: "Azeret Mono", monospace;
+        display: block;
+        width: 555px;
+        height: 375px;
+        background: #FFFFFF;
+        border: 5px solid #000;
+        border-radius: 25px;
+        position: relative;
+        top: 150px;
+        left: 375px;
+        text-align: center;
+      }
+
+      #welcomeScreen {
+        font-family: "Azeret Mono", monospace;
+        display: block;
+      }
+
+      #doodle {
+        font-family: "Azeret Mono", monospace;
+      }
+
+      #toolbar {
+        font-family: "Azeret Mono", monospace;
+        display: block;
+      }
+
+      #colors {
+        font-family: "Azeret Mono", monospace;
+        display: block;
+      }
+
+      #red {
+        background-color: red;
+        color: white;
+        padding: 5px;
+      }
+
+      #blue {
+        background-color: blue;
+        color: white;
+        padding: 5px;
+      }
+
+      #yellow {
+        background-color: yellow;
+        color: black;
+        padding: 5px;
+      }
+
+      #green {
+        background-color: green;
+        color: white;
+        padding: 5px;
+      }
+
+      #black {
+        background-color: black;
+        color: white;
+        padding: 5px;
+      }
+
+      #shapes {
+        font-family: "Azeret Mono", monospace;
+      }
+
+      #square {
+      }
+
+      #circle {
+      }
+
+      #triangle {
+      }
+
+      #line {
+      }
+
+      #canvasDiv {
+        display: block;
+      }
+
+      #canvas {
+        background-color: white;
+        border: 2px solid black;
+        display: block;
+        background: #FFFFFF;
+        border: 5px solid #000;
+        border-radius: 25px;
+        position: relative;
+        padding: 25;
+      }
+
+      #homebody {
+      }
+
+      label {
+        font-family: "Azeret Mono", monospace;
+        color: white;
+        font-weight: bold;
+      }
+
+      .shape {
+        font-family: "Azeret Mono", monospace;
+      }
+
+      .color:hover {
+        background-color: black;
+      }
+
+      .shape:hover {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body id="homebody">
+    <div class="demo-wrap">
+      <div class="demo-content">
+        <h1 class="rainbow-text">DoodleBoard</h1>
+      </div>
+    </div>
+
+    <div id="popup">
+      <div id="welcomeScreen">
+        <h2>Instructions</h2>
+        <p>
+          Once you hit the Doodle button, feel free to draw whatever you desire!
+        </p>
+        <button id="doodleBtn" onclick="window.open('index.html')">
+          Doodle!
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

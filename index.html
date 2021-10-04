@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script type="text/javascript" src="javascript/canvas.js"></script>
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="/canvas.js"></script>
+    <link type="text/css" rel="stylesheet" href="/style.css" />
 
     <title>DoodleBoard</title>
 
@@ -15,18 +15,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <h1 class="rainbow-text">DoodleBoard</h1>
-
-    <div id="popup">
-      <div id="welcomeScreen">
-        <h2>Instructions</h2>
-        <p>
-          Once you hit the Doodle button, feel free to draw whatever you desire!
-        </p>
-        <button id="doodle">Doodle!</button>
-      </div>
-    </div>
+  <body id="indexbody">
 
     <div id="toolbar">
       <label id="colors">Colors</label>
@@ -54,7 +43,7 @@
       <div></div>
     </div>
     <div id="canvasDiv">
-      <canvas id="canvas" width="600" height="600"></canvas>
+      <canvas id="canvas"></canvas>
     </div>
   </body>
 </html>

@@ -12,10 +12,13 @@ h1 {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: bold;
 }
 
 h2 {
   font-family: "Azeret Mono", monospace;
+  text-align: center;
 }
 
 body {
@@ -33,6 +36,15 @@ p {
 #popup {
   font-family: "Azeret Mono", monospace;
   display: block;
+  width: 555px;
+  height: 375px;
+  background: #FFFFFF;
+  border: 5px solid #000;
+  border-radius: 25px;
+  position: relative;
+  top: 150px;
+  left: 375px;
+  text-align: center;
 }
 
 #welcomeScreen {
@@ -55,18 +67,33 @@ p {
 }
 
 #red {
+  background-color: red;
+  color: white;
+  padding: 5px;
 }
 
 #blue {
+  background-color: blue;
+  color: white;
+  padding: 5px;
 }
 
 #yellow {
+  background-color: yellow;
+  color: black;
+  padding: 5px;
 }
 
 #green {
+  background-color: green;
+  color: white;
+  padding: 5px;
 }
 
 #black {
+  background-color: black;
+  color: white;
+  padding: 5px;
 }
 
 #shapes {
@@ -91,13 +118,23 @@ p {
 
 #canvas {
   background-color: white;
-  border-style: solid;
   border: 2px solid black;
   display: block;
+  background: #FFFFFF;
+  border: 5px solid #000;
+  border-radius: 25px;
+  position: relative;
+  padding: 25;
 }
 
-.color {
+#homebody {
+  
+}
+
+label {
   font-family: "Azeret Mono", monospace;
+  color: white;
+  font-weight: bold;
 }
 
 .shape {
@@ -105,7 +142,7 @@ p {
 }
 
 .color:hover {
-  background-color: yellow;
+  background-color: black;
 }
 
 .shape:hover {
