@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Color Swatch - CS4241 A4</title>
+    <link rel="stylesheet" href="../public/style.css" />
+</head>
+
+<body>
+    <h1>Color Swatch</h1>
+    <fieldset>
+        <label for="r">R</label>
+        <input type="range" min="0" max="255" id="r" step="1" value="255">
+        <output for="r" id="outputR">255</output><br /><br />
+
+        <label for="g">G</label>
+        <input type="range" min="0" max="255" id="g" step="1" value="255">
+        <output for="g" id="outputG">255</output><br /><br />
+
+        <label for="b">B</label>
+        <input type="range" min="0" max="255" id="b" step="1" value="255">
+        <output for="b" id="outputB">255</output><br /><br />
+
+        <label for="a">A</label>
+        <input type="range" min="0" max="100" id="a" step="1" value="100">
+        <output for="a" id="outputA">100</output><br /><br />
+    </fieldset>
+
+    <output id="hexVal">#ffffffff</output><br /><br />
+
+    <fieldset>
+        <canvas id="canvas" height="325" width="580"></canvas>
+    </fieldset>
+
+    <script src="../public/function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+
+</body>
+</html>
