@@ -1,7 +1,7 @@
 Assignment 4 - Creative Coding: Interactive Multimedia Experiences
 ===
 
-Due: October 4th, by 11:59 AM.
+Due: October 4th, by 11:59 AM. (I got an extension from Prof. Roberts!)
 
 ## First Gen Pokemon Types and Weaknesses
 
