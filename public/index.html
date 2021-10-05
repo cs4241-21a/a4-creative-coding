@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CS4241 Assignment 2</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='styles.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-image: url('bkgd.png');">
+    <div class='pt-3 d-flex justify-content-center'>
+        <h1>First Gen Pokemon</h1>
+    </div>
+    
+    <div class='container-fluid m-1 p-3'>
+        <div class='row'>
+            <div class='col'></div>
+            <div class='col-4 ml-3 whiteBkgd'>
+                <div class='row'>
+                    <h2>Pokemon by Type</h2>
+                </div>
+                <div class='row'>
+                    <svg id="typeBarChart"></svg>
+                </div>
+                <div class='row'>
+                    <h2>Pokemon by Weakness</h2>
+                </div>
+                <div class='row'>
+                    <svg id="weakBarChart"></svg>
+                </div>
+            </div>
+            <div class='col whiteBkgd'>
+                <div class='row'>
+                    <h2>Pokemon List</h2>
+                </div>
+                <div class='row'>
+                    <div class='col' id='pokemonList'></div>
+                    <div class='col' id='pokemonList2'></div>
+                </div>
+            </div>
+            <div class='col'></div>
+        </div>
+
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src='script.js' defer></script>
+</body>
+
+</html>
