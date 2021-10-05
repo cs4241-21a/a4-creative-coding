@@ -3,7 +3,7 @@ Assignment 4 - Creative Coding: Interactive Multimedia Experiences
 
 ## Color Swatch
 
-Link: [linkhere](linkhere)
+Link: [https://a4-lockeanddemosthenes.glitch.me/](https://a4-lockeanddemosthenes.glitch.me/)
 
 NOTE: The professor gave me an extension to work on this due to family business that came up over the weekend.
 
