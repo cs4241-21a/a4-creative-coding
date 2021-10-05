@@ -1,0 +1,20 @@
+
+
+h1 {
+  font-family : sans-serif;
+  color: #5742f5;
+  max-width: calc(100% - 5rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-family : sans-serif;
+  color: #f5a742;
+  max-width: calc(100% - 30rem);
+  line-height: 1.1;
+  font-size: 1.2em;
+}
+
+
+
+body {background-color: black;}
