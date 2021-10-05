@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+    <link rel="stylesheet" href="/style.css">
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+    
+    <header>
+      <h1>The Cubes</h1>
+      
+    </header>
+    <main>
+    
+        <h2>This website allows you to mess around with these rotating cubes and make them move.Made with Three.js and Tweakpane</h2>
+        <h2>Play around with the options in the top right for some cool results</h2>
+
+    </main>
+
+    
+		<script src="js/three.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tweakpane@3.0.5/dist/tweakpane.min.js"></script>
+		<script>
+      
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+      
+      var rotX = 0.05
+      var rotY = 0.05
+      
+      var boom = 0
+      
+      var color = Math.random() * 0xffffff
+    
+      
+      const pane = new Tweakpane.Pane({
+          title: 'Do things'
+      });
+      
+      const PARAMS = {
+        numCubes: 1,
+        speedX: 50,
+        speedY: 50,
+        rotate: 0
+        
+      };
+      
+            pane.addInput(PARAMS, 'numCubes', {
+        min: 1,
+        max: 200,
+      })
+      .on('change', (ev) => {
+      for( var i = scene.children.length - 1; i >= 0; i--) { 
+         obj = scene.children[i];
+         scene.remove(obj); 
+      }
+        
+      var val = .2;
+        
+      for(var i = 0; i < ev.value.toFixed(2); i++){
+        boom = 0
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial( { color: color } );
+        const cube = new THREE.Mesh( geometry, material );
+        cube.scale.set(0.1,0.1,0.1);
+        
+
+        
+        if(i > 0){
+          
+        if(i % 8 == 1){
+          val = val + .2;
+        }
+          
+          if(i%8 === 0){
+            cube.translateX(val);
+            cube.translateY(val);
+          } else if (i%8 === 1){
+            cube.translateX(val);
+          } else if (i%8 === 2){
+            cube.translateX(val);
+            cube.translateY(-val);
+          } else if (i%8 === 3){
+            cube.translateY(-val);
+          } else if (i%8 === 4){
+            cube.translateX(-val);
+            cube.translateY(-val);
+          } else if (i%8 === 5){
+            cube.translateX(-val);
+          } else if (i%8 === 6){
+            cube.translateX(-val);
+            cube.translateY(val);
+          } else if (i%8 === 7){
+            cube.translateY(val);
+          }
+          
+          
+        }
+        
+        scene.add( cube );
+      }
+        
+      if (ev.last) {
+        console.log('(last)');
+      }
+      });
+
+      pane.addInput(PARAMS, 'speedX', {
+        min: 0,
+        max: 100,
+      })
+      .on('change', (ev) => {
+      rotX = parseInt(ev.value.toFixed(2)) * .001
+      if (ev.last) {
+        console.log('(last)');
+      }
+      });
+      
+      pane.addInput(PARAMS, 'speedY', {
+        min: 0,
+        max: 100,
+      })
+      .on('change', (ev) => {
+      rotY = parseInt(ev.value.toFixed(2)) * .001
+      if (ev.last) {
+        console.log('(last)');
+      }
+      });
+      
+
+      
+
+      
+      
+      
+      
+
+      
+      const btn1 = pane.addButton({
+        title: 'Change Color',
+      });
+
+      btn1.on('click', () => {
+        color = Math.random() * 0xffffff
+      });
+      
+      var dance = 0
+      
+      const btn2 = pane.addButton({
+        title: 'Cube Dance',
+      });
+
+      btn2.on('click', () => {
+        if(dance === 0){
+           dance = 1
+        } else {
+          dance = 0
+        }
+      });
+      
+      const btn3 = pane.addButton({
+        title: 'Dont click this',
+      });
+
+      let count = 0;
+      btn3.on('click', () => {
+        if(boom === 0){
+           boom = 1
+        } else {
+          boom = 0
+        }
+      });
+      
+
+      
+      
+      
+
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild( renderer.domElement );
+      
+      const geometry = new THREE.BoxGeometry();
+      const material = new THREE.MeshBasicMaterial( { color: color } );
+      const cube = new THREE.Mesh( geometry, material );
+      scene.add( cube );
+      cube.scale.set(0.1,0.1,0.1);
+      camera.position.z = 5;
+      
+            var theValue = 0;
+      
+      function animate() {
+      requestAnimationFrame( animate );
+      theValue = theValue + 1
+        
+      for( var i = scene.children.length - 1; i >= 0; i--) { 
+        obj = scene.children[i];
+        obj.material.color.setHex( color );
+        obj.rotation.x += rotX;
+			  obj.rotation.y += rotY;
+        if(boom === 1){
+          if(i%2){
+            obj.translateX(Math.random() / 10);
+            obj.translateY(Math.random() / 10);
+            obj.translateZ(Math.random() / 10);          
+          } else {
+            obj.translateX(-Math.random() / 10);
+            obj.translateY(-Math.random() / 10);
+            obj.translateZ(-Math.random() / 10);
+          }
+
+        }
+        
+        if(dance === 1){
+            obj.translateX(.005);
+            obj.translateY(.005);
+
+        }
+
+
+      }
+        
+        
+        
+      renderer.render( scene, camera );
+      }
+      animate();
+      
+      
+		</script>
+    
+    
+	</body>
+</html>
