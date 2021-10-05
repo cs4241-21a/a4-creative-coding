@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(200,200,200);
+    padding: 40px;
+    margin: auto;
+    margin-top: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 38em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+fieldset {
+    border: none;
+}
+
+output {
+    display: inline-block;
+    min-width: 2.5em;
+}
+
+label, output {
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-size: 1.1em;
+}
+
+fieldset label, fieldset output {
+    min-width: 50px;
+    float: left;
+}
+
+input[type=range] {
+    min-width: 360px;
+    background: black;
+}
+
+label[for=r], output[for=r] {
+    background-color: #f00;
+}
+
+label[for=g], output[for=g] {
+    background-color: #0f0;
+}
+
+label[for=b], output[for=b] {
+    background-color: #00f;
+}
+
+label[for=a], output[for=a] {
+    background-color: #fff;
+}
+
+#hexVal {
+    margin-top: 25px;
+    min-width: 4.5em;
+    font-size: 3em;
+    background: rgba(255,255,255,.3);
+}
