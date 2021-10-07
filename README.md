@@ -7,3 +7,5 @@ This application is a simple synthesizer with piano keyboard controls. It provid
 One of the main challenges I faced while creating the application was handling the audio clicking noise that can occur if an oscillator is turned off when not at a zero crossing.
 To address this, I used an exponential fade to 0.001 on the main gain node before stopping any oscillator. This successfully reduced the audio clicking. 
 However, some of this clicking can still occur if the user clicks and quickly drags across the piano keyboard.
+
+NOTE: Professor Roberts gave me an extension on this assignment.
