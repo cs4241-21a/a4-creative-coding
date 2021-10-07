@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+
+    <title>A4 Music Synthesizer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: #ccdce6;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+      }
+      
+      p {
+        margin:auto;
+        width: 700px;
+        text-align: justify;
+      }
+      
+      h2 {
+        text-align: left;
+        width: 700px;
+        margin:auto;
+      }
+      
+      button {
+        display:block;
+        margin:auto;
+        width: 50px;
+      }
+      
+      #piano {
+        display: none;
+        margin: auto;
+      }
+      
+      #optionsDiv {
+        display: none;
+        margin: auto;
+        width: 700px;
+      }
+      
+      #spectrogram {
+        display: none;
+        margin: auto;
+      }
+      
+      .optionBlock {
+        float: left;
+        margin:auto;
+        text-align:center;
+      }
+      
+      #toggleFilter {
+        margin-left: 40px;
+      }
+      
+      #filterFrequency {
+        margin-left: 30px;
+      }
+  </style>
+  
+    <script src='/js/scripts.js' type='module'></script>
+    <script src='https://cdn.jsdelivr.net/npm/nexusui@latest/dist/NexusUI.js'></script>
+
+  </head>
+  <body>
+    <h1>
+      Virtual Synthesizer Keyboard
+    </h1>
+    
+    <button id="start">Start</button>
+    
+    <div id="piano"></div>
+    
+    <div id="optionsDiv">
+      
+      <div class="optionBlock">
+        
+        <h3>Gain Dial</h3>
+        
+        <div id="gainDial" class="option"></div>
+        
+      </div>
+      
+      <div class="optionBlock">
+        
+        <h3>Panning Slider</h3>
+        
+        <div id="panSlider" class="option"></div>
+      </div>
+      
+      <div class="optionBlock">
+        
+        <h3>Wave Type</h3>
+        
+        <div id="waveTypeSelector" class="option"></div>
+      </div>
+      
+      <div class="optionBlock">
+        <h3>
+           Low Pass Filter
+        </h3>
+        <div id="toggleFilter" class="option"></div>
+        
+        <div id="filterFrequency" class="option"></div>
+        
+      </div>
+      
+    </div><br>
+    
+    <div id="spectrogram"></div>
+    
+    <h2>
+      Instructions:
+    </h2><br>
+    <p>
+      This application provides controls for a basic synthesizer. Press the "Start" button to display the controls and begin using the synthesizer.
+    </p><br>
+    <p>
+      Click and hold a key on the keyboard displayed to play a note ranging from C1 (32.703 Hz) to C6 (1046.5 Hz). Release the click to stop playing the note. You can also click and drag to change what note is being played, but doing this too quickly may cause sound clipping issues.
+    </p><br>
+    <p>
+      Click and drag the "Gain Dial" to adjust the gain of the audio from 0% to 100%. By default, the gain is set to 25%. 
+    </p><br>
+    <p>
+      Click and drag the "Panning Slider" left or right to adjust the stereo panning of the audio. At all the way left, all audio will come out of your left speaker or headphone. At all the way right, all audio will come out of your right speaker or headphone.
+    </p><br>
+    <p>
+      Select a wave type from the "Wave Type" box. You can choose between sine, square, sawtooth, and triangle waves.
+    </p><br>
+    <p>
+      The toggle under the "Low Pass Filter" heading turns the low pass filter on and off. When the low pass filter is enabled, frequencies above the number in the box below the toggle will be filtered out from the audio. You can click and drag this box up or down to increase or decrease the filtering frequency.
+    </p>
+  </body>
+</html>
