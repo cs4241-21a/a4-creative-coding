@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+      }
+
+      h1 {
+        color: white;
+      }
+
+      #container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      #vertical {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    </style>
+
+    <script src="./main.js" type="module"></script>
+  </head>
+  <body>
+    <div id="container1">
+      <h1>Coin Flipper!</h1>
+    </div>
+    <div id="vertical">
+      <button id="btn" class="btn1">flip coin</button>
+      <button id="btn" class="btn2">stop coin</button>
+    </div>
+  </body>
+</html>
