@@ -1,22 +1,44 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>CS4241 Assignment 4</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Occlupanid collection cataloguer login">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-  </head>
-  <body>
-    <div id="body-wrapper">
-      <h1>Words finder</h1>
-      <p id="progress">loading...</p>
-      </p>
-      <form>
-      <input type='text' name='search' placeholder="Search">
-      <button type='submit' value="Submit">
+
+<head>
+  <title>CS4241 Assignment 4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<body>
+  <div id="body-wrapper">
+    <h1>Words finder</h1>
+    <svg width="500" height="500">
+      <g id="left" transform="translate(30, 40)"></g>
+      <g id="right" transform="translate(450, 40)"></g>
+      <g id="top" transform="translate(40, 30)"></g>
+      <g id="bottom" transform="translate(40, 450)"></g>
+    </svg>
+    <form style="display:flex">
+      <div id="xAxis">
+        <p>Display X axis by:</p>
+        <input type="radio" id="xYears" name="xAxis" value="xYears" disabled="disabled">
+        <label for="xYears">Year</label><br>
+        <input type="radio" id="xAlbums" name="xAxis" value="xSongs" disabled="disabled">
+        <label for="xAlbums">Album</label><br>
+        <input type="radio" id="xSongs" name="xAxis" value="xSongs" disabled="disabled">
+        <label for="xSongs">Song</label><br><br>
+      </div>
+      <div id="yAxis">
+        <p>
+          <input type='text' name='search' placeholder="Search" disabled="disabled"s>
+        <input id='go' type='submit' value="Search!">
+        </p>
+      </div>
     </form>
-    </div>
-  </body>
-  <script type="module" src="script.js" type="text/javascript"></script>
+  </div>
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script type="module" src="script.js" type="text/javascript"></script>
+
 </html>
