@@ -52,7 +52,8 @@ window.onload = function () {
       lyricData = lyricData.sort((a, b) => (a.year > b.year ? 1 : -1));
 
       //showStatus("fetching lyrics...");
-      for (let song of lyricData) {
+      for (let i = 0; i<lyricData.length; i++) {
+        let song = lyricData[i]
         fetch(song.filename)
           .then(response => response.text())
           .then(textString => {
@@ -63,10 +64,13 @@ window.onload = function () {
               xAlbumsList.push(song.album);
             }
 
-            showStatus("Search!");
-            //data is all set up, enable form controls
-            enableForm();
-            chartDisplay();
+            //if on last iteration
+            if(i === lyricData.length - 1){
+              showStatus("Search!");
+              //data is all set up, enable form controls
+              enableForm();
+              chartDisplay();
+            }
           });
       }
     });
@@ -91,6 +95,8 @@ const enableForm = function () {
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].disabled = false;
   }
+
+  document.getElementById("status").style.display = "none"
 };
 
 
@@ -254,6 +260,9 @@ const drawBars = function (data) {
   d3.selectAll('g.bar').remove();
   //start over again
   let barWidth = (chartWidth - chartMargin.left - chartMargin.right) / data.length;
+  let color = d3.scaleSequential()
+  .domain([0, maxVal])
+  .interpolator(d3.interpolateBlues);
   let y = d3.scaleLinear()
     .domain([maxVal * 1.1, 0])
     .range([0, chartHeight])
@@ -267,6 +276,7 @@ const drawBars = function (data) {
     .attr('transform', (_, i) => 'translate(' + (1 + chartMargin.left + i * barWidth) + ', 0)');
   bar
     .append('rect')
+    .attr('fill', d => color(d))
     .attr('width', barWidth - 1)
     .attr('y', d => y(d) - chartMargin.bottom)
     .attr('height', d => chartHeight - y(d))
