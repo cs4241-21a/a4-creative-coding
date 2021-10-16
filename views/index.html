@@ -14,6 +14,7 @@
   <div id="body-wrapper">
     <h1>Word Frequency in TMBG Songs</h1>
     <h2>An interactive visual look at the lyrics of They Might Be Giants.</h2>
+    <p>Hover mouse over each bar for song/album name labels.</p>
     <h2 id="status">Loading...</h2>
     <svg id="chart" preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 400">
       <g id="left"></g>
@@ -41,8 +42,9 @@
           <label for="wordCountUnique">Unique word count</label><br>
           <input type="radio" id="charCount" name="yAxis" value="charCount" disabled="disabled">
           <label for="charCount">Character count</label><br>
-          <label for="search">Or search a custom word/phrase:</label>
-          <input type='text' name='search' placeholder="Search" disabled="disabled"s>
+          <input type="radio" id="searchCount" name="yAxis" value="searchCount" disabled="disabled">
+          <label for="searchCount">Search a custom word/phrase:</label><br>
+          <input type='text' id="search"name='search' placeholder="john" disabled="disabled">
         <input id='go' type='submit' value="Search!">
         </p>
       </div>

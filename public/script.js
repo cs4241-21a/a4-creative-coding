@@ -9,7 +9,7 @@ var xYearEnd = 2022;
 var xAlbumsList = [];
 const chartHeight = 400
 const chartWidth = 600
-const chartMargin = { left: 60, top: 10, right: 50, bottom: 25 }
+const chartMargin = { left: 75, top: 10, right: 50, bottom: 25 }
 
 //chart data
 var xArray = [];
@@ -20,8 +20,8 @@ let maxVal = 0;
 const submit = function (e) {
   // prevent default form action from being carried out
   e.preventDefault();
-  console.log("Submit");
-  return false;
+  document.getElementById("searchCount").checked = true;
+  chartDisplay();
 };
 
 const showStatus = function (msg) {
@@ -52,7 +52,7 @@ window.onload = function () {
       lyricData = lyricData.sort((a, b) => (a.year > b.year ? 1 : -1));
 
       //showStatus("fetching lyrics...");
-      for (let i = 0; i<lyricData.length; i++) {
+      for (let i = 0; i < lyricData.length; i++) {
         let song = lyricData[i]
         fetch(song.filename)
           .then(response => response.text())
@@ -65,7 +65,7 @@ window.onload = function () {
             }
 
             //if on last iteration
-            if(i === lyricData.length - 1){
+            if (i === lyricData.length - 1) {
               showStatus("Search!");
               //data is all set up, enable form controls
               enableForm();
@@ -87,6 +87,7 @@ const enableForm = function () {
   }
   document.getElementById("xYears").checked = true;
   document.getElementById("wordCount").checked = true;
+  document.getElementById('searchCount').onclick = "";
   const setX3selector = document.getElementById('albumSelect');
   setX3selector.onchange = chartDisplay;
 
@@ -116,11 +117,14 @@ const chartDisplay = function () {
   }
   //find maximum value for the y axis
   maxVal = Math.max(...data.map(d => d.value));
-  drawY(maxVal);
 
-  drawBars(data);
-  console.log("Displaying:")
-  console.log(lyricData);
+  clearBars();
+  if (maxVal > 0){
+    drawY(maxVal);
+
+    drawBars(data);
+  }
+
 }
 
 /*
@@ -161,6 +165,8 @@ const evalMetric = function (text) {
       return evalWords(text).length;
     case "wordCountUnique":
       return evalUniqueWords(text).length;
+    case "searchCount":
+      return evalSearch(text).length;
     default:
       return evalChars(text).length;
   }
@@ -184,10 +190,10 @@ const setXYears = function () {
 
 const setXAlbums = function () {
   allowXSongs(false)//disable album selection
-  chartMargin.bottom = 90;
+  chartMargin.bottom = 120;
   //console.log(xAlbumsList);
   xArray = xAlbumsList;//all albums
-  let albumScale = d3.scaleBand().domain(xArray).range([chartMargin.left, chartWidth - chartMargin.right]).padding(0.5);
+  let albumScale = d3.scaleBand().domain(xArray).range([chartMargin.left, chartWidth - chartMargin.right]);
   let axisBottom = d3.axisBottom(albumScale);
   d3.select('#bottom').call(axisBottom).attr('transform', 'translate(0,' + (chartHeight - chartMargin.bottom) + ')')
     .selectAll("text")
@@ -197,7 +203,7 @@ const setXAlbums = function () {
 
 const setXSongs = function () {
   populateXSongs();
-  chartMargin.bottom = 90;
+  chartMargin.bottom = 120;
   allowXSongs(true)//enable album selection
   let albumNames = document.querySelector("#albumSelect").value;
   xArray = lyricData.filter(song => song.album === albumNames).map(song => song.name);//all song names in this album
@@ -255,29 +261,39 @@ const evalUniqueWords = function (text) {
   return [...new Set(words)];
 }
 
-const drawBars = function (data) {
+const evalSearch = function (text) {
+  let reg = new RegExp(document.querySelector("#search").value.toLowerCase(), "g")
+  return (text.toLowerCase().match(reg) || []);
+}
+
+const clearBars = function(){
   //clear all bars
   d3.selectAll('g.bar').remove();
+}
+
+const drawBars = function (data) {
   //start over again
   let barWidth = (chartWidth - chartMargin.left - chartMargin.right) / data.length;
-  let color = d3.scaleSequential()
-  .domain([0, maxVal])
-  .interpolator(d3.interpolateBlues);
+  let color = d3.scaleSequentialSqrt()
+    .domain([0, maxVal])
+    .interpolator(d3.interpolateBlues);
   let y = d3.scaleLinear()
     .domain([maxVal * 1.1, 0])
     .range([0, chartHeight])
   let svg = d3.select('#chart');
   let bar = svg
     .selectAll('g.bar')
-    .data(data.map(d => d.value))
+    .data(data)
     .enter()
     .append('svg:g')
     .attr('class', 'bar')
     .attr('transform', (_, i) => 'translate(' + (1 + chartMargin.left + i * barWidth) + ', 0)');
   bar
     .append('rect')
-    .attr('fill', d => color(d))
+    .attr('fill', d => color(d.value))
     .attr('width', barWidth - 1)
-    .attr('y', d => y(d) - chartMargin.bottom)
-    .attr('height', d => chartHeight - y(d))
+    .attr('y', d => y(d.value) - chartMargin.bottom)
+    .attr('height', d => chartHeight - y(d.value))
+    .append("svg:title")
+    .text(d => d.name)
 }
