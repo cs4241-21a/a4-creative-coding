@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>CS4241 Assignment 4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<body>
+  <div id="body-wrapper">
+    <h1>Word Frequency in TMBG Songs</h1>
+    <h2>An interactive visual look at the lyrics of They Might Be Giants.</h2>
+    <p>Hover mouse over each bar for song/album name labels.</p>
+    <h2 id="status">Loading...</h2>
+    <svg id="chart" preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 400">
+      <g id="left"></g>
+      <g id="right"></g>
+      <g id="top"></g>
+      <g id="bottom"></g>
+    </svg>
+    <form style="display:flex">
+      <div id="xAxis">
+        <p>Display X axis by:</p>
+        <input type="radio" id="xYears" name="xAxis" value="xYears" disabled="disabled">
+        <label for="xYears">Year</label><br>
+        <input type="radio" id="xAlbums" name="xAxis" value="xAlbums" disabled="disabled">
+        <label for="xAlbums">Album</label><br>
+        <input type="radio" id="xSongs" name="xAxis" value="xSongs" disabled="disabled">
+        <label for="xSongs">Song</label><br>
+        <label for="albumSelect">On album:</label>
+          <select name="albumSelect" id="albumSelect" disabled="disabled" value="Book"></select>
+      </div>
+      <div id="yAxis">
+        <p>Y axis value:</p>
+        <p> <input type="radio" id="wordCount" name="yAxis" value="wordCount" disabled="disabled">
+          <label for="wordCount">Word count</label><br>
+          <input type="radio" id="wordCountUnique" name="yAxis" value="wordCountUnique" disabled="disabled">
+          <label for="wordCountUnique">Unique word count</label><br>
+          <input type="radio" id="charCount" name="yAxis" value="charCount" disabled="disabled">
+          <label for="charCount">Character count</label><br>
+          <input type="radio" id="searchCount" name="yAxis" value="searchCount" disabled="disabled">
+          <label for="searchCount">Search a custom word/phrase:</label><br>
+          <input type='text' id="search"name='search' placeholder="john" disabled="disabled">
+        <input id='go' type='submit' value="Search!">
+        </p>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script type="module" src="script.js" type="text/javascript"></script>
+
+</html>
