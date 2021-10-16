@@ -31,12 +31,12 @@ const showStatus = function (msg) {
 
 window.onload = function () {
 
-  showStatus("fetching albums...");
+  //showStatus("fetching albums...");
 
   fetch("/lyrics")
     .then(response => response.json())
     .then(data => {
-      showStatus("fetching songs...");
+      //showStatus("fetching songs...");
       for (let song of data) {
         let split = song.split("_");
         let songData = {};
@@ -51,7 +51,7 @@ window.onload = function () {
       //sort by year,
       lyricData = lyricData.sort((a, b) => (a.year > b.year ? 1 : -1));
 
-      showStatus("fetching lyrics...");
+      //showStatus("fetching lyrics...");
       for (let song of lyricData) {
         fetch(song.filename)
           .then(response => response.text())
@@ -62,13 +62,13 @@ window.onload = function () {
             if (!xAlbumsList.includes(song.album)) {
               xAlbumsList.push(song.album);
             }
+
+            showStatus("Search!");
+            //data is all set up, enable form controls
+            enableForm();
+            chartDisplay();
           });
       }
-
-      showStatus("Search!");
-        //data is all set up, enable form controls
-      enableForm();
-      chartDisplay();
     });
 };
 
@@ -81,6 +81,8 @@ const enableForm = function () {
   for (let radio of document.querySelectorAll('input[type="radio"]')) {
     radio.onclick = chartDisplay;
   }
+  document.getElementById("xYears").checked = true;
+  document.getElementById("wordCount").checked = true;
   const setX3selector = document.getElementById('albumSelect');
   setX3selector.onchange = chartDisplay;
 
@@ -99,12 +101,12 @@ const chartDisplay = function () {
   data = [];
   for (let x of xArray) {
     let dataVal = 0;
-    for (let song of lyricData){
-      if (x == relevantValue(song) && !(song.lyrics === undefined)){
+    for (let song of lyricData) {
+      if (x == relevantValue(song) && !(song.lyrics === undefined)) {
         dataVal += evalMetric(song.lyrics);
       }
     }
-    data.push({name:x, value:dataVal});
+    data.push({ name: x, value: dataVal });
   }
   //find maximum value for the y axis
   maxVal = Math.max(...data.map(d => d.value));
@@ -112,7 +114,7 @@ const chartDisplay = function () {
 
   drawBars(data);
   console.log("Displaying:")
-  console.log(data);
+  console.log(lyricData);
 }
 
 /*
@@ -134,7 +136,7 @@ const drawX = function () {
 
 }
 
-const relevantValue = function(song) {
+const relevantValue = function (song) {
   let type = document.querySelector('input[name="xAxis"]:checked').value;
   switch (type) {
     case "xAlbums":
@@ -146,7 +148,7 @@ const relevantValue = function(song) {
   }
 }
 
-const evalMetric = function(text){
+const evalMetric = function (text) {
   let type = document.querySelector('input[name="yAxis"]:checked').value;
   switch (type) {
     case "wordCount":
@@ -164,7 +166,7 @@ const evalMetric = function(text){
 
 const setXYears = function () {
   allowXSongs(false)//disable album selection
-  chartMargin.bottom =25;
+  chartMargin.bottom = 25;
   xArray = [];
   for (let i = xYearStart; i <= xYearEnd; i++) {
     xArray.push(i);
@@ -182,7 +184,7 @@ const setXAlbums = function () {
   let albumScale = d3.scaleBand().domain(xArray).range([chartMargin.left, chartWidth - chartMargin.right]).padding(0.5);
   let axisBottom = d3.axisBottom(albumScale);
   d3.select('#bottom').call(axisBottom).attr('transform', 'translate(0,' + (chartHeight - chartMargin.bottom) + ')')
-  .selectAll("text")
+    .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end");;
 }
@@ -196,7 +198,7 @@ const setXSongs = function () {
   let albumScale = d3.scaleBand().domain(xArray).range([chartMargin.left, chartWidth - chartMargin.right]).padding(0.5);
   let axisBottom = d3.axisBottom(albumScale);
   d3.select('#bottom').call(axisBottom).attr('transform', 'translate(0,' + (chartHeight - chartMargin.bottom) + ')')
-  .selectAll("text")
+    .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end");;
 }
@@ -224,7 +226,7 @@ const populateXSongs = function () {
 */
 
 const drawY = function (max) {
-  let scale = d3.scaleLinear().domain([max, 0]).range([chartMargin.top, chartHeight - chartMargin.bottom]);
+  let scale = d3.scaleLinear().domain([max * 1.1, 0]).range([chartMargin.top, chartHeight - chartMargin.bottom]);
   let axisLeft = d3.axisLeft(scale).tickFormat(d3.format("d"));
   d3.select('#left').call(axisLeft).attr('transform', 'translate(' + (chartMargin.left) + ', 0)');
 }
@@ -247,25 +249,25 @@ const evalUniqueWords = function (text) {
   return [...new Set(words)];
 }
 
-const drawBars = function (data){
+const drawBars = function (data) {
   //clear all bars
   d3.selectAll('g.bar').remove();
   //start over again
-  let barWidth = (chartWidth - chartMargin.left - chartMargin.right)/data.length;
+  let barWidth = (chartWidth - chartMargin.left - chartMargin.right) / data.length;
   let y = d3.scaleLinear()
-  .domain([maxVal, 0])
-  .range([0, chartHeight])
+    .domain([maxVal * 1.1, 0])
+    .range([0, chartHeight])
   let svg = d3.select('#chart');
   let bar = svg
-  .selectAll('g.bar')
-  .data(data.map(d => d.value))
-  .enter()
-  .append('svg:g')
-  .attr('class', 'bar')
-  .attr('transform', (_, i) => 'translate(' + (1 + chartMargin.left + i * barWidth) + ', 0)');
+    .selectAll('g.bar')
+    .data(data.map(d => d.value))
+    .enter()
+    .append('svg:g')
+    .attr('class', 'bar')
+    .attr('transform', (_, i) => 'translate(' + (1 + chartMargin.left + i * barWidth) + ', 0)');
   bar
-  .append('rect')
-  .attr('width', barWidth - 1)
-  .attr('y', d => y(d) - chartMargin.bottom)
-  .attr('height', d => chartHeight - y(d) )
+    .append('rect')
+    .attr('width', barWidth - 1)
+    .attr('y', d => y(d) - chartMargin.bottom)
+    .attr('height', d => chartHeight - y(d))
 }
