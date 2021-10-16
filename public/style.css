@@ -1,0 +1,10 @@
+body{
+    max-width: 1000px;
+}
+form {
+    flex-wrap: wrap;
+}
+form div {
+    padding:16px;
+    flex-grow:0.5;
+}
