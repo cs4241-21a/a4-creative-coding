@@ -13,24 +13,33 @@
 <body>
   <div id="body-wrapper">
     <h1>Words finder</h1>
-    <svg width="500" height="500">
-      <g id="left" transform="translate(30, 40)"></g>
-      <g id="right" transform="translate(450, 40)"></g>
-      <g id="top" transform="translate(40, 30)"></g>
-      <g id="bottom" transform="translate(40, 450)"></g>
+    <svg id="chart" preserveAspectRatio="xMinYMin meet" viewBox="0 0 600 400">
+      <g id="left"></g>
+      <g id="right"></g>
+      <g id="top"></g>
+      <g id="bottom"></g>
     </svg>
     <form style="display:flex">
       <div id="xAxis">
         <p>Display X axis by:</p>
         <input type="radio" id="xYears" name="xAxis" value="xYears" disabled="disabled">
         <label for="xYears">Year</label><br>
-        <input type="radio" id="xAlbums" name="xAxis" value="xSongs" disabled="disabled">
+        <input type="radio" id="xAlbums" name="xAxis" value="xAlbums" disabled="disabled">
         <label for="xAlbums">Album</label><br>
         <input type="radio" id="xSongs" name="xAxis" value="xSongs" disabled="disabled">
-        <label for="xSongs">Song</label><br><br>
+        <label for="xSongs">Song</label><br>
+        <label for="albumSelect">On album:</label>
+          <select name="albumSelect" id="albumSelect" disabled="disabled" value="Book"></select>
       </div>
       <div id="yAxis">
-        <p>
+        <p>Y axis value:</p>
+        <p> <input type="radio" id="wordCount" name="yAxis" value="wordCount" disabled="disabled">
+          <label for="wordCount">Word count</label><br>
+          <input type="radio" id="wordCountUnique" name="yAxis" value="wordCountUnique" disabled="disabled">
+          <label for="wordCountUnique">Unique word count</label><br>
+          <input type="radio" id="charCount" name="yAxis" value="charCount" disabled="disabled">
+          <label for="charCount">Character count</label><br>
+          <label for="search">Or search a custom word/phrase:</label>
           <input type='text' name='search' placeholder="Search" disabled="disabled"s>
         <input id='go' type='submit' value="Search!">
         </p>
