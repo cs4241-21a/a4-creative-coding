@@ -2,11 +2,17 @@ lofi pitter patters to study to
 ===
 *author:* jyalu wu
 
-*assignment:* assignment 4 - creative coding: interactive multimedia experiences
+*assignment:* creative coding: interactive multimedia experiences
 
 *website links:*
 
 [glitch link](https://a4-jwu2018.glitch.me/)
+
+previous iterations
+---
+*iteration 1:* [short stack: basic two-tier web application using html/css/js and node.js](https://github.com/jwu2018/a2-shortstack)
+
+*iteration 2:* [persistence: two-tier web application with database, express server, and css template](https://github.com/cs4241-21a/a3-persistence)
 
 description
 ---
