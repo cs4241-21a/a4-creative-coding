@@ -4,9 +4,7 @@ lofi pitter patters to study to
 
 *assignment:* creative coding: interactive multimedia experiences
 
-*website links:*
-
-[glitch link](https://a4-jwu2018.glitch.me/)
+*website hosted on:* [glitch](https://a4-jwu2018.glitch.me/)
 
 previous iterations
 ---
