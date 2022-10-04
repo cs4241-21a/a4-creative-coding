@@ -1,0 +1,187 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS4241 Assignment 2</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Neue:wght@700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body id="myText">
+    <h1>Super Mario Music Maker!</h1>
+    <p>*Not affiliated with Nintendo inc.</p>
+    <img src="https://cdn.glitch.global/1ac0c3bf-5e02-4570-a87d-e58b8c6feba1/mario.jpg?v=1664868348810"
+         width = "500" height = "275"/>
+    <form action="">
+      <input type="text" id="yourname" placeholder="your name here"/>
+      <input type="text" id="wheresoft" placeholder="your favorite song title" />
+      <button>submit</button>
+    </form>
+    <p>don't Click the Button below its virus.:</p>
+    <button onclick="swapImg()">
+      <img id="downloadImage" src="download.png" width="400" height="150" />
+    </button>
+    <h2>Here's other people's favorite songs:</h2>
+    <table id="airsoftSightings"></table>
+
+    <audio autoplay id="congratulations" src="https://cdn.glitch.global/3a54f5cf-842d-4a56-b067-db61308f1f3c/congratulations.mp3?v=1662577296679" preload="auto"></audio>
+    
+    <p>
+       Play the Mario sound!
+    </p>
+    <audio src="https://cdn.glitch.global/1ac0c3bf-5e02-4570-a87d-e58b8c6feba1/Mario.mp3?v=1664867537998"> </audio>
+    <button data-playing="false" role="switch" aria-checked="false">
+      <span>Play/Pause</span>
+    </button>
+    <p>
+      Change the volume up or change the volume down!
+    </p>
+    <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
+    <p>
+      Make the audio left or make the audio right!
+    </p>
+    <input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
+    
+    
+  </body>
+  <script>
+    const audio = new Audio("https://cdn.glitch.global/3a54f5cf-842d-4a56-b067-db61308f1f3c/congratulations.mp3?v=1662577296679");
+    
+    let theBody = document.getElementById("myText");
+
+    const submit = function (e) {
+      // prevent default form action from being carried out
+      e.preventDefault();
+
+      let yourname = document.querySelector("#yourname")
+      let wheresoft = document.querySelector("#wheresoft")
+        json = { yourname: yourname.value, wheresoft: wheresoft.value, hotbed: "That area has little activity" },
+        body = JSON.stringify(json);
+
+      fetch("/submit", {
+        method: "POST",
+        body,
+      }).then(async function (response) {
+        // do something with the reponse
+        let newTable = await response.json()
+        reloadPage(newTable);
+        console.log("new table received");
+      });
+
+      return false;
+    };
+
+    function reloadPage(newTable) {
+      let myTable = document.getElementById("airsoftSightings")
+      myTable.innerHTML = ""
+
+      newTable.forEach((element, index) => {
+        myTable.innerHTML +=
+          "<tr><td>" + element.yourname + "</td><td>" + element.wheresoft + "</td><td>" + element.hotbed + "</td><td>"
+      })
+    }
+
+    let andrewGarfield = setInterval(updateColor, 20);
+    let colorCounter = 0;
+    
+    function updateColor() {
+      // changes the color of the background over time
+      colorCounter += 1;
+      if (colorCounter > 9999) {
+        colorCounter = 1;
+      }
+      theBody.style.backgroundColor =
+        "rgb(" +
+        ((85 + colorCounter) % 255) +
+        "," +
+        ((170 + colorCounter) % 255) +
+        "," +
+        (colorCounter % 255) +
+        ")";
+    }
+
+    let bearClicked = true;
+
+    function swapImg() {
+      // swaps the download image on button click
+      let img = document.getElementById("downloadImage");
+      img.src = "bear.PNG";
+      playCongrats()
+      setTimeout(function () {
+        if (bearClicked) {
+          window.alert(
+            "The cybersecurity bear is disappointed in you.\n\n\n\n\nHe says:\nDon't click on images that may be suspicious, whether they say 'CLICK HERE', 'download', or even if it's a picture of a bear."
+          );
+          bearClicked = false;
+        } else {
+          window.alert(
+            "In many ways, the low-quality (but not necessarily low-effort) websites of the early to late 2000's were a truly original and innovative art form lost to time, wherein would-be artists would attempt to create webpages appearing to have been made with the utmost incompetence despite working perfectly.  The incongruous UI choices, the mysterious labyrinthine link embeds, and the utterly incomprehensible design choices made to seemingly deter the user only made those webpages more enticing to explore.  In many ways, my websites thus far have been love letters to this phenomenon that I truly believe to be an art form lost to time."
+          );
+        }
+      }, 200);
+    }
+    
+    function playCongrats() {
+      let myAudio = document.getElementById("congratulations");
+      
+      setTimeout(function () {
+        myAudio.play()
+      }, 200)
+      return false
+    }
+
+    window.onload = function () {
+      const button = document.querySelector("button");
+      button.onclick = submit;
+    };
+    
+    
+    const audioContext = new AudioContext();
+    
+    const audioElement = document.querySelector('audio');
+    const track = audioContext.createMediaElementSource(audioElement);
+    
+    const gainNode = audioContext.createGain();
+    
+    const playButton = document.querySelector('button');
+  
+    const volumeControl = document.querySelector('#volume');
+    
+    // for left/right audio balance
+    const pannerOptions = { pan: 0 };
+    const panner = new StereoPannerNode(audioContext, pannerOptions);
+    
+    const pannerControl = document.querySelector('#panner');
+    
+    track.connect(gainNode).connect(panner).connect(audioContext.destination);
+    
+    pannerControl.addEventListener('input', () => {
+      panner.pan.value = pannerControl.value;
+    }, false);
+
+    volumeControl.addEventListener('input', () => {
+      gainNode.gain.value = volumeControl.value;
+    }, false);
+    
+
+    playButton.addEventListener('click', () => {
+      // Check if context is in suspended state (autoplay policy)
+      if (audioContext.state === 'suspended') {
+        audioContext.resume();
+      }
+
+      // Play or pause track depending on state
+      if (playButton.dataset.playing === 'false') {
+        audioElement.play();
+        playButton.dataset.playing = 'true';
+      } else if (playButton.dataset.playing === 'true') {
+        audioElement.pause();
+        playButton.dataset.playing = 'false';
+      }
+    }, false);
+    
+    audioElement.addEventListener('ended', () => {
+      playButton.dataset.playing = 'false';
+    }, false);
+
+  </script>
+</html>
