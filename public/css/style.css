@@ -1,0 +1,14 @@
+body {
+    font-family: 'Comic Neue', cursive;
+    text-align: center;
+}
+
+table {
+  text-align: center;
+  border-radius: 16px;
+  background-color: #B601A7;
+  padding: 1.5em;
+  color: black;
+  position: relative;
+  left: 200px
+}
